@@ -1,1 +1,13 @@
-index page
+- content_for :header do
+  = partial 'shared/home-header', locals: {fixed: true}
+
+-# = render 'intro'
+-# = render 'clinics'
+-# = render 'doctors'
+-# = render 'pharmacists'
+-# = render 'charities'
+-# = render 'students'
+-# = render 'press'
+-# = render 'download'
+
+= partial 'shared/home-footer'

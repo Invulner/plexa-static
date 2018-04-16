@@ -8,10 +8,14 @@ end
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
+set :layout, 'application'
+
 # Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+page '/index.html', layout: 'home'
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -44,3 +48,5 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+activate :directory_indexes
