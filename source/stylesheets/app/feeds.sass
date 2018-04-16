@@ -1,0 +1,263 @@
+.feeds-page-items
+  .col-sm-3
+    padding-left: 0
+    padding-bottom: 15px
+
+.feeds-page-category
+  padding-bottom: 5px
+  border-bottom: 1px solid #eeeeee
+
+.feeds-page-item
+  position: relative
+  height: 140px
+  border: 1px solid #D3D3D3
+  background-color: #FFFAFA
+
+.feeds-page-header
+  margin-top: 8px
+  margin-left: 8px
+
+.feeds-page-title
+  display: block
+  font-size: 13px
+  font-weight: bold
+  line-height: 10px
+
+.feeds-page-handle
+  display: inline
+  font-size: 11px
+
+.feeds-page-logo
+  width: 25px
+  height: 25px
+  display: inline-block
+  text-indent: -9999px
+  float: left
+  margin-right: 5px
+
+.feeds-page-description
+  margin-top: 10px
+  margin-left: 8px
+  margin-right: 8px
+  margin-bottom: 8px
+  font-size: 12px
+  word-wrap: break-word
+
+.feeds-page-add-button
+  position: absolute
+  cursor: pointer
+  right: 10px
+  bottom: 10px
+  top: auto
+  background: #fff
+  border-radius: 50%
+  display: inline-block
+  padding: 1px 1px 2px 2px
+  z-index: 1
+
+.feeds-page-added-button
+  position: absolute
+  right: 10px
+  bottom: 10px
+  top: auto
+  background: #fff
+  border-radius: 50%
+  display: inline-block
+  padding: 1px 1px 2px 2px
+  z-index: 1
+
+.feeds-page-items
+  .col-sm-3
+    padding-bottom: 0px
+
+    @media (max-width: 767px)
+      padding-right: 0
+
+  .ag-post
+    height: 300px
+    overflow: hidden
+    position: relative
+
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 30px
+      +gradient-vertical(#fff, rgba(255, 255, 255, 0))
+      +scaleY(-1)
+
+    @media (max-width: 767px)
+      height: auto
+      min-height: 300px
+
+.ag-post-header
+  margin-bottom: 10px
+  overflow: hidden
+  font-size: 0
+  position: relative
+
+  > a
+    position: relative
+    display: inline-block
+    vertical-align: middle
+
+    &:after
+      position: absolute
+      bottom: 0
+      right: 0
+      line-height: 0
+
+  &.ag-post-header--fb > a:after
+    content: image-url('small-fb-icon.png')
+
+  &.ag-post-header--tw > a:after
+    content: image-url('small-tw-icon.png')
+
+  &.ag-post-header--ln > a:after
+    content: image-url('small-ln-icon.png')
+
+  .post-icon-image-wrapper
+    .post-icon-image
+      max-width: 32px
+      width: initial
+
+  .facebook-icon-image, .twitter-icon-image, .post-icon-image
+    float: left
+    display: inline
+    border-radius: 5px
+    margin-top: 10px
+
+  .ag-post-title
+    line-height: 1.2
+    margin-left: 5px
+    padding-top: 10px
+    padding-bottom: 0
+    white-space: nowrap
+    overflow: hidden
+    font-size: 12px
+
+    .grid-post-item &
+      width: calc(100% - 52px - #{$post-time-width} - #{$post-time-margin} - #{$post-title-left-margin})
+
+  .ag-post-handle
+    line-height: 1.2
+    display: inline-block
+    margin-left: 3px
+
+  .post-time-since
+    position: absolute
+    right: 0
+    top: 50%
+    line-height: 1.2
+    padding: 10px 10px 0 0
+    margin: 0
+    font-size: 12px
+    +transform(translateY(-50%))
+
+.source-header
+  display: inline-block
+  margin-left: 5px
+  width: calc(100% - 5px - 30px - 20px)
+
+  > *
+    width: 100%
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.attention-block
+  font-size: 0
+  text-align: center
+  height: 100%
+  width: 100%
+
+  &:empty
+    display: none
+
+  &:before
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    height: calc(100vh - 80px - 61px - 10px - 10px)
+
+  .no-pages-selected &:before
+    height: 100%
+
+  .icon
+    width: 56px
+    height: 56px
+    display: inline-block
+    vertical-align: middle
+    margin: 0 3px
+    border-radius: 3px
+
+    svg
+      fill: #fff
+
+  .twitter
+    background-color: #5fa9dd
+
+    svg
+      width: 44px
+      height: 34px
+      margin: 12px 0 0 5px
+
+  .linkedin
+    svg
+      width: 67px
+      height: 67px
+      margin: 0 0 0 0
+
+  .facebook
+    background-color: #3a589e
+
+    svg
+      width: 44px
+      height: 46px
+      margin: 10px 0 0 12px
+
+  p
+    margin: 0 0 52px
+    &.no-margin
+      margin: auto
+
+.attention-block__attention-content
+  +URW-Light-font
+  padding: 100px 0
+  text-align: center
+  font-size: 24px
+  line-height: 24px
+  display: inline-block
+  vertical-align: middle
+
+  @media (max-width: 767px)
+    font-size: 20px
+    line-height: 22px
+
+  @media (max-height: 400px)
+    padding: 60px 0
+
+  .no-pages-selected &
+    font-size: 18px
+
+.attention-block__icons
+  margin: 0 0 50px
+
+.no-pages-selected .btn
+  font-size: 18px
+  margin: 0
+
+.share-content-title
+  margin-top: 7px
+  padding-left: 8px
+  padding-right: 8px
+  font-size: 16px
+
+  a
+    color: black
+
+  .post-time-since
+    margin-top: inherit
+    margin-right: inherit

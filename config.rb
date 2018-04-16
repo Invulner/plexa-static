@@ -8,6 +8,8 @@ end
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
+set :fonts_dir,  "fonts"
+
 set :layout, 'application'
 
 # Per-page layout changes
@@ -50,3 +52,4 @@ page '/index.html', layout: 'home'
 # end
 
 activate :directory_indexes
+activate :sprockets

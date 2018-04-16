@@ -1,13 +1,12 @@
 - content_for :header do
   = partial 'shared/home-header', locals: {fixed: true}
 
--# = render 'intro'
--# = render 'clinics'
--# = render 'doctors'
--# = render 'pharmacists'
--# = render 'charities'
--# = render 'students'
--# = render 'press'
--# = render 'download'
+= partial 'home/intro'
+= partial 'home/clinics'
+= partial 'home/doctors'
+= partial 'home/charities'
+= partial 'home/students'
+= partial 'home/press'
+= partial 'home/download'
 
 = partial 'shared/home-footer'

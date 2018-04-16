@@ -1,0 +1,117 @@
+#search-container,
+.skysearch
+  height: 100%
+  position: relative
+
+.skysearch__top
+  margin-bottom: 30px
+  +display(flex)
+  +align-items(center)
+  +flex-wrap(wrap)
+
+.skysearch__field
+  @extend %panel--brown-border
+  position: relative
+  +flex(1 0 auto)
+
+  &:not(:last-child)
+    margin-bottom: 0
+
+.skysearch__input
+  border: 0
+  resize: none
+  padding-left: 0
+  padding-right: 0
+  width: 100%
+  height: 50px
+  font-size: 20px
+  line-height: 30px
+
+  &:focus
+    outline: none
+
+.skysearch__search-btn
+  @extend %button--brown
+  position: absolute
+  bottom: 50%
+  transform: translateY(50%)
+  right: 6px
+  margin: 0
+  font-size: 19px
+  height: 36px
+  line-height: 38px
+  padding-top: 0
+  padding-bottom: 0
+
+  .skysearch__top--empty &
+    opacity: .65
+    cursor: not-allowed
+    pointer-events: none
+
+.skysearch__spinner
+  opacity: 0
+  visibility: hidden
+  position: relative
+  height: 75px
+  +display(flex)
+  +align-items(center)
+  +justify-content(center)
+  +transition(all .2s ease-in-out)
+
+.skysearch__spinner--visible
+  opacity: 1
+  visibility: visible
+
+.skysearch__empty-results
+  position: relative !important
+  text-align: center
+
+.asclepius-icon
+  display: block
+  width: 77px
+  height: 77px
+  margin: 0 auto 25px
+  background: image-url('asclepius-icon') center no-repeat
+
+  @media(max-width: 767px)
+    height: 50px
+
+.skysearch__holding
+  position: absolute
+  left: 0
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+  color: #848484
+  font-size: 20px
+
+  &:empty
+    margin-top: 0
+
+  p
+    text-align: center
+    line-height: 1
+    margin-bottom: 0
+
+    @media(max-width: 767px)
+      font-size: 14px
+
+.skysearch__nav
+  width: 0
+  height: 0
+  margin: 0
+  opacity: 0
+  overflow: hidden
+  transition: width .3s linear
+
+  &.skysearch__nav--active
+    margin-left: 55px
+    height: auto
+    width: 298px
+
+    @media(max-width: 584px)
+      margin: 12px auto 0
+
+  .skysearch__top--empty &
+    opacity: .65 !important
+    pointer-events: none

@@ -1,0 +1,467 @@
+.discuss__compose
+  border-top: 2px solid #7e7763
+  padding-bottom: 12px
+
+  .checkbox_wrapper
+    position: relative
+    display: inline-block
+
+  .right-block,
+  .left-block
+    width: 50%
+
+  .right-block
+    float: right
+
+  .left-block
+    float: left
+
+  .checkbox
+    vertical-align: top
+    margin: 0 3px 0 0
+    width: 17px
+    height: 17px
+
+    + label
+      margin-top: 4px
+      width: 35px
+      vertical-align: top
+      cursor: pointer
+
+    &:not(checked)
+      position: absolute
+      margin: 0
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: 0
+      z-index: 1
+      cursor: pointer
+
+      + label
+        position: relative
+        margin: 0
+        padding: 0 0 0 30px
+
+      + label:before
+        content: ''
+        position: absolute
+        left: 0
+        width: 35px
+        height: 21px
+        border-radius: 13px
+        background: #dcdcdc
+
+      + label:after
+        content: ''
+        position: absolute
+        top: 3px
+        left: 2px
+        width: 15px
+        height: 15px
+        border-radius: 50%
+        background: #ededed
+        transition: all .2s
+
+    &:checked
+      + label:before
+        background: #3db39e
+
+      + label:after
+        left: 17px
+
+.compose__textarea
+  display: block
+  width: calc(100% - 78px)
+  border: none
+  resize: none
+  font-size: 16px
+  color: $text-color
+  padding: 8px 60px 8px 10px
+  box-sizing: content-box
+
+  +placeholder
+    color: #cbcbcb
+    font-size: 18px
+
+  &:focus
+    outline: none
+
+.compose__form
+  position: relative
+  border: 1px solid #f7f7f7
+  border-radius: 13px
+
+  .scrollbar-outer > .scroll-element.scroll-y
+    right: -1px
+
+  .scroll-wrapper
+    overflow: visible !important
+
+.compose__post-btn
+  position: absolute
+  right: 4px
+  top: 10px
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  border: none
+  background: image-url('send-button.png') 50% 58% no-repeat, #bcac85
+  background-size: 18px 14px
+
+  &[disabled]
+    opacity: .5
+
+  &--edit
+    right: 10px
+    background: #bcac85
+    border-radius: 7px
+    width: 51px
+    height: 22px
+    padding: 2px
+
+.compose__cancel-edit-btn
+  position: absolute
+  right: 10px
+  top: 36px
+  height: 22px
+  width: 51px
+  padding: 2px
+
+.compose__section-header
+  height: 35px
+  background-color: #f7f7f7
+  color: #7d7764
+  font-size: 16px
+  padding: 7px 10px
+
+  .compose__location &
+    padding: 5px 10px
+
+.compose__blocks-wrapper
+  display: inline-flex
+  flex-wrap: wrap
+  width: 100%
+
+  @media(max-width: 768px)
+    & > div:nth-child(2)
+      margin-top: 15px
+
+.compose__section
+  height: 100%
+  border: 1px solid #f7f7f7
+
+  ul
+    max-height: 288px
+    overflow-y: auto
+
+    @media(max-width: 767px)
+      max-height: 216px
+
+.share-settings__tooltip
+  display: none
+  position: absolute
+  background: #fff
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15)
+  top: 38px
+  right: 0
+  z-index: 2
+  width: 220px
+  padding: 10px
+  line-height: 1
+  text-align: left
+
+  &:after,
+  &:before
+    bottom: 99%
+    border: solid transparent
+    content: " "
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+
+  &:after
+    right: 42px
+    border-bottom-color: #fff
+    border-width: 10px
+    margin-left: -10px
+
+  &:before
+    right: 40px
+    border-bottom-color: #f7f7f7
+    border-width: 12px
+    margin-left: -12px
+
+  p:last-child
+    margin-bottom: 0
+
+.compose__comment-switch,
+.compose__privacy-switch
+  position: relative
+  margin: 15px 0
+
+  body:not(.touch) &:hover
+    .share-settings__tooltip
+      display: block
+
+.compose__options
+  display: none
+
+.compose__share
+  @media(max-width: 375px)
+    margin-top: 14px
+
+  ul
+    padding-left: 10px
+    margin: 15px 0 0
+
+  li
+    display: inline-block
+
+  .compose__tab
+    position: relative
+    padding: 0 3px 5px
+    width: 26px
+    height: 26px
+    background-origin: content-box
+    background-size: contain
+    cursor: pointer
+
+    &:not(:last-child)
+      margin-right: 10px
+
+  .compose__user-type
+    background: image-url('user_type.png') center no-repeat
+
+  .compose__location-tab
+    background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="-269.621 175.622 150 150"><path fill="#989898" d="M-157.471,191.009c-9.922-9.922-23.115-15.387-37.146-15.387c-14.034,0-27.224,5.465-37.146,15.387  c-18.362,18.359-20.644,52.903-4.942,73.832l42.088,60.781l42.025-60.696C-136.827,243.911-139.109,209.368-157.471,191.009z  M-194.132,246.845c-10.571,0-19.176-8.604-19.176-19.176s8.604-19.176,19.176-19.176c10.571,0,19.176,8.604,19.176,19.176  S-183.561,246.845-194.132,246.845z" class="st0"></path></svg>')
+    i
+      font-size: 19px
+      color: #cbcbcb
+
+  .compose__tab--active
+    border-bottom: 1px solid #7d7764
+    i
+      color: #7d7764
+
+    path
+      fill: #7d7764
+
+  .compose__tab--active:before
+    position: absolute
+    bottom: -4px
+    left: 10px
+    content: ''
+    width: 0
+    height: 0
+    border-left: 3px solid transparent
+    border-right: 3px solid transparent
+    border-top: 3px solid #7d7764
+
+.share-settings__title
+  display: inline-block
+  vertical-align: middle
+  font-size: 18px
+  line-height: 1
+  margin-right: 15px
+  color: $text-color
+
+  @media(max-width: 1125px)
+    font-size: 13px
+    margin-right: 0
+
+  @media(max-width: 320px)
+    font-size: 10px
+
+.share-settings__switches
+  display: inline-block
+  font-size: 16px
+  font-weight: 300
+
+  @media(max-width: 1125px)
+    transform: scale(.8)
+
+.compose__list-header
+  +URW-SemiBold-font
+  font-size: 11px
+  text-transform: uppercase
+  padding: 10px 10px 0
+
+.compose__img-preview
+  position: relative
+  display: none
+  padding: 0 12px
+  margin-bottom: 15px
+
+.compose__link-preview
+  padding: 0 12px 12px
+
+  &-wrapper
+    position: relative
+
+  &:empty + .compose__remove-link
+    display: none
+
+.compose__remove-img,
+.compose__remove-link
+  position: absolute
+  top: 5px
+  right: 12px
+  border: none
+  margin: 0
+  font-size: 18px
+  background: none
+  color: #fff
+  text-shadow: 0 0 4px #bbb
+
+  &:hover
+    color: #f7f7f7
+
+.compose__uploaded-img
+  width: 100%
+  height: auto
+
+.compose__upload
+  display: block
+  margin: 0 0 9px 12px
+  width: 23px
+  height: 23px
+  border: none
+  background: image-url('photo-icon.svg') center no-repeat
+
+  &--active
+    background: image-url('photo-icon-dark.svg') center no-repeat
+
+.compose__labels-list
+  padding: 10px
+  margin-bottom: 0
+
+  &:empty
+    display: none
+
+  li
+    display: inline-block
+
+  label
+    +URW-Light-font
+    vertical-align: top
+    margin: 0 3px 3px 0
+    padding: 5px 5px 4px
+    font-size: 13px
+    font-weight: 300
+    color: $text-color
+    background: #f7f7f7
+    border-radius: 5px
+    transition: all .2s ease
+    cursor: pointer
+
+  [type="checkbox"]
+    display: none
+
+
+  [type="checkbox"]:checked + label
+    background-color: #7e7763
+    color: #fff
+
+.list-item--active
+  &:before
+    content: '\e013'
+    font-family: 'Glyphicons Halflings'
+    font-size: 11px
+    color: #ededed
+    padding: 3px 0 0 4px
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 12px
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    background-color:  #7e7763
+
+    .nav__groups &
+      right: 0
+
+.ui-blocked
+  opacity: .65
+  pointer-events: none
+
+.compose__no-results
+  text-align: center
+
+.compose__location
+  position: relative
+
+  input
+    display: inline-block
+    color: $text-color
+    border: none
+    width: calc(100% - 55px)
+    background-color: #f7f7f7
+    margin: 0
+    padding: 0
+
+    &:focus
+      outline: none
+
+    &::-webkit-search-cancel-button
+      -webkit-appearance: searchfield-cancel-button
+
+  .skysearch__spinner
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    height: 100%
+    @include linear-gradient (to bottom, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 35px, rgba(255,255,255,1) 36px, rgba(255,255,255,1) 100%)
+    z-index: 1
+
+  +placeholder
+    color: #aaa
+    font-size: 14px
+
+  .compose__search-btn
+    width: 48px
+    height: 24px
+    color: #fff
+    border: none
+    background-color: #bcac85
+    border-radius: 7px
+    font-size: 13px
+    margin: 0
+    padding: 2px
+
+.compose__list,
+.nav__groups
+  ul
+    padding: 0
+    margin: 0
+    list-style-type: none
+
+.compose__list
+  li:not(:last-child):after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 10px
+    width: calc(100% - 20px)
+    height: 1px
+    background-color: #f7f7f7
+
+  li
+    position: relative
+    padding: 8px 33px 8px 10px
+    color: $text-color
+    cursor: pointer
+
+.compose-tab-hidden
+  display: none
+
+.nav__groups
+  li
+    position: relative
+    padding: 5px 23px 5px 0
+    cursor: pointer

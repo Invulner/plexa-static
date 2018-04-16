@@ -1,0 +1,113 @@
+.comment
+  +clearfix
+
+  &:not(:last-child)
+    margin-bottom: 7px
+
+  &:not(:last-of-type)
+    margin-bottom: 17px
+
+  &--active
+    animation: fadeBackground 1.5s linear .3s
+
+@keyframes fadeBackground
+  0%
+    background-color: rgb(178, 215, 255)
+  50%
+    background-color: rgba(178, 215, 255, .5)
+  100%
+    background-color: rgba(178, 215, 255, 0)
+
+.comment__avatar-block
+  float: left
+  width: 35px
+  height: 35px
+  overflow: hidden
+  background: #0f6b31
+  font-size: 15px
+  color: #fff
+  text-transform: uppercase
+  text-align: center
+  line-height: 38px
+
+a.comment__avatar-block
+  &:hover,
+  &:focus
+    opacity: .8
+    color: #fff
+
+.comment__avatar-img
+  display: block
+  max-width: 100%
+
+.comment__main-block
+  margin-left: 42px
+  position: relative
+
+.comment__author,
+.comment__text
+  +URW-Light-font
+  color: #333
+  font-size: 14px
+  line-height: 16px
+
+.comment__author
+  +URW-SemiBold-font
+  float: left
+  margin-right: 6px
+
+a.comment__author
+  &:hover,
+  &:focus
+    color: #999
+
+.comment__text
+  margin: 0 0 3px
+  word-wrap: break-word
+
+.comment__footer
+  font-size: 0
+
+.comment__footer-part
+  display: inline-block
+  position: relative
+  font-size: 13px
+  line-height: 15px
+  color: #7e7763
+  margin-right: 10px
+
+  &:not(:last-child):after
+    content: ''
+    position: absolute
+    width: 1px
+    height: 1px
+    left: 100%
+    margin-left: 4px
+    top: 50%
+    margin-top: -2px
+    background: #bdbdbd
+
+.comment__footer-part--likes
+  cursor: pointer
+
+.comment__footer-part--likes,
+.comment__footer-part--time
+  font-size: 12px
+  top: 1px
+
+  &:not(:last-child):after
+    margin-top: -2px
+
+.comment__footer-part--likes
+  min-width: 62px
+  color: #333
+  font-weight: 500
+
+  svg
+    width: 9px
+    height: 9px
+    margin-right: 3px
+
+.comment__footer-part--time
+  color: #aaa
+  font-style: italic

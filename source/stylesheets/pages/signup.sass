@@ -1,0 +1,194 @@
+.signup_wrapper
+  padding: 90px 15px 0
+  font-size: 28px
+  background: #fff
+  font-family: 'URWGeometric-Light', sans-serif
+
+  @media(max-height: 710px)
+    padding: 70px 15px 0
+
+.login-form__control-group
+  position: relative
+
+  &:not(:last-of-type)
+    margin-bottom: 55px
+
+  &:last-of-type
+    margin-bottom: 30px
+
+  .help-block
+    position: absolute
+    left: 0
+    right: 0
+    text-align: center
+    color: #a94442
+
+.login-form__label
+  position: absolute
+  bottom: 12px
+  left: 0
+  width: 100%
+  text-align: center
+  font-size: 14px
+  color: #64d3c5
+  margin: 0
+  transition: bottom .15s ease-in
+  pointer-events: none
+
+  .login-form__input--filled  &,
+  .login-form__input--filled ~ &,
+  .login-form__input:focus ~ &
+    bottom: 42px
+    pointer-events: all
+
+.login-form__input
+  background: none
+  border: 0
+  border-bottom: 2px solid #000
+  padding: 0 20px
+  text-align: center
+  width: 100%
+  color: #333
+  height: 42px
+  font-size: 28px
+  line-height: 42px
+  box-shadow: none !important
+  border-radius: 0
+
+  &:focus
+    outline: none
+    border-color: #000
+    box-shadow: none
+
+  &:-webkit-autofill
+    background: transparent
+
+.signup__form
+  max-width: 375px
+  margin: 0 auto
+  text-align: center
+
+.signup__title
+  font-size: 46px
+  line-height: 1
+  margin: 0 0 60px
+  font-weight: 400
+  text-align: center
+  color: #333
+
+  @media(max-width: 440px)
+    font-size: 36px
+    margin-bottom: 40px
+
+  @media(max-height: 710px)
+    margin-bottom: 40px
+
+.login-form__hint
+  font-size: 16px
+  text-align: center
+  margin-bottom: 23px
+
+  &:last-of-type
+    margin-bottom: 28px
+
+  a
+    text-decoration: underline
+    color: #333
+
+    &:hover,
+    &:focus,
+    &:active
+      color: #000
+      text-decoration: none
+
+  @media(max-height: 710px)
+    margin-bottom: 20px
+
+.login-form__user-email
+  color: #64d3c5
+
+.login-form__bordered
+  margin-bottom: 10px !important
+
+  &:before
+    content: ''
+    display: block
+    height: 1px
+    width: 320px
+    margin: 0 auto 22px
+    background: #ececec
+
+.login-form__resend-input
+  display: block
+  width: 200px
+  padding: 5px
+  margin: 10px auto 0
+  border: 1px solid #ececec
+
+  &:focus
+    outline: none
+
+.login-form__submit-btn
+  font-size: 26px
+  color: #fff
+  padding: 5px 45px
+  background: #64d3c5
+  border-radius: 25px
+  border: none
+
+  &:hover,
+  &:focus,
+  &:active
+    color: #fff
+    opacity: .8
+    outline: none
+
+.signup__text
+  margin-bottom: 50px
+  font-size: 25px
+
+.signup_promo
+  padding-top: 30px
+  border-top: 1px solid #b5b4aa
+  margin: 30px 0
+
+.signup__lost-link
+  color: #333
+  font-size: 20px
+
+  &:hover
+    color: #333
+
+.signup-link,
+.signup-link:hover
+  color: #bcac85
+
+.signup_wrapper
+  &.inquiry
+    max-width: 500px
+    .inquiry__title
+      margin-bottom: 40px
+      font-weight: 400
+    .inquiry__description
+      margin: 0 0 20px
+      padding: 0 50px 0 50px
+      font-size: 22px
+      font-weight: 400
+
+      @media(max-width: 440px)
+        padding: 0 25px 0 25px
+
+    form
+      padding: 0 80px 0 80px
+
+      @media(max-width: 440px)
+        padding: 0 25px 0 25px
+
+  form
+    .checkbox
+      font-size: 20px
+      line-height: 22px
+      text-align: left
+    .in-center
+      margin-left: auto
+      margin-right: auto

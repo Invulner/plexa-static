@@ -5,7 +5,7 @@
       .navbar--header.gold-bg{ class: fixed ? 'fixed-top' : '', id: fixed ? 'main__nav' : '' }
         .logo
           %a{ href: '/'}
-            %img{ alt: "Plexa medical social media", src: image_tag("home/text-logo.svg") }
+            = image_tag "home/text-logo.svg", alt: "Plexa medical social media"
         .header__mob-toggle
           .icon.icon__toggle
             .icon__toggle-line-1

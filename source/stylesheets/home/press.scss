@@ -1,0 +1,23 @@
+.press-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0;
+  max-width: 680px;
+}
+
+.press-list__item {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 7px 14px;
+  max-width: 700px;
+
+  @include respond-to-max(480px) {
+    padding: 7px 10px;
+  }
+}
+
+.press-list__link {
+  display: block;
+}

@@ -1,0 +1,176 @@
+.article-image
+  height: 200px
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  &.article-image
+    height: 100px
+
+.disabled
+  opacity: 0.5
+
+.small-icon
+  width: 13px
+  height: 13px
+  display: inline-block
+  text-indent: -9999px
+  background-repeat: no-repeat
+  cursor: pointer
+  margin: 4px 0 0
+  &.facebook
+    background-image: image-url('small-fb-icon.png')
+  &.twitter
+    background-image: image-url('small-twitter-icon.png')
+
+.post-form-section
+  > .tab-content
+    min-height: 500px
+    &.overflow-hidden
+      overflow: hidden
+
+  .x_panel-wrapper
+    height: 100%
+    margin-bottom: -50px
+
+  .tab-pane
+    height: 100%
+    display: none
+    &.active
+      display: block
+
+
+h4.post-to-media
+  margin-top: 25px
+
+.post-time-date
+  margin: 0px
+  border-top: 1px solid #f7f7f7
+  padding-top: 20px
+
+  .glyphicon
+    color: black
+
+  input
+    font-weight: 300
+
+.fb-post:before
+  background-image: url(image-path('app/fb-icon.png'))
+
+.twitter-post:before
+  background-image: url(image-path('app/twitter.png'))
+
+.reset
+  margin-top: 24px
+
+.post-button
+  height: 50px
+  button
+    font-size: 16px
+    padding-left: 30px
+    padding-right: 30px
+
+.modal-body
+  .x_panel
+    padding: 0
+
+
+.tab-header
+  margin-top: 20px
+  margin-bottom: 20px
+.nav-tabs
+  a
+    color: #337ab7
+.x_content
+  margin-top: 0px
+
+#provider-title
+  font-size: 13px
+  font-weight: bold
+  margin-bottom: 10px
+
+.schedule-checkboxes
+  margin: 0px
+  .post-time-date
+    border-top: none
+
+  .radio-inline
+    margin-bottom: 10px
+
+.post-form-section__uploader
+  border: 1px solid #ccc
+  padding: 5px 10px
+  overflow: hidden
+  background: #f2f0f0
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1) inset
+
+  .form-group
+    margin: 0
+
+  .new-post-modal__editable-area &
+    box-shadow: none
+    border: 0
+    padding-left: 0
+    padding-right: 0
+
+  textarea
+    padding: 0
+    border: none
+    box-shadow: none
+    resize: none
+    max-height: 124px
+    margin-bottom: 20px
+    background: #f2f0f0
+    &:read-only
+      background-color: #f2f0f0
+
+  =plus-button($upload-file-passive, $upload-file-active, $upload-file-hover)
+    margin-right: 7px
+    margin-bottom: 7px
+    background-color: $upload-file-passive
+    height: 80px
+    width: 80px
+    display: inline-block
+    vertical-align: middle
+    border-radius: 3px
+    position: relative
+
+    &:before
+      content: ''
+      width: 28px
+      height: 28px
+      border-bottom: 6px solid $upload-file-active
+      border-right: 6px solid $upload-file-active
+      position: absolute
+      top: calc(50% + 3px)
+      left: calc(50% + 3px)
+      +transform(translateY(-100%) translateX(-100%))
+
+    &:after
+      content: ''
+      width: 28px
+      height: 28px
+      border-top: 6px solid $upload-file-active
+      border-left: 6px solid $upload-file-active
+      position: absolute
+      top: calc(50% - 3px)
+      left: calc(50% - 3px)
+
+    &:hover:after
+      border-top: 6px solid $upload-file-hover
+      border-left: 6px solid $upload-file-hover
+
+    &:hover:before
+      border-bottom: 6px solid $upload-file-hover
+      border-right: 6px solid $upload-file-hover
+
+
+  .upload-file
+    +plus-button(#fff, #f2f0f0, #e1e1e1)
+
+  .upload-banner
+    +plus-button(#fff, #6474ff, #5062e1)
+
+.post-to-selector
+  label > img
+    border-radius: 5px
+

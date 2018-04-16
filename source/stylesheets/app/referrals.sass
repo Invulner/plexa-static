@@ -1,0 +1,188 @@
+$input-height: 50px
+$brand-bright-color: #ffcc00
+
+.refer-title
+  margin: 15px 0 5px
+
+.rewards
+  +display(flex)
+  +justify-content(space-between)
+  margin: 32px 0 26px
+  font-size: 13px
+
+  &:not(:last-child)
+    border-bottom: 1px solid #f5f5f5
+    padding-bottom: 40px
+
+.rewards__title
+  margin-right: 6px
+
+.rewards__value
+  +linear-gradient(to right, #dddedd, #fff)
+  border-radius: 3px
+  min-width: 60px
+  line-height: 28px
+  text-align: center
+  position: relative
+
+  &:before
+    content: ''
+    background: image-url('home/pic2.svg') 0 0/contain no-repeat
+    position: absolute
+    top: -9px
+    left: -19px
+    width: 52px
+    height: 52px
+    +transform(rotate(30deg))
+
+.rewards__value--bright
+  background: #fec20e
+
+.inline-middle
+  display: inline-block
+  vertical-align: middle
+
+.share-title
+  margin: 25px 0 5px
+  font-size: 15px
+
+.form-one-string
+  font-size: 0
+
+.form-one-string__input
+  border: none
+  background-color: #f7f7f7
+  line-height: $input-height
+  height: $input-height
+  padding: 10px
+  font-size: 20px
+  +calc(width, "100% - 90px - 7px")
+
+.form-one-string__btn
+  width: 90px
+  margin: 0 0 0 7px
+  line-height: 1.1
+  border-radius: 2px
+  white-space: normal
+  padding: 12px
+  vertical-align: top
+
+.soc-share-btn
+  display: inline-block
+  vertical-align: middle
+  color: #36454f
+  min-width: 175px
+  margin: 6px 0 10px
+  font-size: 0
+  +transition(all .5s)
+
+  &:not(:last-child)
+    margin-right: 60px
+
+  .icon
+    width: 48px
+    height: 48px
+    border-radius: 3px
+
+  .facebook
+    background-color: #3a589e
+
+    svg
+      width: 50px
+      height: 40px
+      margin: 8px 0 0 5px
+
+  .twitter
+    background-color: #5fa9dd
+
+    svg
+      width: 35px
+      height: 30px
+      margin: 10px 0 0 7px
+
+  svg
+    fill: #fff
+
+  span
+    display: inline-block
+    vertical-align: middle
+
+.soc-share-btn__text
+  font-size: 12px
+  padding-left: 12px
+  line-height: 46px
+  border: 1px solid #f5f5f5
+  border-left: none
+  min-width: 129px
+  border-radius: 0 3px 3px 0
+  margin-left: -2px
+
+  .soc-share-btn--fb:hover &
+    border-color: #3a589e
+
+  .soc-share-btn--tw:hover &
+    border-color: #5fa9dd
+
+
+.promo-refer
+  display: block
+  background-color: #eff0f1
+  border: 1px solid #ddd
+  border-radius: 1px
+  padding: 16px 65px 16px 12px
+  position: relative
+  color: #36454f
+  line-height: 15px
+  margin: 0 18px 20px 13px
+
+  .nav-sm &
+    display: none
+
+  &:before
+    content: ''
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background-color: $brand-bright-color
+    position: absolute
+    top: 17px
+    right: 9px
+
+  &:after
+    content: ''
+    border: 7px solid transparent
+    border-left: 14px solid #fff
+    position: absolute
+    top: 29px
+    right: 14px
+
+  &:hover
+    border: 1px solid $brand-bright-color
+    box-shadow: 0 0 0 1px $brand-bright-color inset
+
+.promo-refer__more
+  display: block
+  font-size: 8px
+  line-height: 14px
+
+
+.btn-refer
+  font-size: 13px
+  padding: 7px 12px !important
+  margin: 16px 0 10px 0
+  border-radius: 2px
+  line-height: 1.42857143 !important
+
+  .nav.navbar-nav > li > &
+    color: #7d7764 !important
+
+    &:hover
+      background: none
+
+  @media (max-width: 480px)
+    padding: 7px 5px !important
+
+#email-error
+  display: none
+  padding-top: 10px
+  color: red

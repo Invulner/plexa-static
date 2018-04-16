@@ -13,7 +13,7 @@
               %input.login-form__input
               %label.login-form__label{ for: 'email' } Email address
 
-          %input#user_submit.btn.btn-light-green.join-btn.submit.in-center{ type: 'submit', data: { disable_with: 'Sending request ...' } }
+          %input#user_submit.btn.btn-light-green.join-btn.submit.in-center{ type: 'submit', data: { disable_with: 'Sending request ...' }, value: 'Join now' }
           %p.hint.hint--white
             By clicking join you agree to Plexa's
             = link_to 'terms and conditions', '#terms-tab', class: 'inline-link'
@@ -106,4 +106,4 @@
               %input.btn.btn-primary.mailchimpButton{ type: "submit", value: "Subscribe" }
           .footer__logo
             %a{ href: "/" }
-              %img.footer--logo-img{ alt: "Plexa - Medical social network - logo", src: image_tag("home/text-logo.svg") }
+              = image_tag "home/text-logo.svg", alt: "Plexa - Medical social network - logo", class: 'footer--logo-img'

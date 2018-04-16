@@ -1,0 +1,63 @@
+.page-verify-wrapper
+  +display(flex)
+
+.page-verify
+  position: relative
+  font-size: 28px
+  text-align: left
+  width: 100%
+  min-height: 100vh
+  +display(flex)
+  +align-items(center)
+  +justify-content(space-between)
+  padding: 0 0 100px
+
+  @media only screen and (max-width: 960px)
+    +flex-direction(column)
+    +justify-content(center)
+    text-align: center
+
+  @media only screen and (max-width: 760px)
+    font-size: 24px
+    padding: 20px 0 120px
+
+.page-verify__column
+  width: 56%
+  padding: 30px
+
+  @media only screen and (max-width: 1270px)
+    padding: 30px 20px
+
+  @media only screen and (max-width: 960px)
+    width: 100%
+    padding: 30px 0
+
+.page-verify__column--sm
+  max-width: 44%
+
+  @media only screen and (max-width: 960px)
+    max-width: 100%
+
+.page-verify__title
+  font-size: 50px
+  line-height: 1.1
+  font-weight: 400
+  margin-bottom: 24px
+
+  &:last-of-type
+    margin-bottom: 38px
+
+  @media only screen and (max-width: 960px)
+    font-size: 45px
+
+.page-verify__form
+  padding-top: 10px
+  width: 70%
+  float: right
+  @media only screen and (max-width: 960px)
+    margin: 0 auto
+    float: initial
+    max-width: 450px
+
+.page-verify__form-title
+  margin-bottom: 30px

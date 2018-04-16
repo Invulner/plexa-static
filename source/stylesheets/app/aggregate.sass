@@ -1,0 +1,557 @@
+.facebook-icon
+  width: 30px
+  height: 30px
+  display: inline-block
+  text-indent: -9999px
+  float: left
+  margin-top: 10px
+  margin-left: 10px
+  margin-right: 5px
+  cursor: pointer
+
+.twitter-icon
+  width: 25px
+  height: 25px
+  display: inline-block
+  text-indent: -9999px
+  background-image: image-url('twitter-icon.png')
+  background-repeat: no-repeat
+  float: left
+  margin-right: 5px
+  cursor: pointer
+
+.like-icon, .share-icon, .comments-icon
+  display: inline-block
+  vertical-align: text-top
+  svg
+    width: 13px
+    height: 13px
+
+.share-icon svg, .comments-icon svg
+  margin-right: 4px
+
+.like-icon svg
+  margin-right: 3px
+
+.post-header
+  margin-top: 8px
+  margin-left: 8px
+
+.post-title
+  display: block
+  font-size: 13px
+  font-weight: bold
+  line-height: 10px
+
+.post-handle
+  display: inline
+  font-size: 11px
+
+.post-author
+  font-size: 12px
+  font-weight: bold
+  margin-top: 5px
+
+.post-image
+  margin-top: 10px
+  margin-left: 8px
+
+.post-media
+  text-align: center
+
+.post-image-modal
+  margin-top: 10px
+  margin-left: 8px
+  max-width: 584px
+
+.post-shares
+  display: inline-block
+  margin-top: 10px
+  margin-left: 10px
+  font-size: 14px
+
+.post-likes
+  float: right
+  display: inline-block
+  font-size: 14px
+  margin-top: 10px
+  margin-right: 10px
+
+.post-likes span,
+.post-shares span
+  display: inline-block
+
+.post-content
+  display: block
+  display: -webkit-box
+  margin-top: 10px
+  margin-left: 8px
+  margin-right: 8px
+  margin-bottom: 8px
+  font-size: 14px
+  word-wrap: break-word
+  max-height: 400px
+  -webkit-line-clamp: 20
+  -webkit-box-orient: vertical
+  overflow: hidden
+  text-overflow: ellipsis
+  line-height: 1.49
+
+.post-article-content
+  border: 1px solid #eeeeee
+  padding: 10px
+  a
+    color: initial
+
+.post-article-header
+  font-size: 13px
+  font-weight: bold
+
+.post-time-since
+  float: right
+  margin-top: 10px
+  margin-right: $post-time-margin
+  font-size: 13px
+  line-height: 32px
+
+.grid
+  background: #FFF
+  padding: 5px
+  margin-bottom: 20px
+  border-radius: 5px
+  clear: both
+
+.col2 img
+  max-width: 164px
+
+.grid-item
+  margin: 5px
+  border: 1px solid #D3D3D3
+  background-color: #FFFAFA
+
+.fancybox,
+.fancybox:hover,
+.fancybox-link:visited
+  color: #000
+  text-decoration: none
+
+.videos img
+  width: 100%
+  height: auto
+
+a.video
+  display: block
+  position: relative
+
+a.video span
+  width: 100%
+  height: 100%
+  position: absolute
+  background: image-url('play-button.svg') no-repeat
+  background-position: 50% 50%
+  background-size: 25%
+
+  @media (max-width: 767px)
+    width: 50px
+    height: 50px
+    top: 50%
+    left: 50%
+    margin-top: -25px
+    margin-left: -25px
+    background-size: 50px
+
+.modal-video
+  text-align: center
+
+.post-share
+  display: inline-block
+  button, a[role='button']
+    border-radius: 0px
+    padding: 0px 9px
+  margin-left: 8px
+
+.aggregate-header
+  display: inline-block
+  width: 80%
+
+.filter-form
+  float: right
+  margin-top: 19px
+  padding-bottom: 9px
+  border-bottom: 1px solid #eeeeee
+  width: 20%
+
+.grid-post-item
+  padding: 0 10px 20px
+
+  @media (min-width: 1700px)
+    width: 20%
+    padding-left: 10px
+
+  @media (max-width: 1699px) and (min-width: 1440px)
+    width: 25%
+    padding-left: 10px
+
+  @media (max-width: 1439px) and (min-width: 750px)
+    width: 33.333%
+    padding-left: 10px
+
+  @media (max-width: 750px)
+    width: 50%
+
+    a.video
+      float: none
+
+  @media (max-width: 480px)
+    width: 100%
+
+.post-icon-image,
+.facebook-icon-image
+  width: 32px
+  margin-left: 10px
+
+.twitter-icon-image
+  width: 32px
+  margin-left: 10px
+
+.post-title-link
+  color: #000 !important
+
+.ag-post-share
+  padding: 0 10px 5px
+  +display(flex)
+  +justify-content(space-between)
+
+  button
+    display: inline-block
+    width: 29%
+    margin: 0 0 5px
+
+    @media (max-width: 1124px)
+      .text-box
+        display: none
+
+  .ui-soc-icon
+    margin: 0
+
+.ag-post-share a
+  color: #FFF
+  cursor: pointer
+
+.grid-posts
+  opacity: 0
+  +transition(opacity 0.4s)
+  @media (max-width: 1124px) and (min-width: 767px)
+    width: 100%
+    margin: 0 auto
+
+.grid-posts.visible
+  opacity: 1
+
+.sort_list
+  padding-right: 0
+  color: #36454f
+  border: 1px solid #e8e8e8
+  min-width: 160px
+  background: #FFF
+  height: 30px
+  border-radius: 5px
+  line-height: 28px
+  margin-bottom: 10px
+  a
+    color: #36454f
+    padding: 10px
+
+.posts-order
+  margin-bottom: 15px
+  float: right
+
+  @media (max-width: 1124px) and (min-width: 767px)
+    margin-right: 4%
+
+  @media (max-width: 767px)
+    float: none
+    margin: 0 0 15px
+
+.grid-wrapper
+  position: relative
+
+.grid-posts-loading
+  position: absolute
+  top: 30px
+  left: 50%
+  +translate(-50%, 0)
+  opacity: 1
+  +transition(opacity 0.4s)
+
+  .visible + &
+    opacity: 0
+
+.post-share-icon
+  margin-left: 5px
+
+.ag-post-loading
+  display: none
+  padding-top: 30px
+  text-align: center
+
+.ag-post-loading-icon
+  display: inline-block
+  width: 50px
+
+.magnet-slider
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+  .carousel-control
+    position: absolute
+    top: 50%
+    margin-top: -25px
+    width: 50px
+    height: 50px
+    border-top: 2px solid #fff
+    border-right: 2px solid #fff
+    background: none
+    opacity: .5
+    +transition(opacity .5s)
+
+    &:hover
+      opacity: 1
+
+  .carousel-control.left
+    left: 20px
+    +transform(rotate(-135deg))
+
+  .carousel-control.right
+    right: 20px
+    +transform(rotate(45deg))
+
+  .left
+    float: none
+
+.fancybox-magnet
+  .fancybox-inner
+    border-radius: 4px 0 0 4px
+
+  .post-full-content__inner
+    font-size: 0
+
+  .modal-photo
+    display: inline-block
+    vertical-align: top
+    width: 650px
+    max-width: 65%
+    height: 60vh
+    margin: 0
+    overflow: hidden
+    position: relative
+
+    @media (max-width: 767px)
+      width: 100%
+      max-width: 100%
+      min-width: 70vw
+
+  .post-media
+    width: 100%
+    height: 60vh
+    margin: 0
+
+  .modal-video
+    position: relative
+    background-color: #000
+    +display(inline-flex)
+    +align-items(center)
+    width: 650px
+    max-width: 65%
+    height: auto
+    margin: 0
+    overflow: hidden
+
+    @media (max-width: 767px)
+      max-width: 100%
+      width: 100%
+
+    video
+      width: 100%
+
+  .post-full-content__text
+    display: inline-block
+    vertical-align: top
+    width: 350px
+    max-width: 35%
+    padding: 10px
+
+    @media (max-width: 767px)
+      width: 100%
+      max-width: 100%
+
+  .post-full-content__text--full-width
+    max-width: 100%
+    min-height: 60vh
+
+.post-full-content__text
+  .new-post-modal__editable-area &
+    border: 1px solid #bcac85
+    border-top-color: transparent
+    background: #fff
+
+.half-opacity
+  opacity: 0.5
+
+.post-form-section
+  .post-full-content
+    display: block
+    overflow: hidden
+  .modal-photo
+    display: inline-block
+    vertical-align: top
+    width: 100%
+    height: 60vh
+    margin: 0
+    overflow: hidden
+    position: relative
+    max-height: 300px
+
+    @media(max-width: 440px)
+      height: 30vh
+
+  .item
+    height: 100%
+
+  .post-media
+    width: 100%
+    height: 100%
+    margin: 0
+
+  .tab-pane#content
+    overflow-y: auto
+    overflow-x: hidden
+
+.video-container
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 30px
+  overflow: hidden
+  max-height: 200px
+  height: inherit
+  width: inherit
+
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.ag-post-title
+  &.news
+    a
+      color: initial
+
+.post-media
+  background-repeat: no-repeat
+  background-color: #000
+  background-position: 50% 50%
+  -o-background-size: contain
+  -moz-background-size: contain
+  -webkit-background-size: contain
+  background-size: cover
+
+.content-magnet-filters
+  margin-bottom: 12px
+
+  label
+    margin-right: 10px
+
+    &.checkbox
+      display: block
+
+      input
+        margin-right: 4px !important
+
+    &.last
+      margin-left: 10px
+
+  .multiselect-container > li > a
+    white-space: initial
+
+@media (min-width: 767px)
+  .content-magnet-filters--news
+    .form-group .multiselect-native-select .dropdown-menu
+      left: auto
+      right: 0
+
+@media (max-width: 760px)
+  .content-magnet-filters
+    text-align: left
+
+@media (min-width: 760px)
+  .content-magnet-filters
+    .form-group:nth-child(1)
+      margin-right: 10px
+
+@media (min-width: 760px) and (max-width: 994px)
+  .content-magnet-filters
+    margin-right: 10px
+
+#my-feeds-filter
+  padding-right: 0px
+  padding-left: 0px
+
+span.post-hashtag
+  color: #1DA1F2
+
+.content-magnet-filters
+  .multiselect-native-select
+    button
+      height: 34px
+      width: 114px
+
+    .disabled + .btn-group
+      opacity: .5
+      pointer-events: none
+
+  .submit-button
+    margin-bottom: 0px
+    height: 34px
+    margin-left: 10px
+
+  .multiselect-container
+    max-height: 282px
+    overflow-y: auto
+    min-width: 200px
+    right: 0
+    left: auto !important
+    margin-top: 2px
+
+    li.active
+      a
+        background-color: white
+        color: #262626
+        &:hover
+          background-color: #f5f5f5
+          color: #262626
+    label.checkbox
+      input[type=checkbox]
+        vertical-align: middle
+
+  @media (max-width: 440px)
+    .multiselect-native-select
+      button, .btn-group
+        width: 100%
+    ul.dropdown-menu
+      width: 100%
+    .submit-button
+      margin-left: 0px
+      width: 100%
+    input[type=checkbox]
+      margin-top: 2px
+
+.show-content
+  cursor: pointer
+
+  [data-decision="rejected"] &
+    cursor: auto
