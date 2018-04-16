@@ -18,6 +18,8 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 page '/index.html', layout: 'home'
+page '/consult.html', layout: 'consult'
+page '/consult/*', layout: 'consult'
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
