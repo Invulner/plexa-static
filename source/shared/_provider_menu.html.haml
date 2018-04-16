@@ -1,0 +1,43 @@
+.navigation__section
+  %h6.navigation__title Social networks
+  %ul.nav.side-menu
+    %li.share-data.new-post-menu
+      = link_to '#', class: 'slide-menu__link new-post' do
+        %i.navigation__icon.navigation__icon--post
+          = image_tag 'app/nav/new-post.svg', alt: 'post'
+        %span.navigation__item-text
+          New Post
+        %span.slide-menu__link-tooltip
+          Create new content and post it to one or many connected platforms.
+    %li
+      = link_to '#', class: 'slide-menu__link' do
+        %i.navigation__icon.navigation__icon--scheduled
+          = image_tag 'app/nav/scheduled-post.svg', alt: 'scheduled'
+        %span.navigation__item-text
+          Scheduled Posts
+        %span.slide-menu__link-tooltip
+          A monthly display of your upcoming posts. Schedule posts & campaigns.
+    %li
+      = link_to '#', class: 'slide-menu__link' do
+        %i.navigation__icon.navigation__icon--ad-campaign
+          = image_tag 'app/nav/ad-campaign.svg', alt: 'ad campaign'
+        %span.navigation__item-text
+          Ad Campaigns
+        %span.slide-menu__link-tooltip
+          Reach a larger audience with paid advertising.
+    %li
+      = link_to '#', class: 'analytics-menu-link slide-menu__link' do
+        %i.navigation__icon.navigation__icon--analytics
+          = image_tag 'app/nav/analytics.svg', alt: 'analytics'
+        %span.navigation__item-text
+          Analytics
+        %span.slide-menu__link-tooltip
+          Detailed infographics about your audience for each platform.
+    %li
+      = link_to '#', class: 'slide-menu__link' do
+        %i.navigation__icon.navigation__icon--my-feeds
+          = image_tag 'app/nav/my-feeds.svg', alt: 'feeds'
+        %span.navigation__item-text
+          My Feeds
+        %span.slide-menu__link-tooltip
+          Direct feeds from your social media home pages, all in one place.

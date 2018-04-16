@@ -8,7 +8,7 @@ end
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
-set :fonts_dir,  "fonts"
+set :fonts_dir, "fonts"
 
 set :layout, 'application'
 
