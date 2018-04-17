@@ -1,0 +1,38 @@
+#followed-modal #pages-container {
+  max-height: 500px;
+  min-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+#followed-modal .large-top-buffer {
+  margin-top: 20px; }
+#followed-modal .top-buffer {
+  margin-top: 10px; }
+#followed-modal #checkbox-text {
+  margin-right: 6px; }
+#followed-modal #submit-button {
+  height: 30px; }
+#followed-modal #skip-button {
+  height: 30px; }
+#followed-modal #followed-form .media-body {
+  vertical-align: middle; }
+#followed-modal #followed-form .media-object {
+  width: 64px;
+  height: 64px; }
+@media(max-width: 420px) {
+  #followed-modal #followed-form .media-object {
+    width: 45px;
+    height: 45px; } }
+#followed-modal #followed-form .page-checkbox, #followed-modal #followed-form .title {
+  align-items: center;
+  display: flex;
+  line-height: 1.2; }
+#followed-modal #followed-form .title {
+  width: 90%;
+  overflow: hidden; }
+@media (max-width: 490px) {
+  #followed-modal #followed-form .title {
+    width: 80%; } }
+#followed-modal #followed-form .media:hover {
+  cursor: pointer; }
+#followed-modal #followed-form .media input[type=checkbox]:hover {
+  cursor: pointer; }

@@ -1,0 +1,50 @@
+.fc-unthemed .fc-today {
+  background: #ffcc00; }
+
+.fc-event, .fc-event:hover {
+  background: aliceblue;
+  color: #001f30;
+  text-decoration: none;
+  border: none; }
+
+.calendar-social-icon {
+  display: inline-block;
+  margin: 5px 3px 8px 3px;
+  vertical-align: middle; }
+
+.calendar-pending-icon {
+  margin-right: 3px;
+  color: orange; }
+
+.calendar-error-icon {
+  margin-right: 3px;
+  color: red; }
+
+.fc-event .fc-content .fc-title {
+  display: block; }
+
+@media (max-width: 568px) {
+  .fc button {
+    padding: 0 5px; }
+  .fc .fc-toolbar {
+    position: relative;
+    margin-bottom: 40px; }
+    .fc .fc-toolbar .fc-center {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      margin-top: 10px;
+      width: 100%;
+      text-align: center; }
+      .fc .fc-toolbar .fc-center > h2 {
+        float: none; }
+    .fc .fc-toolbar .fc-left {
+      float: none;
+      overflow: hidden; }
+      .fc .fc-toolbar .fc-left .fc-next-button {
+        float: right; }
+    .fc .fc-toolbar .fc-right {
+      display: inline-block;
+      margin-top: 10px; }
+    .fc .fc-toolbar > * > * {
+      margin-left: 5px; } }

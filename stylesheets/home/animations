@@ -1,0 +1,11 @@
+@keyframes hoverlink {
+  to {
+    padding-left: 0.2em;
+    padding-right: 0.4em; } }
+@keyframes step-rotate {
+  3%, 33% {
+    transform: rotate(120deg); }
+  37%, 67% {
+    transform: rotate(240deg); }
+  70%,100% {
+    transform: rotate(360deg); } }

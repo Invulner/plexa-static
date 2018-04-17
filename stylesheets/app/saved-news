@@ -1,0 +1,23 @@
+.news-title {
+  padding: 10px; }
+  .news-title .created-time {
+    margin-top: 1px;
+    margin-right: 2px;
+    width: 15%;
+    float: right; }
+
+.news-text {
+  width: 75%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  float: left; }
+
+.fancybox-magnet .post-full-content__text.without-image {
+  max-width: 100%; }
+
+.share-news h4.post-to-media:first-child {
+  margin-top: 0px; }
+
+.ag-post-header .ag-post-title.news {
+  margin-left: 8px; }

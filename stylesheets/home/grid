@@ -1,0 +1,26 @@
+.grid-wrapper {
+  position: relative; }
+
+.grid-posts {
+  opacity: 1; }
+  @media (max-width: 1124px) and (min-width: 767px) {
+    .grid-posts {
+      width: 100%;
+      margin: 0 auto; } }
+
+.grid-post-item {
+  padding: 0 10px 20px; }
+  @media (min-width: 1440px) {
+    .grid-post-item {
+      width: 24.5%;
+      padding-left: 10px; } }
+  @media (max-width: 1439px) and (min-width: 750px) {
+    .grid-post-item {
+      width: 33.333%;
+      padding-left: 10px; } }
+  @media (max-width: 750px) {
+    .grid-post-item {
+      width: 50%; } }
+  @media (max-width: 480px) {
+    .grid-post-item {
+      width: 100%; } }

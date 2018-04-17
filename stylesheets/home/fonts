@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Influenza";
+  src: url("/fonts/home/URWGeometric-ExtraLight.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: "Influenza";
+  src: url("/fonts/home/URWGeometric-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "Influenza";
+  src: url("/fonts/home/URWGeometric-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: bold; }
