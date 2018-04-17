@@ -1,1 +1,12 @@
-%p feed page
+= partial 'shared/sm_icons'
+
+#discuss
+  .attention-block
+  .discuss-feed
+    .flex-row.flex-row--three-columns
+      = partial 'feed/left_sidebar'
+      = partial 'feed/main'
+      = partial 'feed/right_sidebar'
+
+
+= javascript_include_tag 'feed'
