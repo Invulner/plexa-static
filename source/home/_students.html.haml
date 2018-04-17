@@ -1,0 +1,31 @@
+%section.home-section.home-section--students#students
+  .contentWrapper
+    %h2.home-section__title
+      Plexa for
+      %span
+        Medical Students
+
+    .home-section__panel
+      %ul.home-section__list
+        %li.home-section__list-item
+          .home-section__list-img-block
+            = image_tag 'home/new/icons/benchmark-comparison-bw.svg', alt: 'benchmarking', class: 'home-section__list-img'
+          %span.home-section__list-caption
+            Anonymous benchmarking
+        %li.home-section__list-item
+          .home-section__list-img-block
+            = image_tag 'home/new/icons/job-matching.svg', alt: 'employment prospects', class: 'home-section__list-img'
+          %span.home-section__list-caption
+            Employment prospects
+        %li.home-section__list-item
+          .home-section__list-img-block
+            = image_tag 'home/new/icons/workplace-communication.svg', alt: 'communication', class: 'home-section__list-img'
+          %span.home-section__list-caption
+            Student communities
+        %li.home-section__list-item
+          .home-section__list-img-block
+            = image_tag 'home/new/icons/personalised-research-bw.svg', alt: 'personalised research', class: 'home-section__list-img'
+          %span.home-section__list-caption
+            Personalised research
+
+      = link_to 'Find out more', '/students', class: 'btn btn-large btn-green home-section__list-btn'

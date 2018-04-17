@@ -1,0 +1,97 @@
+.quote-section {
+  padding-bottom: 31px;
+  max-width: 1100px;
+  margin: 0 auto !important;
+}
+
+.quote {
+  background: #fff;
+  padding: 40px 47px 19px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+
+  @include respond-to-max(1200px) {
+    padding: 36px 30px 24px;
+  }
+
+  @include respond-to-max(768px) {
+    padding: 24px 24px 16px;
+  }
+
+  @include respond-to-max(580px) {
+    padding: 18px 12px 12px;
+  }
+}
+
+.quote__text {
+  color: #888;
+  font-size: 32px;
+  line-height: 32px;
+  margin: 0;
+
+  &:not(:last-of-type) {
+    margin-bottom: 28px;
+  }
+
+  @include respond-to-max(1200px) {
+    font-size: 28px;
+    line-height: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include respond-to-max(768px) {
+    font-size: 24px;
+    line-height: 26px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @include respond-to-max(580px) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.quote__footer {
+  text-align: right;
+  color: #7d7863;
+  font-size: 24px;
+  padding-top: 4px;
+
+  @include respond-to-max(1200px) {
+    font-size: 22px;
+  }
+
+  @include respond-to-max(768px) {
+    font-size: 20px;
+  }
+
+  @include respond-to-max(580px) {
+    font-size: 16px;
+  }
+}
+
+.quote__author {
+  font-family: serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-right: 12px;
+  letter-spacing: 1px;
+
+  @include respond-to-max(1200px) {
+    font-size: 28px;
+  }
+
+  @include respond-to-max(768px) {
+    font-size: 24px;
+  }
+
+  @include respond-to-max(580px) {
+    font-size: 20px;
+    margin-right: 6px;
+  }
+}

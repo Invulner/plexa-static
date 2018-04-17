@@ -1,0 +1,33 @@
+%section.home-section.home-section--charities#charities
+  .contentWrapper
+    %h2.home-section__title
+      Plexa for
+      %span
+        Medical Charities
+
+    .home-section__panel
+      %ul.home-section__list
+        %li.home-section__list-item
+          .home-section__list-img-block
+            = image_tag 'home/new/icons/increase-charity-donations.svg', alt: 'charity donations', class: 'home-section__list-img'
+          %span.home-section__list-caption
+            Increased donations
+        %li.home-section__list-item
+          .home-section__list-img-block
+            = image_tag 'home/new/icons/brand-ambassador-bw.svg', alt: 'brand ambassador', class: 'home-section__list-img'
+          %span.home-section__list-caption
+            Brand ambassadors
+        %li.home-section__list-item
+          .home-section__list-img-block
+            = image_tag 'home/new/icons/social-media-marketing-tools-bw.svg', alt: 'media marketing tools', class: 'home-section__list-img'
+          %span.home-section__list-caption
+            Boost
+            %br
+            exposure
+        %li.home-section__list-item
+          .home-section__list-img-block
+            = image_tag 'home/new/icons/connect-medical-specialty-area-bw.svg', alt: 'community engagement', class: 'home-section__list-img'
+          %span.home-section__list-caption
+            Community engagement
+
+      = link_to 'Find out more', '/charities', class: 'btn btn-large btn-green home-section__list-btn'

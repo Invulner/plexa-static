@@ -1,0 +1,16 @@
+%panel
+  @extend %panel__shadow
+  background: #fff
+  border-radius: 2px
+  padding: 0 13px
+
+  &:not(:last-child)
+    margin-bottom: 13px
+
+%panel--brown-border
+  @extend %panel
+  @extend %panel__shadow
+  border-top: 2px solid #7e7763
+
+%panel__shadow
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .15)

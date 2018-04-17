@@ -1,0 +1,30 @@
+%main#landing
+  .contentWrapper
+    %article.hero__inner.hero__inner--main
+      .hero__main
+        %h1.hero__title The healthcare network
+        %p.hero__text Connecting clinics, doctors, medical researches, medical students and business.
+        %p.hero__text A fully integrated medical ecosystem, powered by AI.
+        #hero-actions
+          %a.btn.btn-aqua.hero__btn{ href: '/sign_up' } Sign up for free
+
+      .hero__aux
+        .partnership
+          %h3.partnership__title With support from
+          %ul.partnership__list
+            %li.partnership__item
+              = link_to 'https://www.business.qld.gov.au/industries/science-it-creative/ict/developing-idea', target: '_blank', class: 'partnership__link' do
+                = image_tag 'home/new/queensland-government-logo.png', alt: 'Queensland Government', width: '128'
+            %li.partnership__item
+              = link_to 'http://advance.qld.gov.au/industry/ignite-ideas/round-three-recipients.aspx', target: '_blank', class: 'partnership__link' do
+                = image_tag 'home/new/advance-queensland.png', alt: 'Advance Queensland', width: '174'
+  #inner-nav
+    %ul.hero__nav.nav
+      %li.hero__nav-item
+        = link_to 'Clinics', '#clinics', class: 'hero__nav-link'
+      %li.hero__nav-item
+        = link_to 'Doctors', '#doctors', class: 'hero__nav-link'
+      %li.hero__nav-item
+        = link_to 'Medical Charities', '#charities', class: 'hero__nav-link'
+      %li.hero__nav-item
+        = link_to 'Medical Students', '#students', class: 'hero__nav-link'

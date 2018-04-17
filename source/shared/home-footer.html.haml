@@ -1,0 +1,109 @@
+#wrapper-footer.wrapper
+  .container-fluid
+    .row.network-bg.footer--banner
+      .col-md-8.mx-auto
+        %h3 An interconnected world of healthcare at your fingertips.
+        %p Free for everyone.
+        %form.simple_form.new_user
+          .login-form
+            .login-form__control-group
+              %input.login-form__input
+              %label.login-form__label{ for: 'full_name' } Full name
+            .login-form__control-group
+              %input.login-form__input
+              %label.login-form__label{ for: 'email' } Email address
+
+          %input#user_submit.btn.btn-light-green.join-btn.submit.in-center{ type: 'submit', data: { disable_with: 'Sending request ...' }, value: 'Join now' }
+          %p.hint.hint--white
+            By clicking join you agree to Plexa's
+            = link_to 'terms and conditions', '#terms-tab', class: 'inline-link'
+
+    .row.footer--nav-links
+      .contentWrapper
+        %footer#colophon.site-footer
+          .flexi
+            .footer__left
+              .footer__links
+                .footer--nav-title
+                  %h4 Plexa
+                %ul#Influenza.list-group
+                  %li.nav-item
+                    = link_to 'Clinics', '/clinics', class: 'nav-link'
+                  %li.nav-item
+                    = link_to 'Doctors', '/doctors', class: 'nav-link'
+                  %li.nav-item
+                    = link_to 'Pharmacists', '/pharmacists', class: 'nav-link'
+                  %li.nav-item
+                    = link_to 'News', '/news', class: 'nav-link'
+                  %li.nav-item
+                    = link_to 'Research', '/research', class: 'nav-link'
+              .footer__links
+                .footer--nav-title
+                  %h4 Research
+                %ul.list-group
+                  %li.nav-item
+                    %a.nav-link{ href: "/research/general-medicine-internal-medicine" } General Medicine / Internal Medicine
+                  %li.nav-item
+                    %a.nav-link{ href: "/research/general-practice-family-medicine" } General Practice (Family Medicine)
+                  %li.nav-item
+                    %a.nav-link{ href: "/research/immunology-allergy" } Immunology & Allergy
+                  %li.nav-item
+                    %a.nav-link{ href: "/research/ophthalmology" } Ophthalmology
+                  %li.nav-item
+                    %a.nav-link{ href: "/research/oral-maxillofacial-surgery" } Oral & Maxillofacial Surgery
+              .footer__links
+                .footer--nav-title
+                  %h4 News
+                %ul.list-group
+                  %li.nav-item
+                    %a.nav-link{ href: "/news/addiction-medicine" } Addiction Medicine
+                  %li.nav-item
+                    %a.nav-link{ href: "/news/general-practice-family-medicine" } General Practice (Family Medicine)
+                  %li.nav-item
+                    %a.nav-link{ href: "/news/intensive-care-medicine" } Intensive Care Medicine
+                  %li.nav-item
+                    %a.nav-link{ href: "/news/neurology" } Neurology
+                  %li.nav-item
+                    %a.nav-link{ href: "/news/plastic-surgery" } Plastic Surgery
+
+            .footer__right
+              .footer__links
+                .footer--nav-title
+                  %h4 Connect
+                %ul.list-group
+                  %li.nav-item
+                    %a.nav-link{ href: "https://facebook.com/plexanetwork", title: "Facebook" } Facebook
+                  %li.nav-item
+                    %a.nav-link{ href: "https://twitter.com/plexanetwork", title: "Twitter" } Twitter
+                  %li.nav-item
+                    %a.nav-link{ href: "https://linkedin.com/plexanetwork", title: "LinkedIn" } LinkedIn
+                  %li.nav-item
+                    %a.nav-link{ href: "https://plexa.ai/blog", title: "Plexa Blog" } Blog
+              .footer__links
+                .footer--nav-title
+                  %h4 Members
+                %ul.list-group
+                  %li.nav-item
+                    %a.nav-link{ href: '/sign_up', title: "Sign up" } Sign up
+                  %li.nav-item
+                    %a.nav-link{ href: '/sign_in', title: "Login" } Login
+                .footer--nav-title.two-stack
+                  %h4 Legals
+                %ul.list-group
+                  %li.nav-item
+                    %a.nav-link{ href: '#policy-tab', title: "Privacy Policy" } Privacy Policy
+                  %li.nav-item
+                    %a.nav-link{ href: '#terms-tab', title: "Terms of Service" } Terms of Service
+    .row.footer--signup-logo
+      .contentWrapper
+        .flexi
+          .newsletter__subscribe
+            %span.newsletter__text Get medical news and research delivered to your inbox
+            %form#mailchimp--newsletter{ action: '//plexa.us15.list-manage.com/subscribe/post?u=036b0fae56420640ef7756e6d&id=6cbc71cad4', method: 'post', name: 'mc-embedded-subscribe-form', novalidate: '', target: '_blank' }
+              %input.newsletter--signup-field{ name: "EMAIL", placeholder: "Your email", required: true, type: "email" }
+              %div{ 'aria-hidden' => 'true', style: 'position: absolute; left: -5000px;' }
+                %input.hidden{ name: 'b_036b0fae56420640ef7756e6d_dcd9ae2f93', tabindex: '-1', type: 'text' }
+              %input.btn.btn-primary.mailchimpButton{ type: "submit", value: "Subscribe" }
+          .footer__logo
+            %a{ href: "/" }
+              = image_tag "home/text-logo.svg", alt: "Plexa - Medical social network - logo", class: 'footer--logo-img'

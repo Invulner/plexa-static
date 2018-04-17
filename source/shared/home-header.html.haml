@@ -1,0 +1,29 @@
+%a.skip-link.screen-reader-text.sr-only{ href: "#content" } Skip to content
+%header
+  .container-fluid
+    .row
+      .navbar--header.gold-bg.fixed-top#main__nav
+        .logo
+          %a{ href: '/'}
+            = image_tag "home/text-logo.svg", alt: "Plexa medical social media"
+        .header__mob-toggle
+          .icon.icon__toggle
+            .icon__toggle-line-1
+            .icon__toggle-line-2
+            .icon__toggle-line-3
+        .header__nav
+          %nav.header__nav-wrapper
+            %ul#menu-main-navigation.nav
+              %li.nav-item
+                = link_to 'Clinics', '/clinics'
+              %li.nav-item
+                = link_to 'Doctors', '/doctors'
+              %li.nav-item
+                = link_to 'Research', '/research'
+              %li.nav-item
+                = link_to 'News', '/news'
+              %li.nav-item
+                = link_to 'Blog', '/blog'
+            .header__account
+              %a.btn.btn-transparent.header__btn{ href: '/sign_in' } Log In
+              %a.btn.btn-gold.header__btn{ href: '/sign_up' } Sign up

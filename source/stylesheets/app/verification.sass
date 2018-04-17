@@ -1,0 +1,170 @@
+.referrals-page
+  min-height: 350px
+  @media (max-width: 750px)
+    min-height: auto
+
+.verification-btn,
+.verification-submit
+  display: inline-block
+  border-radius: 0
+  border: none
+  margin: 0
+  font-size: 15px
+  width: 110px
+  vertical-align: top
+
+#verification_identity
+  display: none
+
+#verification_address
+  display: none
+
+.verification-content
+  min-height: 204px
+
+  .info-block__head
+    background: #f8f8f8
+    color: #7d7764
+
+  ul
+    list-style-type: none
+    padding: 0
+
+  li:before
+    content: '- '
+
+.verification-submition
+  padding-bottom: 55px
+
+.verification-submit--identity,
+.verification-btn--identity
+  .verification-row--photo-verified &,
+  .verification-row--photo-not-verified &
+    display: none
+
+.verification-submit--identity
+  border-radius: 14px
+
+.verification-sidebar
+  min-height: 417px
+  height: 96%
+
+  @media (max-width: 767px)
+    min-height: 380px
+
+.verification-lock
+  width: 25px
+  margin-right: 5px
+
+.verification-encryption
+  position: absolute
+  bottom: 15px
+  left: 25px
+  margin-bottom: 40px
+  font-size: 14px
+
+.verification-row
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display:         flex
+
+  @media (max-width: 767px)
+    display: block
+
+.verification-page
+  .info-block__body
+    font-size: 17px
+
+  aside .info-block__body
+    font-size: 14px
+
+.verification-file-selection
+  margin: 20px 0
+  font-size: 0
+
+.verification__code-label
+  display: block
+  font-size: 13px
+  text-transform: uppercase
+
+.verification__input
+  display: inline-block
+  width: 350px
+  background: #f7f7f7
+  border: none
+  box-shadow: none
+  color: #7d7764
+  font-size: 18px
+  padding: 6px 10px
+  margin-right: 6px
+  height: 33px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.verification__step
+  margin-top: 20px
+  font-size: 0
+
+  &:last-of-type
+    margin-bottom: 20px
+
+  &--two
+    .verification-row--phone-verified &
+      display: none
+
+.verification__validation-message,
+.verification__code-hint
+  display: block
+  font-size: 14px
+  margin-top: 10px
+
+.verification__code-hint
+  a
+    color: #64D3C5
+
+    &:hover
+      text-decoration: underline
+
+.verification__validation-message
+  color: red
+
+.verification__status
+  display: none
+  font-size: 15px
+  margin-bottom: 5px
+
+  &--verified
+    color: green
+
+    .verification-row--phone-verified &,
+    .verification-row--photo-verified &
+      display: block
+
+  &--not-verified
+    color: red
+
+    .verification-row--phone-not-verified &,
+    .verification-row--photo-not-verified &
+      display: block
+
+  &--declined
+    color: red
+
+    .verification-row--photo-declined &
+      display: block
+
+.verify-phone-btn,
+.verification-submit
+  &.disabled
+    pointer-events: none
+
+.verify-phone-btn,
+.verification__step--one .verification__code-label
+  .verification-row--phone-verified &
+    display: none
+
+.verification__step--one .verification__code-label
+  .verification-row--phone-not-verified &
+    display: none

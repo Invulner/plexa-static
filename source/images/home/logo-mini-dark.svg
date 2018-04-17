@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 476.19 476.19" style="enable-background:new 0 0 476.19 476.19;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#7E7864;}
+	.st1{fill:none;stroke:#7E7864;stroke-width:6;stroke-miterlimit:10;}
+</style>
+<g>
+	<circle class="st0" cx="281.33" cy="75.926" r="29.65"/>
+	<circle class="st0" cx="196.618" cy="75.926" r="29.65"/>
+	<circle class="st0" cx="401.028" cy="195.624" r="29.65"/>
+	<circle class="st0" cx="78.33" cy="195.624" r="29.65"/>
+	<path class="st1" d="M281.33,103.85c0,50.726,41.048,91.772,91.772,91.772"/>
+	<path class="st1" d="M198.028,103.85c0,50.726-41.048,91.772-91.772,91.772"/>
+</g>
+<g>
+	<circle class="st0" cx="281.33" cy="402.509" r="29.65"/>
+	<circle class="st0" cx="196.618" cy="402.509" r="29.65"/>
+	<circle class="st0" cx="401.028" cy="282.811" r="29.65"/>
+	<circle class="st0" cx="78.33" cy="282.811" r="29.65"/>
+	<path class="st1" d="M373.102,282.812c-50.725,0-91.772,41.046-91.772,91.772"/>
+	<path class="st1" d="M106.256,282.812c50.725,0,91.772,41.046,91.772,91.772"/>
+</g>
+</svg>

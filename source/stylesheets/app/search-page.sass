@@ -1,0 +1,92 @@
+.search-page
+  #social-trends
+    +display(flex)
+
+  .flex-cell--equal
+    width: calc(50% - 10px)
+    margin-right: 10px
+
+    &:nth-child(2n)
+      margin-right: 0
+      margin-left: 10px
+
+    &:first-child .info-block:last-child
+      height: calc(100% - 82px - 20px - 247px - 20px - 20px)
+
+      .info-block__body
+        max-height: 633px
+        overflow: auto
+
+    &:last-child .info-block__body
+      max-height: 979px
+      overflow: auto
+
+    @media (max-width: 750px)
+      width: 100%
+      margin: 0
+
+      &:nth-child(2n)
+        margin-left: 0
+
+  .info-block__post-head-title
+    width: calc(100% - 32px - 5px - 65px)
+
+  .stories-block__item
+
+    @media (max-width: 1310px)
+      padding: 6px
+      +flex-direction(column)
+
+  .stories-block__image
+    width: 170px
+    height: 170px
+    min-width: 170px
+
+    @media (max-width: 1310px)
+      width: 100%
+      margin: 0 0 9px
+
+  .stories-block__desc
+    width: calc(100% - 180px)
+
+    @media (max-width: 1310px)
+      width: 100%
+
+  .stories-block__text
+    height: 99px
+
+    @media (max-width: 1310px)
+      height: auto
+
+  .info-block__post-soc
+    @media (max-width: 1310px)
+      +flex-direction(column)
+
+      > *
+        width: 100%
+
+      .info-block__post-soc-btns
+        margin-top: 10px
+
+  .stories-block__btns .btn
+    @media (max-width: 380px)
+      margin: 0 0 3px
+
+  .info-block__search-result-block
+    height: 176px
+    cursor: pointer
+
+  .info-block__search-field-type2
+    @extend .info-block__search-field
+
+    &:focus
+      +placeholder
+        color: transparent
+
+  .info-block__search--loading
+    &:hover
+      .btn
+        color: #555555
+        background: #ffcc00
+  .show-content
+    color: black

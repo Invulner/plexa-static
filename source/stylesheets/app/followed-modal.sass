@@ -1,0 +1,45 @@
+#followed-modal
+  #pages-container
+    max-height: 500px
+    min-height: 500px
+    overflow-y: auto
+    overflow-x: hidden
+  .large-top-buffer
+    margin-top: 20px
+  .top-buffer
+    margin-top: 10px
+
+  #checkbox-text
+    margin-right: 6px
+
+  #submit-button
+    height: 30px
+  #skip-button
+    height: 30px
+  #followed-form
+    .media-body
+      vertical-align: middle
+    .media-object
+      width: 64px
+      height: 64px
+      @media(max-width: 420px)
+        width: 45px
+        height: 45px
+    .page-checkbox, .title
+      align-items: center
+      display: flex
+      line-height: 1.2
+
+    .title
+      width: 90%
+      overflow: hidden
+
+    @media (max-width: 490px)
+      .title
+        width: 80%
+    .media
+      &:hover
+        cursor: pointer
+      input[type=checkbox]
+        &:hover
+          cursor: pointer

@@ -1,0 +1,500 @@
+.feed-item
+  @extend %panel
+  padding-top: 12px
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+
+.feed-item__header
+  +clearfix
+  position: relative
+  margin-bottom: 9px
+
+  a:hover,
+  a:focus,
+  a:active
+    color: #999
+    opacity: .8
+
+.feed-item__avatar-block
+  +URW-Light-font
+  width: 43px
+  height: 43px
+  overflow: hidden
+  float: left
+  background-color: #0f6b31
+  text-align: center
+  line-height: 50px
+  color: #fff
+  font-size: 26px
+
+.feed-item__avatar-img
+  display: block
+  width: 100%
+  height: 100%
+
+.feed-item__header-main
+  margin-left: 49px
+  text-align: justify
+  font-size: 0
+
+.feed-item__header-row
+  display: inline-block
+  margin-bottom: 5px
+
+.feed-item__author,
+.feed-item__time
+  line-height: 16px
+
+.feed-item__author
+  +URW-SemiBold-font
+  float: left
+  margin: 0
+  font-size: 16px
+  color: #353535
+  margin-right: 10px
+
+.feed-item__time
+  position: relative
+  min-width: 65px
+  font-size: 12px
+  color: #333
+  font-style: italic
+  display: inline-block
+  vertical-align: top
+
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: -4px
+    width: 1px
+    height: 1px
+    margin-top: -1px
+    background: #333
+
+.feed-item__label
+  +URW-Regular-font
+  position: relative
+  display: inline-block
+  height: 18px
+  line-height: 20px
+  padding: 0 8px
+  color: #fff
+  border-radius: 3px
+  font-size: 13px
+  vertical-align: top
+
+  &:not(:first-of-type)
+    margin-left: 3px
+
+.feed-item__label--position
+  position: absolute
+  left: 50px
+  bottom: 0
+  background: #7e7763
+
+.feed-item__label--group
+  padding-left: 18px
+  background: #4b7c6b
+  max-width: calc(100% - 23px)
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    margin-top: -4px
+    left: 4px
+    width: 8px
+    height: 8px
+    background: image-url('triple-icon.svg') center no-repeat
+    background-size: cover
+
+  @media (max-width: 440px)
+    position: absolute
+    top: 25px
+    right: 0
+    max-width: calc(100% + 10px)
+
+.feed-item__label--visibility
+  color: #333
+  padding-left: 20px
+  background: #eff0f1
+  margin-left: 4px
+
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 5px
+    margin-top: -3px
+    width: 10px
+    height: 6px
+    background: urL('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAANCAMAAABxTNVSAAAAe1BMVEXv8PHu7/Ds7e7Y2NnX2NjW19fR0tPQ0dLIyMnDxMW/wMGur7CnqKimp6eAgYF+fn99fX5yc3NxcnJtbW5aWltYWFlXWFhUVVVSU1NPT09KSktDQ0NAQEA/Pz87Ozw0NTUfHx8TExMRERELCwsJCQkFBQUEBAQCAgIAAADQAY6gAAAAKHRSTlMAAQMZGhsgISovM0VNTnZ5eoWGi5+hoqWnq7C4u7zAx97r7fP1+vv9QxkBowAAAI1JREFUGNN9kEcOwkAAA2cJhBIgkMDSO1nm/y/kQBMSwkfLGtkGAAb14dScDvWAj/p7X9r3n16YJG2mOd0qaSoDQCuqtyEAw5saWxCi6oxsc911mKvGwFjVgoW6plB1zFnVHkf1SE/V8zu7Upfv7IM7p729bDJmT+5Xh9GrA4Qyaaq65NOkaRL+bPvxwx2sUhauvGBKqgAAAABJRU5ErkJggg==')
+    background-size: cover
+
+.feed-item__dropdown-wrapper
+  display: inline-block
+  vertical-align: top
+  position: relative
+
+.feed-item__triangle-trigger
+  height: 17px
+  width: 15px
+  display: inline-block
+  vertical-align: top
+  position: relative
+  margin-left: 9px
+
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    right: 50%
+    width: 6px
+    height: 6px
+    border-left: 1px solid #000
+    border-bottom: 1px solid #000
+    margin-right: -3px
+    margin-top: -5px
+    +transform(rotate(-45deg))
+
+.feed-item__dropdown
+  position: absolute
+  right: 0
+  top: 100%
+  opacity: 0
+  text-align: left
+  visibility: hidden
+  margin-top: 7px
+  padding: 8px 6px
+  color: #fff
+  background: #7e7763
+  border-radius: 4px
+  min-width: 143px
+  z-index: 1
+  +transition(all .3s ease-in-out)
+
+  &:before
+    content: ''
+    position: absolute
+    top: -4px
+    right: 18px
+    width: 10px
+    height: 10px
+    background: #7e7763
+    +transform(rotate(52deg) skew(15deg))
+
+.feed-item__dropdown--visible
+  opacity: 1
+  visibility: visible
+  margin-top: 15px
+
+.feed-item__dropdown--arrow-trigger
+  right: -12px
+
+  &:before
+    right: 14px
+
+.feed-item__dropdown-section
+  display: block
+
+  &:not(:last-child)
+    margin-bottom: 13px
+
+.feed-item__dropdown-title
+  +URW-SemiBold-font
+  font-size: 13px
+  padding-left: 15px
+  position: relative
+  margin: 0 0 4px
+
+.feed-item__dropdown-title--specialities
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: -8px
+    width: 12px
+    height: 12px
+    background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 150 150"> <path fill="#EDEDED" d="M103.6,9.8c-4.7-3.9-8-3-12.8,5.5c-3.1,5.6-8.1,6.3-11.2,6.1l0-1.1c3.5-1.8,6-5.3,6-9.6C85.7,4.8,80.9,0,75,0 c-5.9,0-10.8,4.8-10.8,10.8c0,4.2,2.5,7.8,6.1,9.5l0,1.1c-3,0.2-8-0.5-11.2-6.1c-4.7-8.5-8-9.4-12.7-5.5 C41.6,13.7,22.9,36.1,0,34.1c0,0,4.5,10.3,16.9,8c0,0,6.6,6.9,17.3,2.1c0,0,5.6,5,14.4,0.4c0,0,6.6,5,13.6,0.7c0,0,4,2.9,8.4,2.1 l0.3,25.9c-0.5-0.1-0.9-0.2-1.4-0.3c0,0-7.6-1.6-15.7-3.9c-7.8-2-16.4-5.3-17.6-7.1c0.1-0.1,0.3-0.2,0.5-0.3c0.7-0.4,1.9-0.7,3.3-1 c2.9-0.6,6.7-0.9,10.6-1c7.7-0.3,9.1,0.1,9.3,0.1c0-0.2,4.5,0.5,5.7-4c0,0,0.1-0.2,0-0.3c-0.3-3.1-2.7-3.3-4.6-3.7 c-3.2-0.4-1.5-0.2-5.9-0.2c-7.1,0.5-28.9-1.2-31.7,10.3c0,0.3,0,0.5-0.1,0.8c0.9,10,21.6,14.4,36.7,17.3c-5.1,3.5-7.8,8-8.9,13.9 c-0.5,6.3,4.4,12.2,16,18.9c-8.8,6.2-14.5,12-14.1,19.1c0.8,5.7,5.9,13.4,15.8,18.3c0,0,0,0,0.1,0l0,0c0,0,0,0,0,0 c0,0-7-10.6-7.4-16.5c-0.5-3.4,1.5-8.4,9.9-14.5l0.2,21.3h0c0.1,1.8,1.5,3.2,3.2,3.2c1.7,0,3.1-1.4,3.2-3.2h0l0.3-20.7 c7.8,5.8,9.6,10.6,9.1,13.9c-0.5,5.8-7.4,16.5-7.4,16.5s0,0,0,0c0,0,0,0,0.1,0c10-4.8,15-12.5,15.8-18.3c0.5-7-5.3-12.9-14-19.1 C93.5,106,98.5,100,98,93.8c-1.1-5.9-3.8-10.4-8.9-13.9c15-3,35.8-7.3,36.7-17.4c0-0.3-0.1-0.5-0.1-0.8C123,50.2,101.1,52,94,51.5 c-4.3,0-2.6-0.2-5.8,0.2c-2,0.4-4.4,0.5-4.6,3.7c-0.1,0.1,0.1,0.3,0,0.3c1.2,4.6,5.7,3.8,5.7,4c0.1,0,1.5-0.4,9.3-0.1 c3.9,0.2,7.8,0.4,10.6,1c1.4,0.3,2.6,0.7,3.3,1c0.2,0.1,0.4,0.2,0.5,0.3c-1.3,1.7-9.8,5-17.6,7.1c-8.1,2.2-15.8,3.9-15.8,3.9 c-0.2,0-0.4,0.1-0.6,0.1l0.3-25.7c4.4,0.8,8.4-2.1,8.4-2.1c7,4.4,13.6-0.7,13.6-0.7c8.9,4.6,14.4-0.4,14.4-0.4 c10.7,4.8,17.3-2.1,17.3-2.1c12.4,2.3,16.9-8,16.9-8C127.1,36.1,108.4,13.7,103.6,9.8z M61,95.8c0.2-2.3-0.6-7.6,10-11.6l0.2,21.4 c-2.1-1.3-4.2-2.6-6.4-4C62,99.8,60.7,97.4,61,95.8z M84.1,101.6c-1.9,1.2-3.7,2.3-5.5,3.5l0.3-20.5c9.7,3.9,9,9,9.2,11.2 C88.3,97.4,87,99.8,84.1,101.6z"/> </svg>')
+    background-size: cover
+
+.feed-item__dropdown-title--location
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: -8px
+    width: 11px
+    height: 12px
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-269.621 175.622 150 150"><path fill="#EDEDED" d="M-157.471,191.009c-9.922-9.922-23.115-15.387-37.146-15.387c-14.034,0-27.224,5.465-37.146,15.387c-18.362,18.359-20.644,52.903-4.942,73.832l42.088,60.781l42.025-60.696C-136.827,243.911-139.109,209.368-157.471,191.009zM-194.132,246.845c-10.571,0-19.176-8.604-19.176-19.176s8.604-19.176,19.176-19.176c10.571,0,19.176,8.604,19.176,19.176 S-183.561,246.845-194.132,246.845z"/> </svg> ')
+    background-size: cover
+
+.feed-item__dropdown-link
+  color: #fff
+  font-size: 13px
+  line-height: 18px
+  display: block
+
+  &:not(:last-child)
+    margin-bottom: 2px
+
+  &:hover
+    opacity: .8
+    color: #fff
+
+  &:focus
+    color: #fff
+
+.feed-item__dropdown-item-icon
+  margin-right: 7px
+  top: 2px
+
+.feed-item__header-aux
+  display: inline-block
+  position: relative
+  vertical-align: top
+  font-size: 0
+  white-space: nowrap
+  text-align: right
+
+.feed-item__footer
+  background: #f7f7f7
+  margin-left: -13px
+  padding: 11px 13px
+  +clearfix
+  +calc(width, "100% + 26px")
+
+.feed-item__reply-form
+  position: relative
+  float: right
+  +calc(width, "100% - 127px")
+
+  @media(max-width: 535px)
+    width: 100%
+
+  .scroll-textarea
+    border: 0
+
+    .scroll-content
+      height: auto !important
+
+  .scrollbar-outer > .scroll-content.scroll-scrolly_visible
+    left: 0
+    margin-left: 0
+
+  .scrollbar-outer > .scroll-element.scroll-y
+    right: -2px
+    border-radius: 0 8px 8px 0
+    width: 10px
+
+  .scrollbar-outer > .scroll-element.scroll-y .scroll-element_outer
+    width: 6px
+
+textarea.feed-item__reply-input
+  +URW-Light-font
+  background: #fff
+  border-radius: 8px
+  height: 36px
+  padding: 8px 40px 6px 13px !important
+  font-size: 15px
+  color: #000
+  resize: none
+  border: 0
+  width: 100%
+  +transition(height .3s ease-in-out)
+
+  +placeholder
+    color: #333
+
+  &:focus
+    outline: none
+
+  .scroll-textarea > .scroll-content > &
+    height: 36px !important
+
+    &--active
+      border: 0
+      outline: none
+      height: 108px !important
+
+.feed-item__reply-btn
+  position: absolute
+  top: 7px
+  right: 4px
+  width: 22px
+  height: 22px
+  border-radius: 50%
+  background: #bcac85
+  border: 0
+  margin: 0 3px 0 0
+  padding: 0
+
+  &[disabled]
+    opacity: .5
+
+  .feed-item__reply-form[disabled] &
+    pointer-events: none
+
+  &:after
+    content: ''
+    position: absolute
+    width: 14px
+    height: 11px
+    top: 50%
+    left: 50%
+    margin-left: -7px
+    margin-top: -5px
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAdCAMAAAAXdyW2AAABR1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////86aXtaAAAAbHRSTlMAAQMEBgcICQsREhQWGBocHiEjJCgrLjIzNDY5P0VHS0xNTlFSVFZXWFldX2Zqa3FydHZ4foCFh4iLkJKUlpiZm56hr7CxsrS2t73AwsPHyc3S1NbY293h4ubn6ert7u/x8vP09fb4+fv8/f7JD/F/AAABGUlEQVR4AYXLZztCcQCG8ec00BHZhbL3kMhOhuwiIbsykur5/q91xjnK9T/1e3tfNxpwD0yNwEJr/2Ro9+w2T370iFrkNPVJ0wygk70Tyzt6qxEF4Km0k5t3Wkg6AfQWKVROZEnmuqCIUOBta+yOFeNQyRn+dz3fNPfFim3ollgjf+CDc4+KKwd09hT/3AdloDNJRaYDpgB1pdiQBGA0S9UwqsSoeFlXP9sGNZuo1l0gE7MOKNouqYnbUSMc7YPG/0zNazvEpJUiNaUAxFzHNKxBzJum4cIGoYVvGp7cEGk5pKnkh5AnT9MqLIRpOJdgofmBmkcZlqap+hmENSlORRD1eMskjyTUtU+mXajPnSv40EhoEQ3ZIPILtouZCtee3QcAAAAASUVORK5CYII=')
+    background-size: cover
+
+.feed-item__stats
+  float: left
+  height: 36px
+  position: relative
+  top: 1px
+  +display(inline-flex)
+  +align-items(center)
+
+.feed-item__like
+  font-size: 14px
+  color: #7e7763
+  margin-right: 10px
+
+.feed-item__likes,
+.feed-item__comments,
+.feed-item__share
+  +display(inline-flex)
+  +align-items(center)
+  font-size: 13px
+  color: #000
+  position: relative
+  top: -1px
+
+  svg
+    margin-right: 5px
+    height: 12px
+
+.feed-item__comments
+  margin-left: 4px
+
+.feed-item__comments
+  min-width: 32px
+
+.feed-item__share
+  margin-left: 3px
+
+  svg
+    position: relative
+    top: -1px
+    width: 13px
+    height: 13px
+
+.feed-item__likes--active
+  svg
+    fill: #f26522
+
+.feed-item__likes
+  min-width: 65px
+
+  svg
+    position: relative
+    top: 1px
+    margin-bottom: 3px
+
+.feed-item__likes,
+.feed-item__share
+  cursor: pointer
+
+.feed_item__share svg,
+.feed-item__likes svg
+  width: 13px
+  height: 13px
+
+.feed-item__comments
+  svg
+    width: 13px
+    height: 13px
+    margin-top: 1px
+
+.feed-item__comments svg,
+.feed_item__share svg
+  margin-bottom: 2px
+
+.feed-item__text
+  +URW-Light-font
+  font-size: 16px
+  line-height: 20px
+  color: #353535
+  text-align: left
+  word-wrap: break-word
+  white-space: pre-line
+
+  & + &,
+  &:not(:last-child)
+    margin-bottom: 20px
+
+.feed-item__comments-section
+  padding-top: 15px
+  border-top: 1px solid #7e7763
+  padding-bottom: 15px
+
+.feed-items
+  margin-bottom: 15px
+
+.feed-item__comments-list + .feed-item__comments-list
+  margin-top: 17px
+
+.feed-item__body
+  padding-bottom: 14px
+
+.feed-item__img
+  display: block
+  max-height: 350px
+  overflow: hidden
+
+  + .post-link
+    margin-top: 15px
+
+  img
+    width: 100%
+    height: auto
+
+.feed-item__more-comments
+  display: block
+  margin-bottom: 12px
+  text-decoration: underline
+  font-size: 13px
+  color: #333
+
+  &:hover,
+  &:focus
+    color: #000
+
+  &:hover
+    text-decoration: none
+
+.icon-like--action
+  svg
+    animation: increaseHeart .6s ease-in-out
+
+@keyframes increaseHeart
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.2)
+  100%
+    transform: scale(1)
+
+.feed-empty
+  margin-top: 30px
+  text-align: center
+
+.feed-item__edit
+  .feed-story &
+    display: none

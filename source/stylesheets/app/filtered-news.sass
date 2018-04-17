@@ -1,0 +1,353 @@
+.stories-wrapper
+  .info-block
+    height: 492px
+    max-height: calc(50vh - 10px)
+    min-height: 300px
+
+  .info-block__body
+    max-height: calc(50vh - 10px - 44px)
+    min-height: calc(300px - 44px)
+    height: calc(492px - 44px)
+    overflow: auto
+
+  .info-block--full-height
+    height: 1004px
+    max-height: 100vh
+    min-height: 620px
+
+    .info-block__body
+      height: calc(1004px - 44px)
+
+    @media (max-width: 730px)
+      height: auto
+
+    .info-block__body
+      max-height: calc(100vh - 44px)
+      min-height: calc(620px - 44px)
+
+    .flex-row
+      margin-right: -3px
+      +justify-content(space-between)
+
+  a.disabled
+    opacity: 0.5
+    pointer-events: none
+    cursor: default
+
+  .initial-color
+    color: initial
+
+  .flex-cell--equal
+    +flex-basis(calc(50% - 6px))
+    max-width: calc(50% - 6px)
+    margin: 0 0 12px
+
+    @media (max-width: 1130px)
+      +flex-basis(100%)
+      max-width: 100%
+
+  .flex-cell--big
+    +flex-basis(calc(67% - 10px))
+    max-width: calc(67% - 10px)
+    margin-right: 10px
+
+    @media (max-width: 730px)
+      +flex-basis(100%)
+      max-width: 100%
+      margin: 0
+
+    @media (max-width: 600px)
+      .stories-block__item
+        +flex-basis(100%)
+        max-width: 100%
+        margin: 0 0 12px
+
+  .flex-cell--sm
+    width: calc(33% - 10px)
+    max-width: calc(33% - 10px)
+    margin-left: 10px
+
+    @media (max-width: 1430px)
+      .stories-block__item
+        +flex-direction(column)
+        padding: 10px
+
+      .stories-block__image
+        width: 100%
+        margin: 0 0 10px
+
+      .info-block:first-child .stories-block__image
+        margin: 17px 0 10px
+
+      .stories-block__desc
+        width: 100%
+
+    @media (max-width: 1130px)
+      .stories-block__btns
+        +flex-wrap(wrap)
+
+        .btn
+          width: 100%
+          margin: 0 0 3px
+
+    @media (max-width: 730px)
+      width: 100%
+      max-width: 100%
+      margin: 0
+      order: 1
+      +display(flex)
+      +flex-wrap(wrap)
+
+      .info-block
+        width: calc(50% - 10px)
+        margin-right: 10px
+
+        &:nth-child(2n)
+          margin: 0 0 20px 10px
+
+    @media (max-width: 600px)
+      .info-block
+        width: 100%
+        margin: 0 0 20px
+
+        &:nth-child(2n)
+          margin-left: 0
+
+.stories-block__item
+  +display(flex)
+  margin-bottom: 12px
+
+  .info-block--full-height &
+    padding: 10px 10px 41px
+
+.stories-block__item--full-width
+  display: block
+
+
+.stories-block__head-title
+  font-size: 12px
+  display: inline-block
+  vertical-align: middle
+  margin: 0 0 0 5px
+  width: calc(100% - 32px - 5px)
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+.stories-block__delete
+  position: absolute
+  top: 5px
+  right: 5px
+  color: #ef4748
+  font-size: 10px
+  line-height: 10px
+  z-index: 1
+  cursor: pointer
+  opacity: .8
+
+  &:hover
+    opacity: 1
+
+.stories-block__desc
+  font-size: 9px
+  color: #1d1d1d
+  width: 100%
+  font-size: 13px
+  line-height: 13px
+  width: calc(100% - 122px)
+
+  .info-block--full-height &
+    width: 100%
+
+.stories-block__title
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+  font-weight: 700
+  line-height: 14px
+  padding-right: 7px
+  margin: 0 0 18px
+
+  .info-block--full-height &
+    white-space: normal
+
+.stories-block__author
+  font-style: italic
+  margin: 0 0 6px
+
+.stories-block__text
+  color: #36454f
+  margin-bottom: 1px
+  word-wrap: break-word
+  margin-right: 5px
+  font-size: 12px
+  line-height: 14px
+  height: 44px
+  overflow: hidden
+  max-height: 100px
+
+  .info-block--full-height &
+    height: auto
+    margin-bottom: 20px
+    text-align: justify
+
+    &:last-of-type
+      margin: 0px 0px 5px 0px
+
+.stories-block__controls
+  +display(flex)
+  +justify-content(space-between)
+  +align-items(center)
+
+.stories-block__link
+  color: #36454f
+  text-decoration: underline
+
+  &:hover
+    color: #36454f
+    text-decoration: none
+
+.source-details
+  font-size: 0
+  margin-bottom: 10px
+
+.source-details__logo
+  width: 35px
+  height: 35px
+  margin-right: 7px
+  overflow: hidden
+  display: inline-block
+  vertical-align: middle
+
+  img
+    width: 100%
+
+.source-details__name
+  display: inline-block
+  vertical-align: middle
+  font-size: 15px
+
+.source-details__link
+  font-size: 11px
+  line-height: 12px
+  font-style: italic
+  display: block
+  color: #1d1d1d
+
+  &:hover
+    color: #1d1d1d
+    text-decoration: underline
+
+.stories-block__btns
+  +display(flex)
+  +justify-content(flex-end)
+  margin: 10px 0 0
+
+  .info-block--full-height &
+    position: absolute
+    left: 10px
+    right: 10px
+    bottom: 10px
+
+  .btn
+    margin: 0 5px 0 0
+
+    &:last-child
+      margin: 0
+
+.stories-block__btns--right
+  +justify-content(flex-end)
+
+.stories-block__btn
+  font-size: 12px
+  line-height: 20px
+  margin: 0
+  padding: 0px 16px 0px 16px
+
+  &:hover,
+  &:active
+    color: #fff
+
+  .stories-block__btns &
+    min-width: 60px
+    font-size: 13px
+
+.stories-block__btn--saved
+  background-color: #1b6f77
+
+  &:hover
+    background-color: darken(#1b6f77, 15%)
+
+.stories-block__btn--rejected
+  background-color: #ef4748
+
+  &:hover
+    background-color: darken(#ef4748, 15%)
+
+.stories-block__btn--post
+  background-color: #36454f
+
+  &:hover
+    background-color: darken(#36454f, 15%)
+
+.stories-queue
+  text-align: center
+  margin: 17px 0 2px
+
+.stories-block__poster
+  margin: 0 -10px 10px
+  width: calc(100% + 20px)
+  height: 180px
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-color: #000
+
+.stories-block__image
+  height: 115px
+  width: 115px
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  margin-right: 7px
+  min-width: 115px
+  background-color: #000
+
+.ai-badge
+  width: 20px
+  position: relative
+  margin-left: 3px
+  right: 0px
+  top: -11px
+  height: 12px
+  display: none
+  @media (min-width: 339px)
+    display: initial
+
+.saved-news
+  .ag-post-header
+    font-size: inherit
+
+.stories-block__delete
+  position: absolute
+  top: 6px
+  right: 8px
+  color: #ef4748
+  font-size: 10px
+  line-height: 15px
+  z-index: 1
+  cursor: pointer
+  opacity: 0.8
+
+  &:hover
+    opacity: 1
+
+.news-item-link
+  font-weight: normal
+  color: black
+  &:hover
+    color: black
+
+#news-magnet-container
+  .show-content
+    color: black

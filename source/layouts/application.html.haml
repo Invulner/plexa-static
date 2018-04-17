@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %title Plexa Static
+    %meta{ charset: 'utf-8' }
+    %meta{ content: 'IE=edge', 'http-equiv': 'X-UA-Compatible' }
+    %meta{ content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no', name: 'viewport' }
+    = stylesheet_link_tag 'app/application'
+    = javascript_include_tag 'app/application'
+    = yield_content :extra_scripts
+
+  %body.nav-md
+    .container.body
+      .main_container
+        = yield_content :left_menu
+        = partial 'shared/top_menu'
+        .right_col{ role: 'main' }
+          = yield
+
+    -# = partial 'layouts/share-modal'
+    -# = partial 'layouts/followed-modal'
+    -# = partial 'layouts/banner_modal'
+    -# = partial 'layouts/create-group-modal'
+    -# = partial 'layouts/group-members-modal'
+    -# = partial 'layouts/new-post'
+    -# = partial 'layouts/request_modal/request_modal'
+    -# = partial 'layouts/group-public-data-modal'
