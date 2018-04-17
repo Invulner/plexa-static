@@ -9,7 +9,7 @@
       .navigation__section
         %h6.navigation__title Plexa network
         %ul.nav.side-menu
-          %li.active
+          %li{ class: active == 'feed' ? 'active' : '' }
             = link_to '/feed', class: 'slide-menu__link' do
               %i.navigation__icon.navigation__icon--feed
                 = image_tag 'app/nav/view-feed.svg', alt: 'feed'
@@ -19,14 +19,14 @@
                 Your medical feed from the private Plexa network. Talk to others on the network securely.
 
           %li
-            %a.slide-menu__link{ href: "/user/medfundr" }
+            %a.slide-menu__link{ href: "#{}" }
               %i.navigation__icon.navigation__icon--feed
                 = image_tag 'app/nav/medfundr.svg'
               %span.navigation__item-text Medfundr
               %span.slide-menu__link-tooltip A selection of medical organisations and causes achieving great things. Read about their important research and work. Donate if you wish.
 
           %li
-            %a.slide-menu__link{ href: "/user/services" }
+            %a.slide-menu__link{ href: "#" }
               %i.navigation__icon.navigation__icon--feed
                 = image_tag 'app/nav/services.svg', alt: 'feed'
               %span.navigation__item-text Services
@@ -46,8 +46,8 @@
               %span.slide-menu__link-tooltip
                 Add, view and share social media from sources relevant to you.
                 Select from our recommended content or add your own.
-          %li
-            = link_to '#', class: 'analytics-menu-link slide-menu__link' do
+          %li{ class: active == 'news' ? 'active' : '' }
+            = link_to '/news-magnet', class: 'analytics-menu-link slide-menu__link' do
               %i.navigation__icon.navigation__icon--news-magnet
                 = image_tag 'app/nav/news-magnet.svg', alt: 'news magnet'
               %span.navigation__item-text
@@ -55,8 +55,8 @@
               %span.slide-menu__link-tooltip
                 Add, view and share industry-specific journalism personalised for you.
 
-          %li
-            = link_to '#', class: 'analytics-menu-link slide-menu__link' do
+          %li{ class: active == 'research' ? 'active' : '' }
+            = link_to '/research-magnet', class: 'analytics-menu-link slide-menu__link' do
               %i.navigation__icon.navigation__icon--research-magnet
                 = image_tag 'app/nav/research-magnet.svg', alt: 'research magnet'
               %span.navigation__item-text
