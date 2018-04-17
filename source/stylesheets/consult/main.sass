@@ -1,0 +1,138 @@
+.consult
+  background: $consult-bg
+  padding-top: 85px
+  min-height: 100%
+
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+  button
+    border: none
+
+.consult
+  &__header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    padding: 30px 30px 0
+    z-index: 1
+    background: $consult-bg
+
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      top: 74px
+      width: 100%
+      height: 150px
+      background: linear-gradient(to bottom, rgba(254, 254, 254, 1) 0%,  rgba(254, 254, 254, .1) 100%)
+
+  &__logo
+    img
+      width: 40px
+
+    span
+      width: 80px
+      display: inline-block
+      vertical-align: middle
+      margin-left: 8px
+      font-size: 20px
+      line-height: 1.1
+      color: $green
+
+  &__close
+    img
+      width: 20px
+
+  .button
+    border-radius: 5px
+    padding: 5px 10px 4px
+
+.consult-chat
+  max-width: 550px
+  margin: 0 auto
+  color: $text-color
+  font-family: 'URWGeometric-Light'
+
+  &__item
+    position: relative
+    margin-bottom: 30px
+    padding: 15px
+    border-radius: 5px
+    background-color: $gray
+    font-size: 18px
+
+    &--plexa
+      background-color: $mint
+
+      .consult-chat__author
+        right: -45px
+        left: auto
+
+    &--question
+      height: 270px
+      padding-top: 45px
+      text-align: center
+
+  &__video
+    position: relative
+
+    img
+      width: 100%
+
+    &-buttons
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 30px
+      padding-top: 5px
+      background: rgba(255,255,255, .4)
+      text-align: center
+
+      button
+        width: 20px
+        height: 20px
+        padding: 0
+        border-radius: 50%
+        background: #fff
+
+      img
+        display: block
+
+
+  &__question-title
+    font-family: 'URWGeometric-SemiBold'
+    font-size: 20px
+
+  &__question
+    font-family: 'URWGeometric-Regular'
+    font-size: 20px
+    margin-bottom: 40px
+
+  &__author
+    position: absolute
+    left: -45px
+    top: 0
+    width: 30px
+    height: 30px
+    border-radius: 50%
+
+  &__time
+    position: absolute
+    bottom: -20px
+    left: 2px
+    font-size: 11px
+    font-weight: 600
+
+  &__buttons button
+    background-color: #f7f7f7
+    margin-top: 12px
+
+    &:hover,
+    &.active
+      background-color: $green
+      color: #fff

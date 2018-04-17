@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="41px" viewBox="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 19.61465 0 39 38.77 39 38.77 19.61465 38.77 0.2293 0 0.2293"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(1.000000, 0.000000)">
+            <g id="Page-1">
+                <g id="Group-3" transform="translate(0.000000, 0.770500)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M38.77,19.6143 C38.77,30.3203 30.091,39.0003 19.385,39.0003 C8.679,39.0003 0,30.3203 0,19.6143 C0,8.9083 8.679,0.2293 19.385,0.2293 C30.091,0.2293 38.77,8.9083 38.77,19.6143" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                </g>
+                <polygon id="Stroke-4" stroke="#000000" stroke-width="2.55" stroke-linecap="round" stroke-linejoin="round" points="28.4248 20.3848 15.9298 32.8798 15.9298 20.3848 15.9298 7.8898"></polygon>
+            </g>
+            <path d="M38.77,20.6443 C38.77,31.3503 30.091,40.0303 19.385,40.0303 C8.679,40.0303 0,31.3503 0,20.6443 C0,9.9383 8.679,1.2593 19.385,1.2593 C30.091,1.2593 38.77,9.9383 38.77,20.6443 Z" id="Page-1" stroke="#000000" stroke-width="1.259" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>
