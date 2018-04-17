@@ -1,7 +1,7 @@
 .col-md-3.left_col.navigation
   .left_col.scroll-view
     .navbar.nav_title{ style: 'border: 0;' }
-      %a.site_title{ href: '/feed' }
+      %a.site_title{ href: '/feed.html' }
         = image_tag 'home/text-logo.svg', alt: 'Plexa Logo', class: 'site_title__logo'
         = image_tag 'home/logo-mini-dark.svg', alt: 'Plexa Logo', class: 'site_title__logo-min'
     %br
@@ -10,7 +10,7 @@
         %h6.navigation__title Plexa network
         %ul.nav.side-menu
           %li{ class: active == 'feed' ? 'active' : '' }
-            = link_to '/feed', class: 'slide-menu__link' do
+            = link_to '/feed.html', class: 'slide-menu__link' do
               %i.navigation__icon.navigation__icon--feed
                 = image_tag 'app/nav/view-feed.svg', alt: 'feed'
               %span.navigation__item-text
@@ -19,7 +19,7 @@
                 Your medical feed from the private Plexa network. Talk to others on the network securely.
 
           %li
-            %a.slide-menu__link{ href: "#{}" }
+            %a.slide-menu__link{ href: "#" }
               %i.navigation__icon.navigation__icon--feed
                 = image_tag 'app/nav/medfundr.svg'
               %span.navigation__item-text Medfundr
@@ -47,7 +47,7 @@
                 Add, view and share social media from sources relevant to you.
                 Select from our recommended content or add your own.
           %li{ class: active == 'news' ? 'active' : '' }
-            = link_to '/news-magnet', class: 'analytics-menu-link slide-menu__link' do
+            = link_to '/news-magnet.html', class: 'analytics-menu-link slide-menu__link' do
               %i.navigation__icon.navigation__icon--news-magnet
                 = image_tag 'app/nav/news-magnet.svg', alt: 'news magnet'
               %span.navigation__item-text
@@ -56,7 +56,7 @@
                 Add, view and share industry-specific journalism personalised for you.
 
           %li{ class: active == 'research' ? 'active' : '' }
-            = link_to '/research-magnet', class: 'analytics-menu-link slide-menu__link' do
+            = link_to '/research-magnet.html', class: 'analytics-menu-link slide-menu__link' do
               %i.navigation__icon.navigation__icon--research-magnet
                 = image_tag 'app/nav/research-magnet.svg', alt: 'research magnet'
               %span.navigation__item-text

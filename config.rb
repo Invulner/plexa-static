@@ -9,7 +9,7 @@ end
 # https://middlemanapp.com/basics/layouts/
 
 set :fonts_dir, "fonts"
-
+set :relative_links, true
 set :layout, 'application'
 
 # Per-page layout changes
@@ -48,10 +48,10 @@ page '/consult/*', layout: 'consult'
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+  activate :relative_assets
+end
 
-activate :directory_indexes
 activate :sprockets
