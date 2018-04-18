@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:700,400,300italic,300,100)
+
+@font-face
+  font-family: 'ITCAvant'
+  src: font-url('ITCAvantGardePro-XLt.eot')
+  src: font-url('ITCAvantGardePro-XLt.eot?#iefix') format('embedded-opentype'), font-url('ITCAvantGardePro-XLt.woff') format('woff'), font-url('ITCAvantGardePro-XLt.ttf') format('truetype'), font-url('ITCAvantGardePro-XLt.svg#ITCAvantGardePro-XLt') format('svg')
+  font-style: normal
+  font-weight: normal
+  text-rendering: optimizeLegibility
+
+=ITCAvant-font
+  font-family: 'ITCAvant', sans-serif
+
+=Lato-font($font-weight)
+  font-family: 'Lato', sans-serif
+  font-weight: $font-weight
+
+=LatoLight-font
+  +Lato-font(300)
+
+=LatoRegular-font
+  +Lato-font(400)
+
+=LatoLightItalic-font
+  +Lato-font(300)
+  font-style: italic
+
+=LatoThin-font
+  +Lato-font(100)
+
+=LatoBold-font
+  +Lato-font(700)

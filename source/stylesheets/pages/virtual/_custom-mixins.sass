@@ -1,0 +1,77 @@
+=hs
+  &:hover,
+  &:focus,
+  &:active
+    @content
+
+=respond-to-max($media)
+  @media only screen and (max-width: $media)
+    @content
+
+=respond-to-min($media)
+  @media only screen and (min-width: $media)
+    @content
+
+=respond-to-webkit
+  @media only screen and (-webkit-min-device-pixel-ratio: 0)
+    @content
+
+=reset-list
+  list-style: none
+  margin: 0
+  padding: 0
+
+=fluid-img
+  display: block
+  max-width: 100%
+  height: auto
+
+=full-bg
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+=responsive-sprite($sprite-width, $sprite-height, $posx, $posy, $img-width, $img-height)
+  background-size: $sprite-width * 100% / $img-width $sprite-height * 100% / $img-height
+  background-position: $posx * 100% / ($sprite-width - $img-width) $posy * 100% / ($sprite-height - $img-height)
+
+=vertical-alignment
+  +display(flex)
+  +align-items(center)
+
+=center-alignment
+  +vertical-alignment
+  +justify-content(center)
+
+=btn
+  display: inline-block
+  text-align: center
+  text-decoration: none
+
+=btn--white
+  color: #fff
+  border: 2px solid #fff
+
+=btn--aqua
+  background: $aqua
+  color: #fff
+
+  &:hover
+    background: darken($aqua, 10%)
+
+=btn--blue
+  background: #426bb4
+  color: #fff
+
+  &:hover
+    background: darken(#426bb4, 10%)
+
+=btn--yellow
+  background: #ffc709
+  color: #fff
+
+  &:hover
+    background: rgba(255, 199, 9, 0.9)
+
+=btn--dark-text
+  color: #3a4b55
