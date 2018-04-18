@@ -1,0 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:700,400,300italic,300,100);
+@font-face {
+  font-family: "ITCAvant";
+  src: url("/fonts/ITCAvantGardePro-XLt.eot");
+  src: url("/fonts/ITCAvantGardePro-XLt.eot?#iefix") format("embedded-opentype"), url("/fonts/ITCAvantGardePro-XLt.woff") format("woff"), url("/fonts/ITCAvantGardePro-XLt.ttf") format("truetype"), url("/fonts/ITCAvantGardePro-XLt.svg#ITCAvantGardePro-XLt") format("svg");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
