@@ -10,6 +10,8 @@
     = yield_content :extra_scripts
 
   %body.nav-md
+    = partial 'shared/share-modal'
+
     .container.body
       .main_container
         = yield_content :left_menu
@@ -17,7 +19,6 @@
         .right_col{ role: 'main' }
           = yield
 
-    -# = partial 'layouts/share-modal'
     -# = partial 'layouts/followed-modal'
     -# = partial 'layouts/banner_modal'
     -# = partial 'layouts/create-group-modal'

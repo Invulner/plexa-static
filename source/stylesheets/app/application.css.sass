@@ -43,6 +43,7 @@
 @import 'streams'
 @import 'campaigns'
 @import 'search-page'
+@import '../vendor/flash.css'
 @import 'override'
 @import 'welcome'
 
@@ -74,10 +75,18 @@
 @import 'image-builder'
 @import 'services'
 @import 'group-management'
-@import 'vendor/bootstrap-colorpicker.css'
 @import 'invitation-block'
 
 .content-magnet-filters
   .selectize-control
     min-width: 200px !important
     text-align: left
+
+
+// DEMO PART ONLY!
+.post-media.news
+  .share-modal--research &
+    background-image: image-url('app/research/poster-default.png')
+
+  .share-modal--news &
+    background-image: image-url('app/news/poster-default.png')
