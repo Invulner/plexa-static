@@ -2,10 +2,10 @@
   %h1.signup__title Login
   %form.signup__form
     .login-form__control-group
-      %input.login-form__input.login-form__input--filled{ required: true, type: 'emai;' }
+      %input.login-form__input.login-form__input--email.login-form__input--filled{ required: true, type: 'emai;' }
       %label.login-form__label{ for: 'user_email' } Email
     .login-form__control-group
-      %input.login-form__input.login-form__input--filled{ required: true, type: 'password', autocomplete: 'off' }
+      %input.login-form__input.login-form__input--password.login-form__input--filled{ required: true, type: 'password', autocomplete: 'off' }
       %label.login-form__label{ for: 'user_password' } Password
     %p.login-form__hint
       = link_to 'Lost password?', '#'
@@ -16,3 +16,5 @@
     %input.btn-aqua.login-form__submit-btn.submit.in-center{ type: 'Submit', value: 'Log in' }
 
     = partial 'pages/footer'
+
+= javascript_include_tag 'login'
