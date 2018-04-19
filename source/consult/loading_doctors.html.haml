@@ -1,11 +1,6 @@
 .container-fluid.consult
-	%header.consult__header
-		.consult__logo.pull-left
-			%img{ src: '/images/consult/logo.svg' }
-			%span Quantum Consult
-		%button.consult__close.pull-right
-			%img{ src: '/images/consult/close.svg' }
-	.consult__loading
+	= partial 'header'
+	.consult__loading.block-centered
 		= partial 'spinner'
 		%p
 			Please wait while we find doctors

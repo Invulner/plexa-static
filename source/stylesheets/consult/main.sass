@@ -49,10 +49,6 @@
       width: 20px
 
   &__loading
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translateX(-50%) translateY(-50%)
     text-align: center
 
     p
@@ -132,6 +128,26 @@
         width: 115px
         height: 3px
         background-color: #000
+
+  &__reply-notification
+    text-align: center
+
+    img
+      width: 120px
+      height: 120px
+      border-radius: 50%
+
+    p
+      font-size: 25px
+      color: $brown
+      line-height: 1.2
+      padding: 40px 0
+
+    &-btn
+      padding: 3px 20px 2px
+      font: 16px 'URWGeometric-Light'
+      border-radius: 5px
+      color: #000
 
   .button
     border-radius: 5px
@@ -264,3 +280,9 @@
     color: #fff
     font: 25px 'URWGeometric-Light'
     line-height: 1
+
+.block-centered
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
