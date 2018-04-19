@@ -1,5 +1,4 @@
 $options = $('.compose__options')
-$dropdownTrigger = $('.feed-item__dropdown-trigger')
 $dropdown = $('.feed-item__dropdown')
 
 # Compose textarea
@@ -23,8 +22,61 @@ dropdownToggle = (e) ->
 hideDropdown = ->
   $dropdown.removeClass 'feed-item__dropdown--visible'
 
-$(document).on 'click', $dropdownTrigger, dropdownToggle
+$(document).on 'click', '.feed-item__dropdown-trigger', dropdownToggle
 
 $(document).on 'click', (e) ->
   if !$(e.target).hasClass('feed-item__dropdown-trigger')
     hideDropdown()
+
+
+# Likes
+$(document).on 'click', '.feed-item__likes', ->
+  $likeCounter = $(@).find('.feed-item__like-counter')
+  likesCount = +$likeCounter.text()
+
+  if $(@).hasClass('feed-item__likes--active')
+    $likeCounter.text(--likesCount)
+  else
+    $likeCounter.text(++likesCount)
+
+  $(@).toggleClass('feed-item__likes--active')
+
+
+# Filter topic selection
+$('.feed-filter .filter-checkbox').on 'change', (e) ->
+  id = $(e.target).attr('id')
+  checked = $(e.target).is(':checked')
+  filters = if localStorage.getItem('filters') then JSON.parse(localStorage.getItem('filters')) else []
+
+  if id != 'allspec'
+    $('#allspec').prop 'checked', false
+    index = filters.indexOf('allspec')
+
+    if (index > -1)
+      filters.splice(index, 1)
+
+    if checked
+      filters.push(id)
+    else
+      index = filters.indexOf(id)
+
+      if (index > -1)
+        filters.splice(index, 1)
+
+  else
+    $('.feed-filter__list .filter-checkbox').prop 'checked', false
+
+    if checked
+      filters = [id]
+    else
+      filters = []
+
+  localStorage.setItem 'filters', JSON.stringify(filters)
+
+filters = JSON.parse(localStorage.getItem('filters'))
+
+if filters.length
+  $('.feed-filter .filter-checkbox').prop 'checked', false
+  
+  filters.map (filter, i) ->
+    $(".feed-filter ##{filter}").prop 'checked', true

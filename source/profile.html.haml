@@ -1,0 +1,12 @@
+- content_for :left_menu do
+  = partial 'shared/left_menu', locals: { active: 'feed' }
+
+= partial 'shared/sm_icons'
+
+#discuss
+  = partial '/feed/profile-header'
+  .public-profile__main.row
+    = partial '/feed/profile-feed'
+    = partial '/feed/profile-info'
+
+= javascript_include_tag 'feed'

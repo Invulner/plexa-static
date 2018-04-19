@@ -8,7 +8,7 @@
   .discuss-feed
     .flex-row.flex-row--three-columns
       = partial 'feed/left_sidebar'
-      = partial 'feed/main'
-      = partial 'feed/right_sidebar', locals: { filter_path: '/filtered-feed.html' }
+      = partial 'feed/filtered'
+      = partial 'feed/right_sidebar', locals: { filter_path: '/feed.html' }
 
 = javascript_include_tag 'feed'

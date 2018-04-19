@@ -1,0 +1,13 @@
+.row
+  .col-xs-12.public-profile__header
+    = link_to 'Back', '/feed.html', class: 'public-profile__back'
+
+    .public-profile__heading-wrapper
+      .clearfix.public-profile__heading
+        .public-profile__avatar-block
+          = image_tag 'app/oran-avatar.jpg', alt: 'avatar', className: 'public-profile__avatar-img', width: '80', height: '80'
+          OR
+        .public-profile__name
+          Oran Rigby
+        .public-profile__title
+          Doctor

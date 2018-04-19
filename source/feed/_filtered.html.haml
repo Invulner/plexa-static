@@ -228,150 +228,16 @@
     .feed-items
       .feed-item
         .feed-item__header
+          %a.feed-item__avatar-block{:href => "#profile/129"}
           = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/23/api_oran-headshot-min.jpg"}/
-            OR
-          .feed-item__header-main
-            .feed-item__header-row
-              = link_to '/profile.html', class: 'feed-item__author' do
-                Oran Rigby
-              %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-04-19T06:45:18.548Z"} 2 hours ago
-            .feed-item__header-aux{:style => "width: calc(100% - 154px);"}
-              .feed-item__dropdown-wrapper
-                %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
-                .feed-item__dropdown.feed-item__dropdown--arrow-trigger
-                  .feed-item__dropdown-section
-                    %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
-                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
-                      Hide post
-                    %a.feed-item__dropdown-link.feed-item__report{:href => "javascript:void(0)"}
-                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-flag
-                      Report
-                    %a.feed-item__dropdown-link.feed-item__block{:href => "javascript:void(0)"}
-                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-remove-sign
-                      Block user
-            %span.feed-item__label.feed-item__label--position
-              Doctor
-        .feed-item__body
-          %a.post-link{:href => "https://www.sciencedirect.com/science/article/pii/S0039606017302799", :target => "_blank"}
-            .post-link__body
-              %h2.post-link__title
-                From innovation to market adoption in the operating room: The “CFO as customer” - ScienceDirect
-              %span.post-link__link
-                www.sciencedirect.com
-        .feed-item__comments-region
-        .feed-item__footer.share-data
-          .feed-item__stats
-            %span.feed-item__likes.icon-like
-              %span.feed-item__like Like
-              %svg
-                %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-              %span.feed-item__like-counter 0
-            %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
-              %svg
-                %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-          %form.feed-item__reply-form
-            %textarea.feed-item__reply-input{:placeholder => "Type your reply", :rows => "1", :style => "height: 36px;"}
-            %button.feed-item__reply-btn{:disabled => "disabled", :type => "submit"}
-
-      .feed-item
-        .feed-item__header
-          = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}
+            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}/
             PM
           .feed-item__header-main
             .feed-item__header-row
               = link_to '/profile.html', class: 'feed-item__author' do
                 Plexa Medbot
               %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-04-16T09:00:12.905Z"} 1 day ago
-            .feed-item__header-aux{:style => "width: calc(100% - 169px);"}
-              .feed-item__dropdown-wrapper
-                %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
-                .feed-item__dropdown.feed-item__dropdown--arrow-trigger
-                  .feed-item__dropdown-section
-                    %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
-                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
-                      Hide post
-            %span.feed-item__label.feed-item__label--position
-              Medical Organisation
-        .feed-item__body
-          %a.post-link{:href => "http://www.annfammed.org/lookup/doi/10.1370/afm.2196", :target => "_blank"}
-            .post-link__body
-              %h2.post-link__title
-                EvidenceNOW: Balancing Primary Care Implementation and Implementation Research
-              %span.post-link__link
-                www.annfammed.org
-        .feed-item__comments-region
-        .feed-item__footer.share-data
-          .feed-item__stats
-            %span.feed-item__likes.icon-like
-              %span.feed-item__like Like
-              %svg
-                %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-              %span.feed-item__like-counter 0
-            %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
-              %svg
-                %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-          %form.feed-item__reply-form
-            %textarea.feed-item__reply-input{:placeholder => "Type your reply", :rows => "1", :style => "height: 36px;"}
-            %button.feed-item__reply-btn{:disabled => "disabled", :type => "submit"}
-
-      .feed-item
-        .feed-item__header
-          = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}
-            PM
-          .feed-item__header-main
-            .feed-item__header-row
-              = link_to '/profile.html', class: 'feed-item__author' do
-                Plexa Medbot
-              %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-04-15T16:00:17.520Z"} 2 days ago
-            .feed-item__header-aux{:style => "width: calc(100% - 169px);"}
-              .feed-item__dropdown-wrapper
-                %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
-                .feed-item__dropdown.feed-item__dropdown--arrow-trigger
-                  .feed-item__dropdown-section
-                    %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
-                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
-                      Hide post
-            %span.feed-item__label.feed-item__label--position
-              Medical Organisation
-        .feed-item__body
-          %a.post-link{:href => "https://www.sciencedirect.com/science/article/pii/S0304383518302441", :target => "_blank"}
-            .post-link__body
-              %h2.post-link__title
-                A novel tropomyosin-related kinase A inhibitor, KK5101 to treat pancreatic cancer
-              %span.post-link__link
-                www.sciencedirect.com
-        .feed-item__comments-region
-        .feed-item__footer.share-data
-          .feed-item__stats
-            %span.feed-item__likes.icon-like
-              %span.feed-item__like Like
-              %svg
-                %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-              %span.feed-item__like-counter 0
-            %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
-              %svg
-                %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-          %form.feed-item__reply-form
-            %textarea.feed-item__reply-input{:placeholder => "Type your reply", :rows => "1", :style => "height: 36px;"}
-            %button.feed-item__reply-btn{:disabled => "disabled", :type => "submit"}
-
-      .feed-item
-        .feed-item__header
-          = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}
-            PM
-          .feed-item__header-main
-            .feed-item__header-row
-              = link_to '/profile.html', class: 'feed-item__author' do
-                Plexa Medbot
-              %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-04-13T09:00:15.739Z"} 4 days ago
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-13T09:00:15.739Z"} 6 days ago
             .feed-item__header-aux{:style => "width: calc(100% - 169px);"}
               .feed-item__dropdown-wrapper
                 %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
@@ -396,7 +262,7 @@
               %span.feed-item__like Like
               %svg
                 %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-              %span.feed-item__like-counter 0
+              0
             %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
               %svg
                 %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
@@ -407,14 +273,61 @@
       .feed-item
         .feed-item__header
           = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}
+            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/23/api_oran-headshot-min.jpg"}/
+            OR
+          .feed-item__header-main
+            .feed-item__header-row
+              = link_to '/profile.html', class: 'feed-item__author' do
+                Oran Rigby
+              %a.feed-item__story-link{:href => "javascript:void(0)"}
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-04T11:37:47.988Z"} 15 days ago
+            .feed-item__header-aux{:style => "width: calc(100% - 154px);"}
+              .feed-item__dropdown-wrapper
+                %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
+                .feed-item__dropdown.feed-item__dropdown--arrow-trigger
+                  .feed-item__dropdown-section
+                    %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
+                      Hide post
+                    %a.feed-item__dropdown-link.feed-item__report{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-flag
+                      Report
+                    %a.feed-item__dropdown-link.feed-item__block{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-remove-sign
+                      Block user
+            %span.feed-item__label.feed-item__label--position
+              Doctor
+        .feed-item__body
+          %p.feed-item__text
+            ⚕ Shared from plexa.ai:
+            This month’s #BulletinACS examines the occurrence of chronic obstructive pulmonary disease (COPD) in the National Trauma Data Bank (NTDB) research dataset.
+            %a.inline-link{:href => "https://t.co/p0yMYdMa8Y", :target => "_blank"} https://t.co/p0yMYdMa8Y
+          %a.fancybox.feed-item__img{:href => "https://d1x2yd8scvgoir.cloudfront.net/discuss/story_image/image/37/full_ntdb_fig1.png"}
+            %img{:alt => "", :src => "https://d1x2yd8scvgoir.cloudfront.net/discuss/story_image/image/37/preview_ntdb_fig1.png"}/
+        .feed-item__comments-region
+        .feed-item__footer.share-data
+          .feed-item__stats
+            %span.feed-item__likes.icon-like
+              %span.feed-item__like Like
+              %svg
+                %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+              0
+          %form.feed-item__reply-form
+            %textarea.feed-item__reply-input{:placeholder => "Type your reply", :rows => "1", :style => "height: 36px;"}
+            %button.feed-item__reply-btn{:disabled => "disabled", :type => "submit"}
+
+      .feed-item
+        .feed-item__header
+          %a.feed-item__avatar-block{:href => "#profile/129"}
+          = link_to '/profile.html', class: 'feed-item__avatar-block' do
+            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}/
             PM
           .feed-item__header-main
             .feed-item__header-row
               = link_to '/profile.html', class: 'feed-item__author' do
                 Plexa Medbot
               %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-04-08T16:00:04.265Z"} 9 days ago
+                %time.feed-item__time.time.timeago{:datetime => "2018-03-29T16:00:13.925Z"} 21 days ago
             .feed-item__header-aux{:style => "width: calc(100% - 169px);"}
               .feed-item__dropdown-wrapper
                 %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
@@ -426,12 +339,13 @@
             %span.feed-item__label.feed-item__label--position
               Medical Organisation
         .feed-item__body
-          %a.post-link{:href => "http://doi.wiley.com/10.1111/jocd.12502", :target => "_blank"}
+          %a.post-link{:href => "http://www.reproduction-online.org/lookup/doi/10.1530/REP-17-0483", :target => "_blank"}
+            .post-link__header.post-link__image.post-link__image--small{:style => "background-image: url(http://www.reproduction-online.org/content/vol155/issue4/home_cover.gif)"}
             .post-link__body
               %h2.post-link__title
-                Correlations between skin hydration parameters and corneocyte‐derived parameters to characterize skin conditions - Masaki -  - Journal of Cosmetic Dermatology - Wiley Online Library
+                Female fertility preservation: past, present and future
               %span.post-link__link
-                doi.wiley.com
+                www.reproduction-online.org
         .feed-item__comments-region
         .feed-item__footer.share-data
           .feed-item__stats
@@ -439,50 +353,7 @@
               %span.feed-item__like Like
               %svg
                 %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-              %span.feed-item__like-counter 0
-            %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
-              %svg
-                %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-          %form.feed-item__reply-form
-            %textarea.feed-item__reply-input{:placeholder => "Type your reply", :rows => "1", :style => "height: 36px;"}
-            %button.feed-item__reply-btn{:disabled => "disabled", :type => "submit"}
-
-      .feed-item
-        .feed-item__header
-          = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}
-            PM
-          .feed-item__header-main
-            .feed-item__header-row
-              = link_to '/profile.html', class: 'feed-item__author' do
-                Plexa Medbot
-              %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-04-07T16:00:06.646Z"} 10 days ago
-            .feed-item__header-aux{:style => "width: calc(100% - 169px);"}
-              .feed-item__dropdown-wrapper
-                %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
-                .feed-item__dropdown.feed-item__dropdown--arrow-trigger
-                  .feed-item__dropdown-section
-                    %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
-                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
-                      Hide post
-            %span.feed-item__label.feed-item__label--position
-              Medical Organisation
-        .feed-item__body
-          %a.post-link{:href => "http://bmjopen.bmj.com/lookup/doi/10.1136/bmjopen-2017-020449", :target => "_blank"}
-            .post-link__body
-              %h2.post-link__title
-                http://bmjopen.bmj.com/lookup/doi/10.1136/bmjopen-2017-020449
-              %span.post-link__link
-                bmjopen.bmj.com
-        .feed-item__comments-region
-        .feed-item__footer.share-data
-          .feed-item__stats
-            %span.feed-item__likes.icon-like
-              %span.feed-item__like Like
-              %svg
-                %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-              %span.feed-item__like-counter 0
+              0
             %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
               %svg
                 %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}

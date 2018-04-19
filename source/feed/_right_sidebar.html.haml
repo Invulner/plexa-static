@@ -160,4 +160,5 @@
       %li.feed-filter__item
         %input#510f.filter-checkbox{:type => "checkbox"}
         %label.feed-filter__link{:for => "510f"} Histopathology
-    %button.btn-beige.btn-new.feed-filter__apply-btn Apply filters
+
+    = link_to 'Apply filters', filter_path, class: 'btn-beige btn-new feed-filter__apply-btn'
