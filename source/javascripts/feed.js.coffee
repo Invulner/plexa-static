@@ -75,8 +75,8 @@ $('.feed-filter .filter-checkbox').on 'change', (e) ->
 
 filters = JSON.parse(localStorage.getItem('filters'))
 
-if filters.length
+if filters?.length
   $('.feed-filter .filter-checkbox').prop 'checked', false
-  
+
   filters.map (filter, i) ->
     $(".feed-filter ##{filter}").prop 'checked', true
