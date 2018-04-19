@@ -24,7 +24,7 @@
               = link_to '#' do
                 %span Groups
             %li
-              = link_to '#', method: :delete do
+              = link_to '#', class: 'logout-link' do
                 %i.fa.fa-sign-out.pull-right
                 Log Out
 
@@ -36,3 +36,5 @@
             .notif
               %i
                 = partial 'shared/pulse_icon'
+
+= javascript_include_tag 'login'

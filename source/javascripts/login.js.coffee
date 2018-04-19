@@ -8,6 +8,14 @@ $('.login-form__submit-btn').on 'click', (e) ->
 
   if (login.length && password.length)
     if (login == 'patient@mail.com')
-      window.location.href = 'feed_patient.html'
+      localStorage.setItem('user_type', 'patient')
     else
-      window.location.href = 'feed.html'
+      localStorage.setItem('user_type', 'doctor')
+
+    window.location.href = 'feed.html'
+
+$('.logout-link').on 'click', (e) ->
+  e.preventDefault()
+
+  localStorage.removeItem('user_type')
+  window.location.href = 'sign_in.html'

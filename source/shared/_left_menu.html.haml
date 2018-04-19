@@ -1,4 +1,4 @@
-.col-md-3.left_col.navigation
+.col-md-3.left_col.navigation.hidden
   .left_col.scroll-view
     .navbar.nav_title{ style: 'border: 0;' }
       %a.site_title{ href: '/feed.html' }
@@ -82,3 +82,11 @@
           %p.invitation-block__text
             Get 50 credits per user.
           = link_to 'Send invite', '#', class: 'btn btn-green invitation-block__link'
+
+:coffee
+  userType = localStorage.getItem('user_type')
+
+  if userType == 'patient'
+    $('.navigation__section--provider').hide()
+
+  $('.navigation').removeClass 'hidden'
