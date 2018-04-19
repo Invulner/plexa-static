@@ -1,0 +1,65 @@
+.container-fluid.consult
+  %header.consult__header
+    .consult__logo.pull-left
+      %img{ src: '/images/consult/logo.svg' }
+      %span Quantum Consult
+    %button.consult__close.pull-right
+      %img{ src: '/images/consult/close.svg' }
+
+  .consult__doctors
+    %h1.consult__doctors-heading Select doctors who you would like to submit your video to
+    %table.consult__table
+      %thead
+        %tr
+          %th Bulk select
+          %th.consult__table-recommended Recommended
+          %th Location
+          %th Travel distance
+          %th Bulk billing
+          %th Price per Consult
+      %tbody
+        %tr
+          %td
+            %input.x-checkbox{ type: 'checkbox', id: 'ch1' }
+            %label{ for: 'ch1' }
+          %td
+            .consult__doctor
+              %img{ src: '/images/consult/avatar3@2x.png' }
+              %span.consult__doctor-name Dr.Everliegh Westwood
+              %span.consult__doctor-label Nearest
+          %td Balmain
+          %td 7 mins
+          %td No
+          %td $55
+        %tr
+          %td
+            %input.x-checkbox{ type: 'checkbox', id: 'ch2' }
+            %label{ for: 'ch2' }
+          %td
+            .consult__doctor
+              %img{ src: '/images/consult/avatar2@2x.png' }
+              %span.consult__doctor-name Dr. David Forrester
+              %span.consult__doctor-label Soonest
+          %td Balmain
+          %td 7 mins
+          %td No
+          %td $55
+        %tr
+          %td
+            %input.x-checkbox{ type: 'checkbox', id: 'ch3' }
+            %label{ for: 'ch3' }
+          %td
+            .consult__doctor
+              %img{ src: '/images/consult/avatar@2x.png' }
+              %span.consult__doctor-name Dr.Roger Haggart
+              %span.consult__doctor-label Cheapest
+          %td Balmain
+          %td 7 mins
+          %td No
+          %td $55
+
+    .consult__select
+      %input.x-checkbox{ type: 'checkbox', id: 'ch4' }
+      %label.consult__select-label{ for: 'ch4' }
+      Select a recommended doctor for me if selected doctors aren’t available
+    %button.btn-new.btn-green Submit consult request

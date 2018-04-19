@@ -22,7 +22,7 @@
     z-index: 1
     background: $consult-bg
 
-    &:after
+    &--transparent:after
       content: ''
       position: absolute
       left: 0
@@ -59,6 +59,79 @@
       margin: 30px 0 0
       font-size: 21px
       color: $brown
+
+  &__doctors
+    max-width: 1000px
+    margin: 0 auto
+    text-align: center
+
+    &-heading
+      font: 21px 'URWGeometric-SemiBold'
+      text-align: center
+      margin-bottom: 35px
+
+  &__doctor
+    position: relative
+    float: left
+    padding-left: 25px
+
+    &-label
+      position: absolute
+      left: 90px
+      top: 32px
+      line-height: 1
+      font-size: 11px
+      padding: 3px 5px
+      font-style: italic
+      font-family: URWGeometric-Light
+      background-color: #d3ffef
+      border-radius: 5px
+
+    &-name
+      vertical-align: middle
+
+    img
+      width: 45px
+      height: 45px
+      margin-right: 15px
+
+  &__select
+    text-align: center
+    font-size: 16px
+    margin-bottom: 40px
+
+    &-label
+      margin-right: 15px !important
+
+  &__table
+    width: 100%
+    margin-bottom: 50px
+
+    td, th
+      font-size: 17px
+      text-align: center
+
+    th
+      position: relative
+      font-weight: normal
+      border-bottom: 1px solid #000
+      padding: 8px 5px
+
+    td
+      padding: 20px 10px
+
+    &-recommended
+      text-align: left !important
+      padding-left: 50px !important
+
+      &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 44px
+        width: 115px
+        height: 3px
+        background-color: #000
 
   .button
     border-radius: 5px
@@ -149,3 +222,45 @@
     &.active
       background-color: $green
       color: #fff
+
+.x-checkbox
+  position: absolute
+  opacity: 0
+
+  & + label
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    padding: 0
+    margin: 0
+
+  & + label:before
+    content: ''
+    float: right
+    vertical-align: text-top
+    width: 14px
+    height: 14px
+    margin-top: -2px
+    background: #d2d2d2
+    border-radius: 50%
+
+  &:disabled + label
+    color: #b8b8b8
+    cursor: auto
+
+  &:disabled + label:before
+    box-shadow: none
+    background: #ddd
+
+  &:checked + label:before
+    background: $green
+
+  &:checked + label:after
+    content: '×'
+    position: absolute
+    left: 0
+    top: -5px
+    color: #fff
+    font: 25px 'URWGeometric-Light'
+    line-height: 1
