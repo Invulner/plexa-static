@@ -1,5 +1,3 @@
-#= require jquery
-
 $('.login-form__submit-btn').on 'click', (e) ->
   e.preventDefault()
 
