@@ -7,15 +7,15 @@
       %li.consult__pay-card
         %input.x-checkbox{ type: 'radio', name: 'card-type', id: 'ch1' }
         %label{ for: 'ch1' }
-        %img{ src: '/images/consult/paypal@2x.png' }
+        = image_tag 'consult/paypal@2x.png'
       %li.consult__pay-card
         %input.x-checkbox{ type: 'radio', name: 'card-type', id: 'ch2' }
         %label{ for: 'ch2' }
-        %img{ src: '/images/consult/visa2x.png' }
+        = image_tag 'consult/visa2x.png'
       %li.consult__pay-card
         %input.x-checkbox{ type: 'radio', name: 'card-type', id: 'ch3' }
         %label{ for: 'ch3' }
-        %img{ src: '/images/consult/mastercard@2x.png' }
+        = image_tag 'consult/mastercard@2x.png'
     .consult__pay-fields
       %input.consult__pay-card-number{ placeholder: 'Card number' }
       %input.consult__pay-card-expiry-date{ placeholder: 'Expiry date' }

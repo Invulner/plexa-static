@@ -1,20 +1,20 @@
 .container-fluid.consult
   %header.consult__header.consult__header--transparent
     .consult__logo.pull-left
-      %img{ src: '/images/consult/logo.svg' }
+      = image_tag 'consult/logo.svg'
       %span Quantum Consult
     %button.consult__close.pull-right
-      %img{ src: '/images/consult/close.svg' }
+      = image_tag 'consult/close.svg'
   .row
     .col-xs-12.col-sm-6.col-sm-offset-3
       %ul.consult-chat
         %li.consult-chat__item.consult-chat__item--plexa
           .consult-chat__message Hi Alicia! Thanks for starting a Quantum Consult. I’m the Plexa Medbot and I’ll be guiding you through the process.
-          %img.consult-chat__author{ src: '/images/consult/plexa-logo.svg' }
+          = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
           %span.consult-chat__time 18:19 pm
         %li.consult-chat__item.consult-chat__item--plexa
           .consult-chat__message First thing we need is a short summary of your condition. You can do this by video, audio or text. Please let me know your preference!
-          %img.consult-chat__author{ src: '/images/consult/plexa-logo.svg' }
+          = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
           %span.consult-chat__time 18:19 pm
         %li.consult-chat__item
           .consult-chat__message
@@ -23,7 +23,7 @@
               %button.button.active record a video
               -#%button record audio
               -#%button write my response
-          %img.consult-chat__author{ src: '/images/consult/avatar@2x.png' }
+          = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
           %span.consult-chat__time 18:19 pm
         %li.consult-chat__item.consult-chat__item--question
           .consult-chat__message
@@ -31,20 +31,20 @@
             .consult-chat__question Do you have pain?
             %button.btn-green.button Start recording
 
-          %img.consult-chat__author{ src: '/images/consult/avatar@2x.png' }
+          = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
           %span.consult-chat__time 18:19 pm
 
         %li.consult-chat__item.consult-chat__item--video
           .consult-chat__message
             .consult-chat__video
-              %img{ src: '/images/consult/video-image.jpg' }
+              = image_tag 'consult/video-image.jpg'
               .consult-chat__video-buttons
                 %button
-                  %img{ src: '/images/consult/trash.svg' }
+                  = image_tag 'consult/trash.svg'
                 %button
-                  %img{ src: '/images/consult/play.svg' }
+                  = image_tag 'consult/play.svg'
                 %button
-                  %img{ src: '/images/consult/replay.svg' }
+                  = image_tag 'consult/replay.svg'
 
-          %img.consult-chat__author{ src: '/images/consult/avatar@2x.png' }
+          = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
           %span.consult-chat__time 18:19 pm
