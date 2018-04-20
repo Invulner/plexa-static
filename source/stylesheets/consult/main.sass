@@ -66,6 +66,64 @@
       text-align: center
       margin-bottom: 35px
 
+  &__prescription
+    text-align: center
+
+    &-back
+      span
+        display: block
+        font: 28px 'URWGeometric-SemiBold'
+
+      a
+        color: #000
+        font-size: 16px
+
+        &:before
+          content: ''
+          display: inline-block
+          width: 9px
+          height: 9px
+          margin-right: 3px
+          border-bottom: 1px solid #000
+          border-left: 1px solid #000
+          transform: rotate(45deg)
+
+        &:hover
+          color: $brown
+
+          &:before
+            border-bottom: 1px solid $brown
+            border-left: 1px solid $brown
+
+    &-recipe
+      width: 195px
+      padding: 20px
+      border: 1px solid #000
+      margin: 50px auto
+
+      img
+        width: 40px
+        padding: 2px 4px
+        border: 2px solid #000
+        border-radius: 5px
+        margin-right: 25px
+
+    &-title
+      font-size: 30px
+
+    &-drug,
+    &-times
+      font-size: 14px
+      text-align: left
+
+    &-times
+      display: block
+      font-style: italic
+
+    button
+      padding: 5px 23px 4px
+      font-size: 18px
+
   &__doctor
     position: relative
     float: left
