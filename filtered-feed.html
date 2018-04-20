@@ -546,7 +546,7 @@ Groups
 <path class='st0' d='M-157.471,191.009c-9.922-9.922-23.115-15.387-37.146-15.387c-14.034,0-27.224,5.465-37.146,15.387c-18.362,18.359-20.644,52.903-4.942,73.832l42.088,60.781l42.025-60.696C-136.827,243.911-139.109,209.368-157.471,191.009zM-194.132,246.845c-10.571,0-19.176-8.604-19.176-19.176s8.604-19.176,19.176-19.176c10.571,0,19.176,8.604,19.176,19.176S-183.561,246.845-194.132,246.845z' fill='#cbcbcb'></path>
 </svg>
 </li>
-<li class='compose__groups-tab compose__tab' data-tab='groups' style='display: none;'>
+<li class='compose__groups-tab compose__tab' data-tab='groups'>
 <svg viewbox='0 0 548.2 511.6' x='0px' xmlns='http://www.w3.org/2000/svg' y='0px'>
 <path d='M109.6,146.2c20.2,0,37.4-7.1,51.7-21.4c14.3-14.3,21.4-31.5,21.4-51.7c0-20.2-7.1-37.4-21.4-51.7 C147,7.1,129.8,0,109.6,0C89.5,0,72.2,7.1,58,21.4C43.7,35.7,36.5,52.9,36.5,73.1c0,20.2,7.1,37.4,21.4,51.7C72.2,139,89.5,146.2,109.6,146.2z' fill='#cbcbcb'></path>
 <path d='M196.6,260.2c21.4,21.4,47.2,32.1,77.5,32.1c30.3,0,56.1-10.7,77.5-32.1c21.4-21.4,32.1-47.3,32.1-77.5c0-30.3-10.7-56.1-32.1-77.5c-21.4-21.4-47.2-32.1-77.5-32.1c-30.3,0-56.1,10.7-77.5,32.1c-21.4,21.4-32.1,47.2-32.1,77.5S175.2,238.8,196.6,260.2z' fill='#cbcbcb'></path>
@@ -591,11 +591,6 @@ Groups
 <input placeholder='Enter a location' type='search'>
 <button class='compose__search-btn' type='submit'>Search</button>
 </form>
-<div class='skysearch__spinner'>
-<svg class='spinner' viewbox='0 0 50 50'>
-<circle class='path' cx='25' cy='25' fill='none' r='20' stroke-width='5'></circle>
-</svg>
-</div>
 <ul class='compose__search-list'>
 <li class='list-item--active'>All Locations</li>
 <li>Australia</li>
@@ -609,6 +604,8 @@ Select a group
 </div>
 <ul class='compose__groups-list'>
 <li class='list-item--active'>No group</li>
+<li>Group 1</li>
+<li>Group 2</li>
 </ul>
 </div>
 </div>
@@ -826,13 +823,13 @@ Select a group
 </div>
 </div>
 </div>
+
 <div class='discuss__group-strip'></div>
 <div class='discuss__feed'>
 <div class='feed-search'></div>
 <div class='feed-items'>
 <div class='feed-item'>
 <div class='feed-item__header'>
-<a class='feed-item__avatar-block' href='#profile/129'></a>
 <a href="profile.html" class="feed-item__avatar-block"><img alt='avatar' class='feed-item__avatar-img' onerror='this.style.display = &#39;none&#39;' src='https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg'>
 PM
 </a><div class='feed-item__header-main'>
@@ -880,7 +877,7 @@ Insights.ovid.com
 <svg>
 <use xlink:href='#like-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
 </svg>
-0
+<span class='feed-item__like-counter'>0</span>
 </span>
 <span class='feed-item__share icon-share' data-target='#share-modal' data-toggle='modal'>
 <svg>
@@ -949,7 +946,7 @@ This month’s #BulletinACS examines the occurrence of chronic obstructive pulmo
 <svg>
 <use xlink:href='#like-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
 </svg>
-0
+<span class='feed-item__like-counter'>0</span>
 </span>
 </div>
 <form class='feed-item__reply-form'>
@@ -960,7 +957,6 @@ This month’s #BulletinACS examines the occurrence of chronic obstructive pulmo
 </div>
 <div class='feed-item'>
 <div class='feed-item__header'>
-<a class='feed-item__avatar-block' href='#profile/129'></a>
 <a href="profile.html" class="feed-item__avatar-block"><img alt='avatar' class='feed-item__avatar-img' onerror='this.style.display = &#39;none&#39;' src='https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg'>
 PM
 </a><div class='feed-item__header-main'>
@@ -1009,7 +1005,7 @@ www.reproduction-online.org
 <svg>
 <use xlink:href='#like-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
 </svg>
-0
+<span class='feed-item__like-counter'>0</span>
 </span>
 <span class='feed-item__share icon-share' data-target='#share-modal' data-toggle='modal'>
 <svg>
