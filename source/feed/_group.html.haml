@@ -2,6 +2,14 @@
   = partial '/feed/compose'
 
   .discuss__group-strip
+    .group-strip
+      %span.group-strip__title Group name
+      .group-strip__members
+        %ul.clearfix
+          %li
+            %span.list__person-photo
+              %span.member__initials PT
+        %button.btn.group-strip__view-btn{:type => "button"} View
 
   .discuss__feed
     .feed-search
@@ -34,7 +42,56 @@
                 Optimizing Blood Transfusion Practices Through Bundled Intervention Implementation in Patients With Gynecologic Cancer Undergoing Laparotomy
               %span.post-link__link
                 Insights.ovid.com
-        .feed-item__comments-region
+        .feed-item__comments-section
+          %div
+            %a.feed-item__more-comments{:href => "javascript:void(0)"} See previous comments
+          .feed-item__comments-list
+            #63.comment
+              %a.comment__avatar-block{:href => "#profile/208"}
+                %img.comment__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/208/api_15039307720980.png"}/
+                PT
+              .comment__main-block
+                %a.comment__author{:href => "#profile/208"}
+                  Plexa Test
+                %p.comment__text 2345234
+                .comment__footer
+                  %span.comment__footer-part.comment__footer-part--likes.icon-like
+                    %span.comment__footer-part Like
+                    %svg
+                      %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                    0
+                  %time.comment__footer-part.comment__footer-part--time.time.timeago{:datetime => "2018-04-18T12:40:34.471Z"} 2 days ago
+            #64.comment
+              %a.comment__avatar-block{:href => "#profile/208"}
+                %img.comment__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/208/api_15039307720980.png"}/
+                PT
+              .comment__main-block
+                %a.comment__author{:href => "#profile/208"}
+                  Plexa Test
+                %p.comment__text 345345
+                .comment__footer
+                  %span.comment__footer-part.comment__footer-part--likes.icon-like
+                    %span.comment__footer-part Like
+                    %svg
+                      %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                    0
+                  %time.comment__footer-part.comment__footer-part--time.time.timeago{:datetime => "2018-04-18T12:40:36.199Z"} 2 days ago
+            #65.comment
+              %a.comment__avatar-block{:href => "#profile/208"}
+                %img.comment__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/208/api_15039307720980.png"}/
+                PT
+              .comment__main-block
+                %a.comment__author{:href => "#profile/208"}
+                  Plexa Test
+                %p.comment__text 345345345
+                .comment__footer
+                  %span.comment__footer-part.comment__footer-part--likes.icon-like
+                    %span.comment__footer-part Like
+                    %svg
+                      %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+                    0
+                  %time.comment__footer-part.comment__footer-part--time.time.timeago{:datetime => "2018-04-18T12:40:38.095Z"} 2 days ago
+
         .feed-item__footer.share-data
           .feed-item__stats
             %span.feed-item__likes.icon-like
@@ -124,7 +181,6 @@
                 Female fertility preservation: past, present and future
               %span.post-link__link
                 www.reproduction-online.org
-        .feed-item__comments-region
         .feed-item__footer.share-data
           .feed-item__stats
             %span.feed-item__likes.icon-like

@@ -80,3 +80,25 @@ if filters?.length
 
   filters.map (filter, i) ->
     $(".feed-filter ##{filter}").prop 'checked', true
+
+
+# Compose tabs
+$('.compose__tab').on 'click', () ->
+  tab = $(@).attr('data-tab')
+
+  $('.compose__tab').removeClass 'compose__tab--active'
+  $(@).addClass 'compose__tab--active'
+
+  $('.compose-tab-content').addClass 'compose-tab-hidden'
+  $(".compose__#{tab}").removeClass 'compose-tab-hidden'
+
+$('.compose__section li').on 'click', () ->
+  $list = $(@).parents('ul')
+
+  $list.find('li').removeClass 'list-item--active'
+  $(@).toggleClass 'list-item--active'
+
+
+# Go to group feed
+$('.feed-filter__list.nav__groups li').on 'click', () ->
+  window.location.href = 'group-feed.html'
