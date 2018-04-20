@@ -149,9 +149,67 @@
       border-radius: 5px
       color: #000
 
+  &__pay
+    width: 450px
+    text-align: center
+
+    &-title
+      margin-bottom: 50px
+      font-size: 30px
+      color: $brown
+
+    &-escrow
+      font-size: 22px
+      color: $brown
+
+    &-view-btn
+      padding: 4px 30px 2px
+      border-radius: 5px
+      font-size: 16px
+
+    &-cards
+      margin: 45px 0 !important
+
+    &-fields
+      font-size: 0
+      margin-bottom: 80px
+
+    &-card
+      display: inline-block
+
+      &:not(:first-of-type)
+        margin-left: 70px
+
+      img
+        height: 30px
+        margin-left: 13px
+
+      &-number
+        width: 100%
+        margin-bottom: 25px
+
+      &-expiry-date,
+      &-ccv
+        width: 47%
+
+      &-expiry-date
+        margin-right: 6%
+
+      &-expiry-date,
+      &-ccv,
+      &-number
+        font-size: 16px
+        border: none
+        border-bottom: 1px solid #000
+
+        +placeholder
+          font-size: 16px
+          color: #000
+
   .button
+    font-size: 16px
     border-radius: 5px
-    padding: 5px 10px 4px
+    padding: 4px 10px 3px
 
 .consult-chat
   max-width: 550px
