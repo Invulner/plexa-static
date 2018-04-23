@@ -1,0 +1,50 @@
+.container-fluid.consult
+  %header.consult__header.consult__header--transparent
+    .consult__logo.pull-left
+      = image_tag 'consult/logo.svg'
+      %span Quantum Consult
+    %button.consult__close.pull-right
+      = image_tag 'consult/close.svg'
+  .row
+    .col-xs-12.col-sm-6.col-sm-offset-3
+      %ul.consult-chat
+        %li.consult-chat__item.consult-chat__item--plexa
+          .consult-chat__message Hi Alicia! Thanks for starting a Quantum Consult. I’m the Plexa Medbot and I’ll be guiding you through the process.
+          = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+          %span.consult-chat__time 18:19 pm
+        %li.consult-chat__item.consult-chat__item--plexa
+          .consult-chat__message First thing we need is a short summary of your condition. You can do this by video, audio or text. Please let me know your preference!
+          = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+          %span.consult-chat__time 18:19 pm
+        %li.consult-chat__item
+          .consult-chat__message
+            I would like to
+            .consult-chat__buttons
+              %button.button.active record a video
+              -#%button record audio
+              -#%button write my response
+          = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+          %span.consult-chat__time 18:19 pm
+        %li.consult-chat__item.consult-chat__item--question
+          .consult-chat__message
+            .consult-chat__question-title Question 1
+            .consult-chat__question Do you have pain?
+            %button.btn-green.button Start recording
+
+          = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+          %span.consult-chat__time 18:19 pm
+
+        %li.consult-chat__item.consult-chat__item--video
+          .consult-chat__message
+            .consult-chat__video
+              = image_tag 'consult/video-image.jpg'
+              .consult-chat__video-buttons
+                %button
+                  = image_tag 'consult/trash.svg'
+                %button
+                  = image_tag 'consult/play.svg'
+                %button
+                  = image_tag 'consult/replay.svg'
+
+          = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+          %span.consult-chat__time 18:19 pm

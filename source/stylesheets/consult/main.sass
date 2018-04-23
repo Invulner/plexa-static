@@ -1,0 +1,473 @@
+.consult
+  position: relative
+  background: $consult-bg
+  padding-top: 85px
+  min-height: 100%
+
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+  button
+    border: none
+
+.consult
+  &__header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    padding: 30px 30px 0
+    z-index: 1
+    background: $consult-bg
+
+    &--transparent:after
+      content: ''
+      position: absolute
+      left: 0
+      top: 74px
+      width: 100%
+      height: 150px
+      background: linear-gradient(to bottom, rgba(254, 254, 254, 1) 0%,  rgba(254, 254, 254, .1) 100%)
+
+  &__logo
+    img
+      width: 40px
+
+    span
+      width: 80px
+      display: inline-block
+      vertical-align: middle
+      margin-left: 8px
+      font-size: 20px
+      line-height: 1.1
+      color: $green
+
+  &__close
+    img
+      width: 20px
+
+  &__loading
+    text-align: center
+
+    p
+      margin: 30px 0 0
+      font-size: 23px
+      color: $brown
+
+  &__doctors
+    max-width: 1000px
+    margin: 0 auto
+    text-align: center
+
+    &-heading
+      font: 21px 'URWGeometric-SemiBold'
+      text-align: center
+      margin-bottom: 35px
+
+  &__prescription
+    text-align: center
+
+    &-back
+      span
+        display: block
+        font: 28px 'URWGeometric-SemiBold'
+
+      a
+        color: #000
+        font-size: 16px
+
+        &:before
+          content: ''
+          display: inline-block
+          width: 9px
+          height: 9px
+          margin-right: 3px
+          border-bottom: 1px solid #000
+          border-left: 1px solid #000
+          transform: rotate(45deg)
+
+        &:hover
+          color: $brown
+
+          &:before
+            border-bottom: 1px solid $brown
+            border-left: 1px solid $brown
+
+    &-recipe
+      width: 200px
+      padding: 20px
+      border: 1px solid #000
+      margin: 50px auto
+
+      img
+        float: left
+        width: 40px
+        padding: 2px 4px
+        border: 2px solid #000
+        border-radius: 5px
+        margin-right: 25px
+
+    &-title
+      font-size: 30px
+
+    &-drug,
+    &-times
+      font-size: 14px
+      text-align: left
+
+    &-times
+      display: block
+      font-style: italic
+
+    button
+      padding: 5px 23px 4px
+      font-size: 18px
+
+  &__doctor
+    position: relative
+    float: left
+    padding-left: 25px
+
+    &-label
+      position: absolute
+      left: 90px
+      top: 32px
+      line-height: 1
+      font-size: 11px
+      padding: 3px 5px
+      font-style: italic
+      font-family: URWGeometric-Light
+      background-color: #d3ffef
+      border-radius: 5px
+
+    &-name
+      vertical-align: middle
+
+    img
+      width: 45px
+      height: 45px
+      margin-right: 15px
+
+  &__select
+    text-align: center
+    font-size: 16px
+    margin-bottom: 40px
+
+    &-label
+      margin-right: 15px !important
+
+  &__table
+    width: 100%
+    margin-bottom: 50px
+
+    td, th
+      font-size: 17px
+      text-align: center
+
+    th
+      position: relative
+      font-weight: normal
+      border-bottom: 1px solid #000
+      padding: 8px 5px
+
+    td
+      padding: 20px 10px
+
+    &-recommended
+      text-align: left !important
+      padding-left: 50px !important
+
+      &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 44px
+        width: 115px
+        height: 3px
+        background-color: #000
+
+  &__reply-notification
+    text-align: center
+
+    img
+      width: 120px
+      height: 120px
+      border-radius: 50%
+
+    p
+      font-size: 25px
+      color: $brown
+      line-height: 1.2
+      padding: 40px 0
+
+    &-btn
+      padding: 3px 20px 2px
+      font: 16px 'URWGeometric-Light'
+      border-radius: 5px
+      color: #000
+
+  &__pay
+    width: 450px
+    text-align: center
+
+    &-title
+      margin-bottom: 50px
+      font-size: 30px
+      color: $brown
+
+    &-escrow
+      font-size: 22px
+      color: $brown
+
+    &-view-btn
+      padding: 4px 30px 2px
+      border-radius: 5px
+      font-size: 16px
+
+    &-cards
+      margin: 45px 0 !important
+
+    &-fields
+      font-size: 0
+      margin-bottom: 80px
+
+    &-card
+      display: inline-block
+
+      &:not(:first-of-type)
+        margin-left: 70px
+
+      img
+        height: 30px
+        margin-left: 13px
+
+      &-number
+        width: 100%
+        margin-bottom: 25px
+
+      &-expiry-date,
+      &-ccv
+        width: 47%
+
+      &-expiry-date
+        margin-right: 6%
+
+      &-expiry-date,
+      &-ccv,
+      &-number
+        font-size: 16px
+        border: none
+        border-bottom: 1px solid #000
+
+        +placeholder
+          font-size: 16px
+          color: #000
+
+  &__video
+    width: 75%
+    margin-top: 20px
+
+    &-play
+      position: relative
+      margin-bottom: 15px
+
+      img
+        width: 100%
+
+    &-bar
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 30px
+      background-color: #000
+
+    &-progress
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 70%
+      height: 30px
+      background-color: $mint
+
+    &-doctor
+      font-size: 22px
+
+    &-profile-link
+      font-size: 18px
+      color: #000
+
+      &:hover
+        color: $brown
+
+  .button
+    font-size: 16px
+    border-radius: 5px
+    padding: 4px 10px 3px
+
+  &__thanks
+    button
+      font-size: 18px
+      margin: 0
+      padding: 5px 23px 4px
+
+    &-prescription
+      margin-bottom: 25px
+
+    &-prescription,
+    &-referral
+      font-size: 22px
+
+
+  &__thanks-for-view
+    padding: 0 0 30px
+    text-align: center
+    border-bottom: 1px solid #000
+    margin-bottom: 40px
+
+    p
+      font-size: 30px
+      margin-bottom: 40px
+
+.btn-black
+  background: #000
+  color: #fff
+
+  &:hover
+    opacity: .8
+
+.consult-chat
+  max-width: 550px
+  margin: 0 auto
+  color: $text-color
+  font-family: 'URWGeometric-Light'
+
+  &__item
+    position: relative
+    margin-bottom: 30px
+    padding: 15px
+    border-radius: 5px
+    background-color: $gray
+    font-size: 18px
+
+    &--plexa
+      background-color: $mint
+
+      .consult-chat__author
+        right: -45px
+        left: auto
+
+    &--question
+      height: 270px
+      padding-top: 45px
+      text-align: center
+
+  &__video
+    position: relative
+
+    img
+      width: 100%
+
+    &-buttons
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 30px
+      padding-top: 5px
+      background: rgba(255,255,255, .4)
+      text-align: center
+
+      button
+        width: 20px
+        height: 20px
+        padding: 0
+        border-radius: 50%
+        background: #fff
+
+      img
+        display: block
+
+
+  &__question-title
+    font-family: 'URWGeometric-SemiBold'
+    font-size: 20px
+
+  &__question
+    font-family: 'URWGeometric-Regular'
+    font-size: 20px
+    margin-bottom: 40px
+
+  &__author
+    position: absolute
+    left: -45px
+    top: 0
+    width: 30px
+    height: 30px
+    border-radius: 50%
+
+  &__time
+    position: absolute
+    bottom: -20px
+    left: 2px
+    font-size: 11px
+    font-weight: 600
+
+  &__buttons button
+    background-color: #f7f7f7
+    margin-top: 12px
+
+    &:hover,
+    &.active
+      background-color: $green
+      color: #fff
+
+.x-checkbox
+  position: absolute
+  opacity: 0
+
+  & + label
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    padding: 0
+    margin: 0
+
+  & + label:before
+    content: ''
+    float: right
+    vertical-align: text-top
+    width: 14px
+    height: 14px
+    margin-top: -2px
+    background: #d2d2d2
+    border-radius: 50%
+
+  &:disabled + label
+    color: #b8b8b8
+    cursor: auto
+
+  &:disabled + label:before
+    box-shadow: none
+    background: #ddd
+
+  &:checked + label:before
+    background: $green
+
+  &:checked + label:after
+    content: '×'
+    position: absolute
+    left: 0
+    top: -5px
+    color: #fff
+    font: 25px 'URWGeometric-Light'
+    line-height: 1
+
+.block-centered
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)

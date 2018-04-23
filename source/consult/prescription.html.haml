@@ -1,0 +1,17 @@
+.container-fluid.consult
+  %header.consult__header
+    .consult__logo.pull-left
+      = image_tag 'consult/logo.svg'
+      %span Quantum Consult
+    .consult__prescription-back.pull-right.text-right
+      %span Prescription
+      %a{ href: '#' } back
+  .consult__prescription.block-centered
+    .consult__prescription-title
+      Dr. Kalinsky has sent you a prescription.
+    .consult__prescription-recipe.clearfix
+      = image_tag 'consult/rx.svg'
+      %span.consult__prescription-drug Diazepam 5mg
+      %span.consult__prescription-times 4 times daily
+    %button.btn-new.btn-black{ type: 'button' } Print
+    %button.btn-new.btn-green{ type: 'button' } Send to pharmacy
