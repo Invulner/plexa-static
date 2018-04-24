@@ -32,9 +32,13 @@
           = link_to '150 credit', '#', class: 'btn-refer'
 
         %li
+          %a.consult-link{ href: '/consult/chat.html' } Start Quantum Consult
+
+        %li
           #notifications
             .notif
               %i
                 = partial 'shared/pulse_icon'
+
 
 = javascript_include_tag 'login'

@@ -3,38 +3,38 @@
     .consult__logo.pull-left
       = image_tag 'consult/logo.svg'
       %span Quantum Consult
-    %button.consult__close.pull-right
+    %a.consult__close.pull-right{ href: '/feed.html' }
       = image_tag 'consult/close.svg'
   .row
     .col-xs-12.col-sm-6.col-sm-offset-3
       %ul.consult-chat
-        %li.consult-chat__item.consult-chat__item--plexa
+        %li.consult-chat__item.consult-chat__item--plexa#first-message
           .consult-chat__message Hi Alicia! Thanks for starting a Quantum Consult. I’m the Plexa Medbot and I’ll be guiding you through the process.
           = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
           %span.consult-chat__time 18:19 pm
-        %li.consult-chat__item.consult-chat__item--plexa
+        %li.consult-chat__item.consult-chat__item--plexa.hidden#second-message
           .consult-chat__message First thing we need is a short summary of your condition. You can do this by video, audio or text. Please let me know your preference!
           = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
           %span.consult-chat__time 18:19 pm
-        %li.consult-chat__item
+        %li.consult-chat__item.hidden#third-message
           .consult-chat__message
             I would like to
             .consult-chat__buttons
-              %button.button.active record a video
-              -#%button record audio
-              -#%button write my response
+              %button.button#record-video-btn record a video
+              %button.button record audio
+              %button.button write my response
           = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
           %span.consult-chat__time 18:19 pm
-        %li.consult-chat__item.consult-chat__item--question
+        %li.consult-chat__item.consult-chat__item--question.hidden#first-question
           .consult-chat__message
             .consult-chat__question-title Question 1
             .consult-chat__question Do you have pain?
-            %button.btn-green.button Start recording
+            %button.btn-green.button#start-recording-btn Start recording
 
           = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
           %span.consult-chat__time 18:19 pm
 
-        %li.consult-chat__item.consult-chat__item--video
+        %li.consult-chat__item.consult-chat__item--video.hidden#first-video
           .consult-chat__message
             .consult-chat__video
               = image_tag 'consult/video-image.jpg'
@@ -48,3 +48,23 @@
 
           = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
           %span.consult-chat__time 18:19 pm
+
+:coffee
+
+  setTimeout ->
+    document.getElementById('second-message').classList.remove('hidden')
+  , 1000
+
+  setTimeout ->
+    document.getElementById('third-message').classList.remove('hidden')
+  , 2000
+
+  document.getElementById('record-video-btn').addEventListener 'click', ->
+    this.classList.add('active')
+    document.getElementById('first-question').classList.remove('hidden')
+
+  document.getElementById('start-recording-btn').addEventListener 'click', ->
+    document.getElementById('first-video').classList.remove('hidden')
+    setTimeout ->
+      window.location.href = '/consult/doctors.html'
+  , 2000
