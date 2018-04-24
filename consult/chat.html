@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plexa Static</title>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+<link href="../stylesheets/app/application.css" rel="stylesheet" />
+</head>
+<body>
+<div class='container-fluid consult'>
+<header class='consult__header consult__header--transparent'>
+<div class='consult__logo pull-left'>
+<img src="../images/consult/logo.svg" alt="Logo" />
+<span>Quantum Consult</span>
+</div>
+<a href="../feed.html" class="consult__close pull-right"><img src="../images/consult/close.svg" alt="Close" />
+</a></header>
+<div class='row'>
+<div class='col-xs-12 col-sm-6 col-sm-offset-3'>
+<ul class='consult-chat'>
+<li class='consult-chat__item consult-chat__item--plexa' id='first-message'>
+<div class='consult-chat__message'>Hi Alicia! Thanks for starting a Quantum Consult. I’m the Plexa Medbot and I’ll be guiding you through the process.</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--plexa hidden' id='second-message'>
+<div class='consult-chat__message'>First thing we need is a short summary of your condition. You can do this by video, audio or text. Please let me know your preference!</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item hidden' id='third-message'>
+<div class='consult-chat__message'>
+I would like to
+<div class='consult-chat__buttons'>
+<button class='button' id='record-video-btn'>record a video</button>
+<button class='button'>record audio</button>
+<button class='button'>write my response</button>
+</div>
+</div>
+<img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--question hidden' id='first-question'>
+<div class='consult-chat__message'>
+<div class='consult-chat__question-title'>Question 1</div>
+<div class='consult-chat__question'>Do you have pain?</div>
+<button class='btn-green button' id='start-recording-btn'>Start recording</button>
+</div>
+<img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--video hidden' id='first-video'>
+<div class='consult-chat__message'>
+<div class='consult-chat__video'>
+<img src="../images/consult/video-image.jpg" alt="Video image" />
+<div class='consult-chat__video-buttons'>
+<button>
+<img src="../images/consult/trash.svg" alt="Trash" />
+</button>
+<button>
+<img src="../images/consult/play.svg" alt="Play" />
+</button>
+<button>
+<img src="../images/consult/replay.svg" alt="Replay" />
+</button>
+</div>
+</div>
+</div>
+<img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    setTimeout(function() {
+      return document.getElementById('second-message').classList.remove('hidden');
+    }, 1000);
+  
+    setTimeout(function() {
+      return document.getElementById('third-message').classList.remove('hidden');
+    }, 2000);
+  
+    document.getElementById('record-video-btn').addEventListener('click', function() {
+      this.classList.add('active');
+      return document.getElementById('first-question').classList.remove('hidden');
+    });
+  
+    document.getElementById('start-recording-btn').addEventListener('click', function() {
+      document.getElementById('first-video').classList.remove('hidden');
+      return setTimeout(function() {
+        return window.location.href = 'doctors.html';
+      });
+    }, 2000);
+  
+  }).call(this);
+</script>
+
+</body>
+</html>
