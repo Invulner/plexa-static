@@ -56,4 +56,4 @@
       %input.x-checkbox{ type: 'checkbox', id: 'ch4' }
       %label.consult__select-label{ for: 'ch4' }
       Select a recommended doctor for me if selected doctors aren’t available
-    %a.consult__doctor-submit.btn-new.btn-green{ href: '/consult/loading_doctors.html' } Submit consult request
+    = link_to 'Submit consult request', '/consult/loading_doctors.html', class: 'consult__doctor-submit btn-new btn-green'

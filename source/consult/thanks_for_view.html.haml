@@ -3,10 +3,10 @@
   .consult__thanks.block-centered
     .consult__thanks-for-view
       %p Thanks for viewing Dr. Kalinsky’s consultation!
-      %a.btn-new.btn-black{ href: '/consult/video.html' } Play again
+      = link_to 'Play again', '/consult/video.html', class: 'btn-new btn-black'
     .consult__thanks-prescription.clearfix
       %span.pull-left You have a prescription available
-      %a.btn-new.btn-green.pull-right{ href: '/consult/prescription.html' } View & collect
+      = link_to 'View & collect', '/consult/prescription.html', class: 'btn-new btn-green pull-right'
     .consult__thanks-referral.clearfix
       %span.pull-left You have a referral available
       %button.btn-new.btn-green.pull-right View & collect

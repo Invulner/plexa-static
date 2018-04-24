@@ -3,7 +3,7 @@
     .consult__logo.pull-left
       = image_tag 'consult/logo.svg'
       %span Quantum Consult
-    %a.consult__close.pull-right{ href: '/feed.html' }
+    = link_to '/feed.html', class: 'consult__close pull-right' do
       = image_tag 'consult/close.svg'
   .row
     .col-xs-12.col-sm-6.col-sm-offset-3
@@ -66,5 +66,5 @@
   document.getElementById('start-recording-btn').addEventListener 'click', ->
     document.getElementById('first-video').classList.remove('hidden')
     setTimeout ->
-      window.location.href = '/consult/doctors.html'
+      window.location.href = 'doctors.html'
   , 2000

@@ -6,10 +6,10 @@
       .consult__video-bar
       .consult__video-progress
     .consult__video-doctor.pull-left Dr. Helen Kalinsky
-    %a.consult__video-profile-link.pull-right{ href: '#' } View profile
+    = link_to 'View profile', '#', class: 'consult__video-profile-link pull-right'
 
 :coffee
 
   setTimeout ->
-    window.location.href='/consult/thanks_for_view.html'
+    window.location.href='thanks_for_view.html'
   , 5000
