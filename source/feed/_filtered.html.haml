@@ -9,15 +9,14 @@
       .feed-item
         .feed-item__header
           = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}/
-            PM
+            = image_tag 'feed/ravi-patel.jpg', alt: 'Ravi Patel', class: 'feed-item__avatar-img'
           .feed-item__header-main
             .feed-item__header-row
               = link_to '/profile.html', class: 'feed-item__author' do
-                Plexa Medbot
+                Dr Ravi Patel
               %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-04-13T09:00:15.739Z"} 6 days ago
-            .feed-item__header-aux{:style => "width: calc(100% - 169px);"}
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-19T06:45:18.548Z"} 6 hours ago
+            .feed-item__header-aux{:style => "width: calc(100% - 158px);"}
               .feed-item__dropdown-wrapper
                 %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
                 .feed-item__dropdown.feed-item__dropdown--arrow-trigger
@@ -25,15 +24,24 @@
                     %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
                       %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
                       Hide post
+                    %a.feed-item__dropdown-link.feed-item__report{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-flag
+                      Report
+                    %a.feed-item__dropdown-link.feed-item__block{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-remove-sign
+                      Block user
             %span.feed-item__label.feed-item__label--position
-              Medical Organisation
+              Doctor
         .feed-item__body
-          %a.post-link{:href => "http://Insights.ovid.com/crossref?an=00006250-900000000-98092", :target => "_blank"}
+          %p.feed-item__text Thanks to Dr. Abdul-Samad for sharing the above article about prostate treatment breakthroughs. Have been hearing wondering news about this lately and am very interested to see the good it can bring.
+          %a.post-link{:href => "https://www.theguardian.com/society/2018/apr/22/prostate-cancer-ultrasound-diagnosis-test", :target => "_blank"}
+            .post-link__header
+              = image_tag 'feed/guardian2.jpg', alt: 'post picture', class: 'post-link__img'
             .post-link__body
               %h2.post-link__title
-                Optimizing Blood Transfusion Practices Through Bundled Intervention Implementation in Patients With Gynecologic Cancer Undergoing Laparotomy
+                Prostate cancer breakthrough as UK team develops more accurate test | Society | The Guardian
               %span.post-link__link
-                Insights.ovid.com
+                www.theguardian.com
         .feed-item__comments-region
         .feed-item__footer.share-data
           .feed-item__stats
@@ -52,15 +60,14 @@
       .feed-item
         .feed-item__header
           = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/23/api_oran-headshot-min.jpg"}/
-            OR
+            = image_tag 'feed/ruwaydah-juman-wasem.jpg', alt: 'Ruwaydah Juman Wasem', class: 'feed-item__avatar-img'
           .feed-item__header-main
             .feed-item__header-row
               = link_to '/profile.html', class: 'feed-item__author' do
-                Oran Rigby
+                Dr Ruwaydah Juman Wasem
               %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-04-04T11:37:47.988Z"} 15 days ago
-            .feed-item__header-aux{:style => "width: calc(100% - 154px);"}
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-19T06:45:18.548Z"} 7 hours ago
+            .feed-item__header-aux{:style => "width: calc(100% - 264px);"}
               .feed-item__dropdown-wrapper
                 %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
                 .feed-item__dropdown.feed-item__dropdown--arrow-trigger
@@ -77,12 +84,16 @@
             %span.feed-item__label.feed-item__label--position
               Doctor
         .feed-item__body
-          %p.feed-item__text
-            ⚕ Shared from plexa.ai:
-            This month’s #BulletinACS examines the occurrence of chronic obstructive pulmonary disease (COPD) in the National Trauma Data Bank (NTDB) research dataset.
-            %a.inline-link{:href => "https://t.co/p0yMYdMa8Y", :target => "_blank"} https://t.co/p0yMYdMa8Y
-          %a.fancybox.feed-item__img{:href => "https://d1x2yd8scvgoir.cloudfront.net/discuss/story_image/image/37/full_ntdb_fig1.png"}
-            %img{:alt => "", :src => "https://d1x2yd8scvgoir.cloudfront.net/discuss/story_image/image/37/preview_ntdb_fig1.png"}/
+          %p.feed-item__text So much discussion about blockchain and healthcare. Can anyone help to explain how this could be incorporated into a family practice?
+          %p.feed-item__text What benefits would it bring and is it easy for a technophobe like me to manage?
+          %a.post-link{:href => "https://www.theguardian.com/society/2018/apr/22/prostate-cancer-ultrasound-diagnosis-test", :target => "_blank"}
+            .post-link__header
+              = image_tag 'feed/delloite.jpg', alt: 'post picture', class: 'post-link__img'
+            .post-link__body
+              %h2.post-link__title
+                Blockchain: Opportunities for health care | Deloitte US
+              %span.post-link__link
+                www2.deloitte.com
         .feed-item__comments-region
         .feed-item__footer.share-data
           .feed-item__stats
@@ -91,6 +102,9 @@
               %svg
                 %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
               %span.feed-item__like-counter 0
+            %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
+              %svg
+                %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
           %form.feed-item__reply-form
             %textarea.feed-item__reply-input{:placeholder => "Type your reply", :rows => "1", :style => "height: 36px;"}
             %button.feed-item__reply-btn{:disabled => "disabled", :type => "submit"}
@@ -98,15 +112,14 @@
       .feed-item
         .feed-item__header
           = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}/
-            PM
+            = image_tag 'feed/michael-davies.jpg', alt: 'Michael Davies', class: 'feed-item__avatar-img'
           .feed-item__header-main
             .feed-item__header-row
               = link_to '/profile.html', class: 'feed-item__author' do
-                Plexa Medbot
+                Dr Michael Davies
               %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-03-29T16:00:13.925Z"} 21 days ago
-            .feed-item__header-aux{:style => "width: calc(100% - 169px);"}
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-19T06:45:18.548Z"} 8 hours ago
+            .feed-item__header-aux{:style => "width: calc(100% - 194px);"}
               .feed-item__dropdown-wrapper
                 %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
                 .feed-item__dropdown.feed-item__dropdown--arrow-trigger
@@ -114,16 +127,17 @@
                     %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
                       %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
                       Hide post
+                    %a.feed-item__dropdown-link.feed-item__report{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-flag
+                      Report
+                    %a.feed-item__dropdown-link.feed-item__block{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-remove-sign
+                      Block user
             %span.feed-item__label.feed-item__label--position
-              Medical Organisation
+              Doctor
         .feed-item__body
-          %a.post-link{:href => "http://www.reproduction-online.org/lookup/doi/10.1530/REP-17-0483", :target => "_blank"}
-            .post-link__header.post-link__image.post-link__image--small{:style => "background-image: url(http://www.reproduction-online.org/content/vol155/issue4/home_cover.gif)"}
-            .post-link__body
-              %h2.post-link__title
-                Female fertility preservation: past, present and future
-              %span.post-link__link
-                www.reproduction-online.org
+          %p.feed-item__text Specialist doctor in cardiology. Working for over 12 years in the field and loving it.
+          %p.feed-item__text I just wanted to say how great the Quantum Consult process is with Plexa. Thanks to Oran and the team.
         .feed-item__comments-region
         .feed-item__footer.share-data
           .feed-item__stats
