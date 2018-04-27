@@ -40,11 +40,15 @@ page '/sign_in.html', layout: 'pages'
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def video_path(my_video)
+    asset_path :video, my_video
+  end
+
+  def video_tag(my_video)
+    tag(:video, :src => video_path(my_video))
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

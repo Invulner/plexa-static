@@ -1,15 +1,29 @@
 .container-fluid.consult
   = partial 'header'
   .consult__video.block-centered
-    .consult__video-play
-      = image_tag 'consult/video-image-2.jpg'
-      .consult__video-bar
-      .consult__video-progress
+    .consult__video-block
+      %video#video{ controls: true }
+        %source{ src: image_path('video.mp4') }
+
+      .consult__video-controls
+        = link_to 'Replay', '#', class: 'button active consult__replay-video'
+        = link_to 'Next', 'thanks_for_view.html', class: 'button active'
+
     .consult__video-doctor.pull-left Dr. Helen Kalinsky
     = link_to 'View profile', '#', class: 'consult__video-profile-link pull-right'
 
-:coffee
+:javascript
+  video = document.getElementById('video')
+  video.addEventListener('ended', onVideoEnd)
 
-  setTimeout ->
-    window.location.href='thanks_for_view.html'
-  , 5000
+  function onVideoEnd() {
+    $('.consult__video-controls').addClass('consult__video-controls--visible')
+  }
+
+  $('.consult__replay-video').on('click', function(event) {
+    event.preventDefault()
+    
+    video.pause()
+    video.currentTime = 0
+    video.play()
+  })

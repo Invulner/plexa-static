@@ -541,3 +541,30 @@ html, body
 
 .consult-chat__item--invisible
   right: -100%
+
+.consult__video-block
+  display: block
+  padding-bottom: 20px
+
+  video
+    max-width: 100%
+
+.consult__video-controls
+  text-align: center
+  opacity: 0
+  padding-top: 10px
+  transition: opacity .3s ease-in
+
+  &--visible
+    opacity: 1
+
+  .button
+    background-color: $green
+
+    &:hover
+      color: #fff
+      background-color: darken($green, 5%)
+
+    &:active,
+    &:focus
+      color: #fff
