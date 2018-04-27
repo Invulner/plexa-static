@@ -6,6 +6,7 @@
 <meta content='IE=edge' http-equiv='X-UA-Compatible'>
 <meta content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
 <link href="../stylesheets/app/application.css" rel="stylesheet" />
+<script src="../javascripts/app/application.js"></script>
 </head>
 <body>
 <div class='container-fluid consult'>
@@ -18,83 +19,242 @@
 </a></header>
 <div class='row'>
 <div class='col-xs-12 col-sm-6 col-sm-offset-3'>
+<div class='consult-chat-block'>
 <ul class='consult-chat'>
-<li class='consult-chat__item consult-chat__item--plexa' id='first-message'>
-<div class='consult-chat__message'>Hi Alicia! Thanks for starting a Quantum Consult. I’m the Plexa Medbot and I’ll be guiding you through the process.</div>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>Hi Sarah. Welcome to Quantum Consult.</div>
 <img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
 <span class='consult-chat__time'>18:19 pm</span>
 </li>
-<li class='consult-chat__item consult-chat__item--plexa hidden' id='second-message'>
-<div class='consult-chat__message'>First thing we need is a short summary of your condition. You can do this by video, audio or text. Please let me know your preference!</div>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>I’m the Plexa Medbot and I’ll guide you through the process of how to create your first Quantum Request.</div>
 <img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
 <span class='consult-chat__time'>18:19 pm</span>
 </li>
-<li class='consult-chat__item hidden' id='third-message'>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>Firstly, let’s pick a good format to receive your medical information. Would you prefer to record a video, record your voice, or use text input?</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--invisible'>
 <div class='consult-chat__message'>
 I would like to
 <div class='consult-chat__buttons'>
-<button class='button' id='record-video-btn'>record a video</button>
-<button class='button'>record audio</button>
-<button class='button'>write my response</button>
+<button class='button user-btn' id='record-video-btn'>RECORD VIDEO</button>
+<button class='button user-btn'>RECORD AUDIO</button>
+<button class='button user-btn'>TYPE TEXT</button>
 </div>
 </div>
 <img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
 <span class='consult-chat__time'>18:19 pm</span>
 </li>
-<li class='consult-chat__item consult-chat__item--question hidden' id='first-question'>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>Thanks. You can change your answers at any time by scrolling back up in this chat or typing ‘Start again’.</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible pause-step'>
+<div class='consult-chat__message'>Please type some words that describe why you are looking to speak with a doctor today.</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>Thanks. Let’s get started with your first video. We will record 3 videos and each asks you a healthcare question.</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>The first questions are about your history of pregnancy and fertility.</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
 <div class='consult-chat__message'>
-<div class='consult-chat__question-title'>Question 1</div>
-<div class='consult-chat__question'>Do you have pain?</div>
-<button class='btn-green button' id='start-recording-btn'>Start recording</button>
+<div class='consult-chat__question-title'>In the video below, please try to answer these questions:</div>
+<div class='consult-chat__question'>How long have you been trying to have a baby?</div>
+<div class='consult-chat__question'>Do you have any children or previous pregnancies?</div>
+<div class='consult-chat__question'>Does your partner have any children?</div>
+</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--invisible'>
+<div class='consult-chat__message'>
+<div class='consult-chat__buttons'>
+<button class='button user-btn' id='record-first-video-btn'>RECORD FIRST VIDEO</button>
+</div>
 </div>
 <img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
 <span class='consult-chat__time'>18:19 pm</span>
 </li>
-<li class='consult-chat__item consult-chat__item--video hidden' id='first-video'>
+<li class='consult-chat__item consult-chat__item--video consult-chat__item--invisible skip-step'>
 <div class='consult-chat__message'>
 <div class='consult-chat__video'>
 <img src="../images/consult/video-image.jpg" alt="Video image" />
-<div class='consult-chat__video-buttons'>
-<button>
-<img src="../images/consult/trash.svg" alt="Trash" />
-</button>
-<button>
-<img src="../images/consult/play.svg" alt="Play" />
-</button>
-<button>
-<img src="../images/consult/replay.svg" alt="Replay" />
-</button>
-</div>
 </div>
 </div>
 <img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
 <span class='consult-chat__time'>18:19 pm</span>
 </li>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>Thanks!</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>
+<div class='consult-chat__question-title'>The next video is about your sexual health. Please try to answer these questions:</div>
+<div class='consult-chat__question'>Have you ever had any pelvic infections or STIs?</div>
+<div class='consult-chat__question'>Do you menstruate regularly?</div>
+<div class='consult-chat__question'>How often do you have sexual intercourse?</div>
+<div class='consult-chat__question'>Are you on the oral contraceptive pill?</div>
+</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--invisible' id='third-message'>
+<div class='consult-chat__message'>
+<div class='consult-chat__buttons'>
+<button class='button user-btn' id='record-second-video-btn'>RECORD SECOND VIDEO</button>
+</div>
+</div>
+<img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--video consult-chat__item--invisible skip-step'>
+<div class='consult-chat__message'>
+<div class='consult-chat__video'>
+<img src="../images/consult/video-image.jpg" alt="Video image" />
+</div>
+</div>
+<img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>Thanks for that. Just one more!</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>
+<div class='consult-chat__question-title'>Please answer these questions:</div>
+<div class='consult-chat__question'>Have you ever had any terminations or spontaneous abortions?</div>
+<div class='consult-chat__question'>Are you in good health generally or do you have any chronic medical conditions?</div>
+<div class='consult-chat__question'>If you have a male partner, are they in generally good health?</div>
+</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--invisible' id='third-message'>
+<div class='consult-chat__message'>
+<div class='consult-chat__buttons'>
+<button class='button user-btn' id='record-third-video-btn'>RECORD THIRD VIDEO</button>
+</div>
+</div>
+<img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--video consult-chat__item--invisible skip-step'>
+<div class='consult-chat__message'>
+<div class='consult-chat__video'>
+<img src="../images/consult/video-image.jpg" alt="Video image" />
+</div>
+</div>
+<img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>Great thanks! One last thing, are you currently taking any medication?</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--invisible'>
+<div class='consult-chat__message'>
+<div class='consult-chat__buttons'>
+<button class='button user-btn'>YES</button>
+<button class='button user-btn'>NO</button>
+</div>
+</div>
+<img src="../images/consult/avatar@2x.png" class="consult-chat__author" alt="Avatar@2x" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
+<li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
+<div class='consult-chat__message'>Thanks. I will package up your consultation and get it ready for your selected doctors.</div>
+<img src="../images/consult/plexa-logo.svg" class="consult-chat__author" alt="Plexa logo" />
+<span class='consult-chat__time'>18:19 pm</span>
+</li>
 </ul>
+</div>
+<div class='consult-form'>
+<textarea class='consult-form__textarea' placeholder='Enter your message'></textarea>
+<button class='consult-form__btn compose__post-btn'></button>
+</div>
 </div>
 </div>
 </div>
 <script>
   (function() {
-    setTimeout(function() {
-      return document.getElementById('second-message').classList.remove('hidden');
-    }, 1000);
+    var $chat, $chatBlock, $textarea, animateMessage, messageShowDelay, scrollChatToBottom, startChatAnimation;
   
-    setTimeout(function() {
-      return document.getElementById('third-message').classList.remove('hidden');
-    }, 2000);
+    $chatBlock = $('.consult-chat-block');
   
-    document.getElementById('record-video-btn').addEventListener('click', function() {
-      this.classList.add('active');
-      return document.getElementById('first-question').classList.remove('hidden');
-    });
+    $chat = $('.consult-chat');
   
-    document.getElementById('start-recording-btn').addEventListener('click', function() {
-      document.getElementById('first-video').classList.remove('hidden');
-      return setTimeout(function() {
-        return window.location.href = 'doctors.html';
+    messageShowDelay = 2500;
+  
+    $textarea = $('.consult-form__textarea');
+  
+    scrollChatToBottom = function() {
+      return $chatBlock.animate({
+        scrollTop: $chat.height()
       });
-    }, 2000);
+    };
+  
+    startChatAnimation = function(delay) {
+      var $firstInvisibleMessage, callback, isPauseStep, isSkipStep, isUserMessage;
+      if (delay == null) {
+        delay = messageShowDelay;
+      }
+      $firstInvisibleMessage = $('.consult-chat__item--invisible').first();
+      isUserMessage = !$firstInvisibleMessage.hasClass('consult-chat__item--medbot');
+      isPauseStep = $firstInvisibleMessage.hasClass('pause-step');
+      isSkipStep = $firstInvisibleMessage.hasClass('skip-step');
+      console.log(isUserMessage);
+      console.log(isPauseStep);
+      console.log(isSkipStep);
+      callback = (isUserMessage || isPauseStep) && !isSkipStep ? null : startChatAnimation;
+      return setTimeout((function(_this) {
+        return function() {
+          return animateMessage($firstInvisibleMessage, callback);
+        };
+      })(this), delay);
+    };
+  
+    animateMessage = (function(_this) {
+      return function(message, callback) {
+        message.removeClass('consult-chat__item--invisible');
+        return setTimeout(function() {
+          scrollChatToBottom();
+          return typeof callback === "function" ? callback() : void 0;
+        }, 20);
+      };
+    })(this);
+  
+    startChatAnimation(0);
+  
+    $('.user-btn').on('click', (function(_this) {
+      return function(e) {
+        $(e.target).addClass('active');
+        return startChatAnimation(0);
+      };
+    })(this));
+  
+    $(".consult-form__btn").on('click', (function(_this) {
+      return function() {
+        startChatAnimation(0);
+        return $textarea.val('');
+      };
+    })(this));
   
   }).call(this);
 </script>
