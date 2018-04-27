@@ -7,64 +7,192 @@
       = image_tag 'consult/close.svg'
   .row
     .col-xs-12.col-sm-6.col-sm-offset-3
-      %ul.consult-chat
-        %li.consult-chat__item.consult-chat__item--plexa#first-message
-          .consult-chat__message Hi Alicia! Thanks for starting a Quantum Consult. I’m the Plexa Medbot and I’ll be guiding you through the process.
-          = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
-          %span.consult-chat__time 18:19 pm
-        %li.consult-chat__item.consult-chat__item--plexa.hidden#second-message
-          .consult-chat__message First thing we need is a short summary of your condition. You can do this by video, audio or text. Please let me know your preference!
-          = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
-          %span.consult-chat__time 18:19 pm
-        %li.consult-chat__item.hidden#third-message
-          .consult-chat__message
-            I would like to
-            .consult-chat__buttons
-              %button.button#record-video-btn record a video
-              %button.button record audio
-              %button.button write my response
-          = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
-          %span.consult-chat__time 18:19 pm
-        %li.consult-chat__item.consult-chat__item--question.hidden#first-question
-          .consult-chat__message
-            .consult-chat__question-title Question 1
-            .consult-chat__question Do you have pain?
-            %button.btn-green.button#start-recording-btn Start recording
+      .consult-chat-block
+        %ul.consult-chat
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message Hi Sarah. Welcome to Quantum Consult.
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
 
-          = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
-          %span.consult-chat__time 18:19 pm
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message I’m the Plexa Medbot and I’ll guide you through the process of how to create your first Quantum Request.
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
 
-        %li.consult-chat__item.consult-chat__item--video.hidden#first-video
-          .consult-chat__message
-            .consult-chat__video
-              = image_tag 'consult/video-image.jpg'
-              .consult-chat__video-buttons
-                %button
-                  = image_tag 'consult/trash.svg'
-                %button
-                  = image_tag 'consult/play.svg'
-                %button
-                  = image_tag 'consult/replay.svg'
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message Firstly, let’s pick a good format to receive your medical information. Would you prefer to record a video, record your voice, or use text input?
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
 
-          = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
-          %span.consult-chat__time 18:19 pm
+          %li.consult-chat__item.consult-chat__item--invisible
+            .consult-chat__message
+              I would like to
+              .consult-chat__buttons
+                %button.button#record-video-btn.user-btn RECORD VIDEO
+                %button.button.user-btn RECORD AUDIO
+                %button.button.user-btn TYPE TEXT
+            = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message Thanks. You can change your answers at any time by scrolling back up in this chat or typing ‘Start again’.
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible.pause-step
+            .consult-chat__message Please type some words that describe why you are looking to speak with a doctor today.
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message Thanks. Let’s get started with your first video. We will record 3 videos and each asks you a healthcare question.
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message The first questions are about your history of pregnancy and fertility.
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message
+              .consult-chat__question-title In the video below, please try to answer these questions:
+              .consult-chat__question How long have you been trying to have a baby?
+              .consult-chat__question Do you have any children or previous pregnancies?
+              .consult-chat__question Does your partner have any children?
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--invisible
+            .consult-chat__message
+              .consult-chat__buttons
+                %button.button#record-first-video-btn.user-btn RECORD FIRST VIDEO
+            = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--video.consult-chat__item--invisible.skip-step
+            .consult-chat__message
+              .consult-chat__video
+                = image_tag 'consult/video-image.jpg'
+            = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message Thanks!
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message
+              .consult-chat__question-title The next video is about your sexual health. Please try to answer these questions:
+              .consult-chat__question Have you ever had any pelvic infections or STIs?
+              .consult-chat__question Do you menstruate regularly?
+              .consult-chat__question How often do you have sexual intercourse?
+              .consult-chat__question Are you on the oral contraceptive pill?
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item#third-message.consult-chat__item--invisible
+            .consult-chat__message
+              .consult-chat__buttons
+                %button.button#record-second-video-btn.user-btn RECORD SECOND VIDEO
+            = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--video.consult-chat__item--invisible.skip-step
+            .consult-chat__message
+              .consult-chat__video
+                = image_tag 'consult/video-image.jpg'
+            = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message Thanks for that. Just one more!
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message
+              .consult-chat__question-title Please answer these questions:
+              .consult-chat__question Have you ever had any terminations or spontaneous abortions?
+              .consult-chat__question Are you in good health generally or do you have any chronic medical conditions?
+              .consult-chat__question If you have a male partner, are they in generally good health?
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item#third-message.consult-chat__item--invisible
+            .consult-chat__message
+              .consult-chat__buttons
+                %button.button#record-third-video-btn.user-btn RECORD THIRD VIDEO
+            = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--video.consult-chat__item--invisible.skip-step
+            .consult-chat__message
+              .consult-chat__video
+                = image_tag 'consult/video-image.jpg'
+            = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message Great thanks! One last thing, are you currently taking any medication?
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--invisible
+            .consult-chat__message
+              .consult-chat__buttons
+                %button.button.user-btn YES
+                %button.button.user-btn NO
+            = image_tag 'consult/avatar@2x.png', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+          %li.consult-chat__item.consult-chat__item--medbot.consult-chat__item--invisible
+            .consult-chat__message Thanks. I will package up your consultation and get it ready for your selected doctors.
+            = image_tag 'consult/plexa-logo.svg', class: 'consult-chat__author'
+            %span.consult-chat__time 18:19 pm
+
+
+      .consult-form
+        %textarea.consult-form__textarea{ placeholder: 'Enter your message' }
+        %button.consult-form__btn.compose__post-btn
 
 :coffee
+  $chatBlock = $('.consult-chat-block')
+  $chat = $('.consult-chat')
+  messageShowDelay = 2500
+  $textarea = $('.consult-form__textarea')
 
-  setTimeout ->
-    document.getElementById('second-message').classList.remove('hidden')
-  , 1000
+  scrollChatToBottom = ->
+    $chatBlock.animate({scrollTop: $chat.height()})
 
-  setTimeout ->
-    document.getElementById('third-message').classList.remove('hidden')
-  , 2000
+  startChatAnimation = (delay = messageShowDelay)->
+    $firstInvisibleMessage = $('.consult-chat__item--invisible').first()
+    isUserMessage = !$firstInvisibleMessage.hasClass('consult-chat__item--medbot')
+    isPauseStep = $firstInvisibleMessage.hasClass('pause-step')
+    isSkipStep = $firstInvisibleMessage.hasClass('skip-step')
+    console.log(isUserMessage)
+    console.log(isPauseStep)
+    console.log(isSkipStep)
+    callback = if ((isUserMessage || isPauseStep) && !isSkipStep) then null else startChatAnimation
+    setTimeout(() =>
+      animateMessage($firstInvisibleMessage, callback)
+    , delay)
 
-  document.getElementById('record-video-btn').addEventListener 'click', ->
-    this.classList.add('active')
-    document.getElementById('first-question').classList.remove('hidden')
 
-  document.getElementById('start-recording-btn').addEventListener 'click', ->
-    document.getElementById('first-video').classList.remove('hidden')
-    setTimeout ->
-      window.location.href = 'doctors.html'
-  , 2000
+  animateMessage = (message, callback) =>
+    message.removeClass 'consult-chat__item--invisible'
+    setTimeout(() =>
+      scrollChatToBottom()
+      callback?()
+    , 20)
+
+  startChatAnimation(0)
+
+  $('.user-btn').on 'click', (e) =>
+    $(e.target).addClass 'active'
+    startChatAnimation(0)
+
+  $(".consult-form__btn").on 'click', () =>
+    startChatAnimation(0)
+    $textarea.val('')

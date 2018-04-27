@@ -152,7 +152,7 @@ $postBtn.on 'click', (e) ->
                 <div class='feed-item__header-main'>
                   <div class='feed-item__header-row'>
                     <a class='feed-item__author' href='/profile.html'>
-                      Plexa Test
+                      Petra Lexa
                     </a>
                     <a class='feed-item__story-link' href='javascript:void(0)'>
                       <time class='feed-item__time time timeago'>1 min ago</time>
