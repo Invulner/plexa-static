@@ -18,7 +18,7 @@
 <a href="../feed.html" class="consult__close pull-right"><img src="../images/consult/close.svg" alt="Close" />
 </a></header>
 <div class='row'>
-<div class='col-xs-12 col-sm-6 col-sm-offset-3'>
+<div class='col-xs-12 col-sm-8 col-sm-offset-2'>
 <div class='consult-chat-block'>
 <ul class='consult-chat'>
 <li class='consult-chat__item consult-chat__item--medbot consult-chat__item--invisible'>
@@ -192,72 +192,7 @@ I would like to
 </div>
 </div>
 </div>
-<script>
-  (function() {
-    var $chat, $chatBlock, $textarea, animateMessage, messageShowDelay, scrollChatToBottom, startChatAnimation;
-  
-    $chatBlock = $('.consult-chat-block');
-  
-    $chat = $('.consult-chat');
-  
-    messageShowDelay = 2500;
-  
-    $textarea = $('.consult-form__textarea');
-  
-    scrollChatToBottom = function() {
-      return $chatBlock.animate({
-        scrollTop: $chat.height()
-      });
-    };
-  
-    startChatAnimation = function(delay) {
-      var $firstInvisibleMessage, callback, isPauseStep, isSkipStep, isUserMessage;
-      if (delay == null) {
-        delay = messageShowDelay;
-      }
-      $firstInvisibleMessage = $('.consult-chat__item--invisible').first();
-      isUserMessage = !$firstInvisibleMessage.hasClass('consult-chat__item--medbot');
-      isPauseStep = $firstInvisibleMessage.hasClass('pause-step');
-      isSkipStep = $firstInvisibleMessage.hasClass('skip-step');
-      console.log(isUserMessage);
-      console.log(isPauseStep);
-      console.log(isSkipStep);
-      callback = (isUserMessage || isPauseStep) && !isSkipStep ? null : startChatAnimation;
-      return setTimeout((function(_this) {
-        return function() {
-          return animateMessage($firstInvisibleMessage, callback);
-        };
-      })(this), delay);
-    };
-  
-    animateMessage = (function(_this) {
-      return function(message, callback) {
-        message.removeClass('consult-chat__item--invisible');
-        return setTimeout(function() {
-          scrollChatToBottom();
-          return typeof callback === "function" ? callback() : void 0;
-        }, 20);
-      };
-    })(this);
-  
-    startChatAnimation(0);
-  
-    $('.user-btn').on('click', (function(_this) {
-      return function(e) {
-        $(e.target).addClass('active');
-        return startChatAnimation(0);
-      };
-    })(this));
-  
-    $(".consult-form__btn").on('click', (function(_this) {
-      return function() {
-        startChatAnimation(0);
-        return $textarea.val('');
-      };
-    })(this));
-  
-  }).call(this);
-</script>
+<script src="../javascripts/consult.js"></script>
 
 </body>
 </html>

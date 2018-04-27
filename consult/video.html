@@ -19,22 +19,34 @@
 </a></header>
 
 <div class='consult__video block-centered'>
-<div class='consult__video-play'>
-<img src="../images/consult/video-image-2.jpg" alt="Video image 2" />
-<div class='consult__video-bar'></div>
-<div class='consult__video-progress'></div>
+<div class='consult__video-block'>
+<video controls id='video'>
+<source src='../images/video.mp4'>
+</video>
+<div class='consult__video-controls'>
+<a href="#" class="button active consult__replay-video">Replay</a>
+<a href="thanks_for_view.html" class="button active">Next</a>
+</div>
 </div>
 <div class='consult__video-doctor pull-left'>Dr. Helen Kalinsky</div>
 <a href="#" class="consult__video-profile-link pull-right">View profile</a>
 </div>
 </div>
 <script>
-  (function() {
-    setTimeout(function() {
-      return window.location.href = 'thanks_for_view.html';
-    }, 5000);
+  video = document.getElementById('video')
+  video.addEventListener('ended', onVideoEnd)
   
-  }).call(this);
+  function onVideoEnd() {
+    $('.consult__video-controls').addClass('consult__video-controls--visible')
+  }
+  
+  $('.consult__replay-video').on('click', function(event) {
+    event.preventDefault()
+    
+    video.pause()
+    video.currentTime = 0
+    video.play()
+  })
 </script>
 
 </body>
