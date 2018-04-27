@@ -3,7 +3,7 @@
 
   .discuss__group-strip
     .group-strip
-      %span.group-strip__title Group name
+      %span.group-strip__title Private Medical Centre
       .group-strip__members
         %ul.clearfix
           %li
@@ -17,15 +17,16 @@
       .feed-item
         .feed-item__header
           = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}/
-            PM
+            = image_tag 'feed/john-murphy.jpg', alt: 'John Murphy', class: 'feed-item__avatar-img'
           .feed-item__header-main
             .feed-item__header-row
               = link_to '/profile.html', class: 'feed-item__author' do
-                Plexa Medbot
+                Prof John Murphy MD
               %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-04-13T09:00:15.739Z"} 6 days ago
-            .feed-item__header-aux{:style => "width: calc(100% - 169px);"}
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-19T06:45:18.548Z"} 6 hours ago
+            .feed-item__header-aux{:style => "width: calc(100% - 216px);"}
+              %span.feed-item__label.feed-item__label--group
+                Private Medical Centre
               .feed-item__dropdown-wrapper
                 %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
                 .feed-item__dropdown.feed-item__dropdown--arrow-trigger
@@ -33,65 +34,17 @@
                     %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
                       %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
                       Hide post
+                    %a.feed-item__dropdown-link.feed-item__report{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-flag
+                      Report
+                    %a.feed-item__dropdown-link.feed-item__block{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-remove-sign
+                      Block user
             %span.feed-item__label.feed-item__label--position
-              Medical Organisation
+              Doctor
         .feed-item__body
-          %a.post-link{:href => "http://Insights.ovid.com/crossref?an=00006250-900000000-98092", :target => "_blank"}
-            .post-link__body
-              %h2.post-link__title
-                Optimizing Blood Transfusion Practices Through Bundled Intervention Implementation in Patients With Gynecologic Cancer Undergoing Laparotomy
-              %span.post-link__link
-                Insights.ovid.com
-        .feed-item__comments-section
-          %div
-            %a.feed-item__more-comments{:href => "javascript:void(0)"} See previous comments
-          .feed-item__comments-list
-            #63.comment
-              %a.comment__avatar-block{:href => "#profile/208"}
-                %img.comment__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/208/api_15039307720980.png"}/
-                PT
-              .comment__main-block
-                %a.comment__author{:href => "#profile/208"}
-                  Plexa Test
-                %p.comment__text 2345234
-                .comment__footer
-                  %span.comment__footer-part.comment__footer-part--likes.icon-like
-                    %span.comment__footer-part Like
-                    %svg
-                      %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-                    0
-                  %time.comment__footer-part.comment__footer-part--time.time.timeago{:datetime => "2018-04-18T12:40:34.471Z"} 2 days ago
-            #64.comment
-              %a.comment__avatar-block{:href => "#profile/208"}
-                %img.comment__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/208/api_15039307720980.png"}/
-                PT
-              .comment__main-block
-                %a.comment__author{:href => "#profile/208"}
-                  Plexa Test
-                %p.comment__text 345345
-                .comment__footer
-                  %span.comment__footer-part.comment__footer-part--likes.icon-like
-                    %span.comment__footer-part Like
-                    %svg
-                      %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-                    0
-                  %time.comment__footer-part.comment__footer-part--time.time.timeago{:datetime => "2018-04-18T12:40:36.199Z"} 2 days ago
-            #65.comment
-              %a.comment__avatar-block{:href => "#profile/208"}
-                %img.comment__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/208/api_15039307720980.png"}/
-                PT
-              .comment__main-block
-                %a.comment__author{:href => "#profile/208"}
-                  Plexa Test
-                %p.comment__text 345345345
-                .comment__footer
-                  %span.comment__footer-part.comment__footer-part--likes.icon-like
-                    %span.comment__footer-part Like
-                    %svg
-                      %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
-                    0
-                  %time.comment__footer-part.comment__footer-part--time.time.timeago{:datetime => "2018-04-18T12:40:38.095Z"} 2 days ago
-
+          %p.feed-item__text Very long list of in-patients tomorrow at the hospital. Any on-demand surgeons able to assist?
+        .feed-item__comments-region
         .feed-item__footer.share-data
           .feed-item__stats
             %span.feed-item__likes.icon-like
@@ -109,15 +62,16 @@
       .feed-item
         .feed-item__header
           = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/23/api_oran-headshot-min.jpg"}/
-            OR
+            = image_tag 'feed/patricia-carlson.jpg', alt: 'Patricia Carlson', class: 'feed-item__avatar-img'
           .feed-item__header-main
             .feed-item__header-row
               = link_to '/profile.html', class: 'feed-item__author' do
-                Oran Rigby
+                Dr Patricia Carlson
               %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-04-04T11:37:47.988Z"} 15 days ago
-            .feed-item__header-aux{:style => "width: calc(100% - 154px);"}
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-19T06:45:18.548Z"} 5 hours ago
+            .feed-item__header-aux{:style => "width: calc(100% - 197px);"}
+              %span.feed-item__label.feed-item__label--group
+                Private Medical Centre
               .feed-item__dropdown-wrapper
                 %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
                 .feed-item__dropdown.feed-item__dropdown--arrow-trigger
@@ -134,12 +88,8 @@
             %span.feed-item__label.feed-item__label--position
               Doctor
         .feed-item__body
-          %p.feed-item__text
-            ⚕ Shared from plexa.ai:
-            This month’s #BulletinACS examines the occurrence of chronic obstructive pulmonary disease (COPD) in the National Trauma Data Bank (NTDB) research dataset.
-            %a.inline-link{:href => "https://t.co/p0yMYdMa8Y", :target => "_blank"} https://t.co/p0yMYdMa8Y
-          %a.fancybox.feed-item__img{:href => "https://d1x2yd8scvgoir.cloudfront.net/discuss/story_image/image/37/full_ntdb_fig1.png"}
-            %img{:alt => "", :src => "https://d1x2yd8scvgoir.cloudfront.net/discuss/story_image/image/37/preview_ntdb_fig1.png"}/
+          %p.feed-item__text I’m able to assist with this. Check out my profile and feel free to create a work request.
+          = link_to 'Dr Patricia Carlson', '/profile.html', class: 'feed-item__btn-link btn-beige btn-new'
         .feed-item__comments-region
         .feed-item__footer.share-data
           .feed-item__stats
@@ -148,6 +98,9 @@
               %svg
                 %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
               %span.feed-item__like-counter 0
+            %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
+              %svg
+                %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
           %form.feed-item__reply-form
             %textarea.feed-item__reply-input{:placeholder => "Type your reply", :rows => "1", :style => "height: 36px;"}
             %button.feed-item__reply-btn{:disabled => "disabled", :type => "submit"}
@@ -155,15 +108,16 @@
       .feed-item
         .feed-item__header
           = link_to '/profile.html', class: 'feed-item__avatar-block' do
-            %img.feed-item__avatar-img{:alt => "avatar", :onerror => "this.style.display = 'none'", :src => "https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg"}/
-            PM
+            = image_tag 'feed/adbdul-samad-nijad-abadi.jpg', alt: 'Adbdul-Samad Nijad Abadi', class: 'feed-item__avatar-img'
           .feed-item__header-main
             .feed-item__header-row
               = link_to '/profile.html', class: 'feed-item__author' do
-                Plexa Medbot
+                Dr Adbdul-Samad Nijad Abadi
               %a.feed-item__story-link{:href => "javascript:void(0)"}
-                %time.feed-item__time.time.timeago{:datetime => "2018-03-29T16:00:13.925Z"} 21 days ago
-            .feed-item__header-aux{:style => "width: calc(100% - 169px);"}
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-19T06:45:18.548Z"} 4 hours ago
+            .feed-item__header-aux{:style => "width: calc(100% - 277px);"}
+              %span.feed-item__label.feed-item__label--group
+                Private Medical Centre
               .feed-item__dropdown-wrapper
                 %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
                 .feed-item__dropdown.feed-item__dropdown--arrow-trigger
@@ -171,16 +125,155 @@
                     %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
                       %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
                       Hide post
+                    %a.feed-item__dropdown-link.feed-item__report{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-flag
+                      Report
+                    %a.feed-item__dropdown-link.feed-item__block{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-remove-sign
+                      Block user
             %span.feed-item__label.feed-item__label--position
-              Medical Organisation
+              Doctor
         .feed-item__body
-          %a.post-link{:href => "http://www.reproduction-online.org/lookup/doi/10.1530/REP-17-0483", :target => "_blank"}
-            .post-link__header.post-link__image.post-link__image--small{:style => "background-image: url(http://www.reproduction-online.org/content/vol155/issue4/home_cover.gif)"}
-            .post-link__body
-              %h2.post-link__title
-                Female fertility preservation: past, present and future
-              %span.post-link__link
-                www.reproduction-online.org
+          %p.feed-item__text Dr. Murphy, what specialisation are you looking for in particular?
+        .feed-item__comments-region
+        .feed-item__footer.share-data
+          .feed-item__stats
+            %span.feed-item__likes.icon-like
+              %span.feed-item__like Like
+              %svg
+                %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+              %span.feed-item__like-counter 0
+            %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
+              %svg
+                %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+          %form.feed-item__reply-form
+            %textarea.feed-item__reply-input{:placeholder => "Type your reply", :rows => "1", :style => "height: 36px;"}
+            %button.feed-item__reply-btn{:disabled => "disabled", :type => "submit"}
+
+      .feed-item
+        .feed-item__header
+          = link_to '/profile.html', class: 'feed-item__avatar-block' do
+            = image_tag 'feed/guan-yin-liao.jpg', alt: 'Guan-yin Liao', class: 'feed-item__avatar-img'
+          .feed-item__header-main
+            .feed-item__header-row
+              = link_to '/profile.html', class: 'feed-item__author' do
+                Dr Guan-yin Liao
+              %a.feed-item__story-link{:href => "javascript:void(0)"}
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-19T06:45:18.548Z"} 3 hours ago
+            .feed-item__header-aux{:style => "width: calc(100% - 186px);"}
+              %span.feed-item__label.feed-item__label--group
+                Private Medical Centre
+              .feed-item__dropdown-wrapper
+                %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
+                .feed-item__dropdown.feed-item__dropdown--arrow-trigger
+                  .feed-item__dropdown-section
+                    %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
+                      Hide post
+                    %a.feed-item__dropdown-link.feed-item__report{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-flag
+                      Report
+                    %a.feed-item__dropdown-link.feed-item__block{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-remove-sign
+                      Block user
+            %span.feed-item__label.feed-item__label--position
+              Doctor
+        .feed-item__body
+          %p.feed-item__text There is a very highly regarded surgeon on paternity leave with specialisation in trauma. You can connect with him via Plexa.
+          %p.feed-item__text Look him up under Prof John Murphy MD.
+          = link_to 'Prof John Murphy MD', '/profile.html', class: 'feed-item__btn-link btn-beige btn-new'
+        .feed-item__comments-region
+        .feed-item__footer.share-data
+          .feed-item__stats
+            %span.feed-item__likes.icon-like
+              %span.feed-item__like Like
+              %svg
+                %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+              %span.feed-item__like-counter 0
+            %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
+              %svg
+                %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+          %form.feed-item__reply-form
+            %textarea.feed-item__reply-input{:placeholder => "Type your reply", :rows => "1", :style => "height: 36px;"}
+            %button.feed-item__reply-btn{:disabled => "disabled", :type => "submit"}
+
+      .feed-item
+        .feed-item__header
+          = link_to '/profile.html', class: 'feed-item__avatar-block' do
+            = image_tag 'feed/john-murphy.jpg', alt: 'John Murphy', class: 'feed-item__avatar-img'
+          .feed-item__header-main
+            .feed-item__header-row
+              = link_to '/profile.html', class: 'feed-item__author' do
+                Prof John Murphy MD
+              %a.feed-item__story-link{:href => "javascript:void(0)"}
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-19T06:45:18.548Z"} 2 hours ago
+            .feed-item__header-aux{:style => "width: calc(100% - 216px);"}
+              %span.feed-item__label.feed-item__label--group
+                Private Medical Centre
+              .feed-item__dropdown-wrapper
+                %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
+                .feed-item__dropdown.feed-item__dropdown--arrow-trigger
+                  .feed-item__dropdown-section
+                    %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
+                      Hide post
+                    %a.feed-item__dropdown-link.feed-item__report{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-flag
+                      Report
+                    %a.feed-item__dropdown-link.feed-item__block{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-remove-sign
+                      Block user
+            %span.feed-item__label.feed-item__label--position
+              Doctor
+        .feed-item__body
+          %p.feed-item__text Thanks for the recommendations. Ideally they would be available from 8am and have experience in dealing with young people.
+        .feed-item__comments-region
+        .feed-item__footer.share-data
+          .feed-item__stats
+            %span.feed-item__likes.icon-like
+              %span.feed-item__like Like
+              %svg
+                %use{"xlink:href" => "#like-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+              %span.feed-item__like-counter 0
+            %span.feed-item__share.icon-share{data: { toggle: 'modal', target: '#share-modal' }}
+              %svg
+                %use{"xlink:href" => "#share2-icon", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+          %form.feed-item__reply-form
+            %textarea.feed-item__reply-input{:placeholder => "Type your reply", :rows => "1", :style => "height: 36px;"}
+            %button.feed-item__reply-btn{:disabled => "disabled", :type => "submit"}
+
+      .feed-item
+        .feed-item__header
+          = link_to '/profile.html', class: 'feed-item__avatar-block' do
+            HA
+          .feed-item__header-main
+            .feed-item__header-row
+              = link_to '/profile.html', class: 'feed-item__author' do
+                Mount Sinai Hospital Admin
+              %a.feed-item__story-link{:href => "javascript:void(0)"}
+                %time.feed-item__time.time.timeago{:datetime => "2018-04-19T06:45:18.548Z"} 1 hours ago
+            .feed-item__header-aux{:style => "width: calc(100% - 287px);"}
+              %span.feed-item__label.feed-item__label--group
+                Private Medical Centre
+              .feed-item__dropdown-wrapper
+                %a.feed-item__dropdown-trigger.feed-item__triangle-trigger{:href => "javascript: void(0)"}
+                .feed-item__dropdown.feed-item__dropdown--arrow-trigger
+                  .feed-item__dropdown-section
+                    %a.feed-item__dropdown-link.feed-item__hide{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-eye-close
+                      Hide post
+                    %a.feed-item__dropdown-link.feed-item__report{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-flag
+                      Report
+                    %a.feed-item__dropdown-link.feed-item__block{:href => "javascript:void(0)"}
+                      %i.feed-item__dropdown-item-icon.glyphicon.glyphicon-remove-sign
+                      Block user
+            %span.feed-item__label.feed-item__label--position
+              Doctor
+        .feed-item__body
+          %p.feed-item__text Just a reminder that we have an internal job network for intra-network referrals. All of this is managed via Plexa Jobs system. You can access the list via the link below.
+          = link_to 'Plexa Job Network', 'https://plexa.ai/', class: 'feed-item__btn-link btn-beige btn-new'
+        .feed-item__comments-region
         .feed-item__footer.share-data
           .feed-item__stats
             %span.feed-item__likes.icon-like

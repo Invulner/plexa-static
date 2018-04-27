@@ -1,6 +1,9 @@
 $options = $('.compose__options')
 $dropdown = $('.feed-item__dropdown')
-activeGroup = composeActiveGroup = localStorage.getItem('group')
+if window.location.href.indexOf('/feed.html') > 0
+  activeGroup = composeActiveGroup = localStorage.setItem('group', '')
+else
+  activeGroup = composeActiveGroup = localStorage.getItem('group')
 
 # Compose textarea
 $('.compose__textarea').on 'focus', (event) ->

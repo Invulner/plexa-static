@@ -1,7 +1,7 @@
 .flex-cell.flex-cell--left.flex-cell--side
   %div
     .feed-filter__profile
-      %a.feed-filter__profile-edit{:href => "/user/profile/edit"} Edit profile
+      %a.feed-filter__profile-edit{:href => "#"} Edit profile
       .feed-filter__avatar
         PT
     .feed-filter
@@ -9,12 +9,10 @@
         My feed
       %ul.feed-filter__list
         %li.feed-default.feed-filter__item
-          %a.feed-filter__link{:href => "javascript:void(0)"}
-            View my feed
+          = link_to 'View my feed', '/feed.html', class: 'feed-filter__link'
     .feed-filter
       %h4.feed-filter__title.feed-filter__title--groups
         Groups
       %ul.feed-filter__list.nav__groups
-        %li Group 1
-        %li Group 2
+        %li Private Medical Centre
       %button.btn-beige.btn-new{"data-target" => "#group-create-modal", "data-toggle" => "modal"} Create group
