@@ -157,42 +157,4 @@
         %textarea.consult-form__textarea{ placeholder: 'Enter your message' }
         %button.consult-form__btn.compose__post-btn
 
-:coffee
-  $chatBlock = $('.consult-chat-block')
-  $chat = $('.consult-chat')
-  messageShowDelay = 2500
-  $textarea = $('.consult-form__textarea')
-
-  scrollChatToBottom = ->
-    $chatBlock.animate({scrollTop: $chat.height()})
-
-  startChatAnimation = (delay = messageShowDelay)->
-    $firstInvisibleMessage = $('.consult-chat__item--invisible').first()
-    isUserMessage = !$firstInvisibleMessage.hasClass('consult-chat__item--medbot')
-    isPauseStep = $firstInvisibleMessage.hasClass('pause-step')
-    isSkipStep = $firstInvisibleMessage.hasClass('skip-step')
-    console.log(isUserMessage)
-    console.log(isPauseStep)
-    console.log(isSkipStep)
-    callback = if ((isUserMessage || isPauseStep) && !isSkipStep) then null else startChatAnimation
-    setTimeout(() =>
-      animateMessage($firstInvisibleMessage, callback)
-    , delay)
-
-
-  animateMessage = (message, callback) =>
-    message.removeClass 'consult-chat__item--invisible'
-    setTimeout(() =>
-      scrollChatToBottom()
-      callback?()
-    , 20)
-
-  startChatAnimation(0)
-
-  $('.user-btn').on 'click', (e) =>
-    $(e.target).addClass 'active'
-    startChatAnimation(0)
-
-  $(".consult-form__btn").on 'click', () =>
-    startChatAnimation(0)
-    $textarea.val('')
+= javascript_include_tag 'consult'
