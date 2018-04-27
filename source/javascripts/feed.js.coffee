@@ -146,9 +146,8 @@ $postBtn.on 'click', (e) ->
   message = $postTextarea.val()
   $postTextarea.val('')
 
-  template = "<div class='feed-item'><div class='feed-item__header'>
+  template = "<div class='feed-item feed-item--custom'><div class='feed-item__header'>
                 <a class='feed-item__avatar-block' href='/profile.html'>
-                  PT
                 </a>
                 <div class='feed-item__header-main'>
                   <div class='feed-item__header-row'>
