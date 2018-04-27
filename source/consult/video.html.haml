@@ -2,7 +2,7 @@
   = partial 'header'
   .consult__video.block-centered
     .consult__video-block
-      %video#video{ controls: true }
+      %video#video{ controls: true, autoplay: true }
         %source{ src: image_path('video.mp4') }
 
       .consult__video-controls
@@ -22,7 +22,7 @@
 
   $('.consult__replay-video').on('click', function(event) {
     event.preventDefault()
-    
+
     video.pause()
     video.currentTime = 0
     video.play()
