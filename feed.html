@@ -494,7 +494,7 @@ Log Out
 <div class='flex-cell flex-cell--left flex-cell--side'>
 <div>
 <div class='feed-filter__profile'>
-<a class='feed-filter__profile-edit' href='/user/profile/edit'>Edit profile</a>
+<a class='feed-filter__profile-edit' href='#'>Edit profile</a>
 <div class='feed-filter__avatar'>
 PT
 </div>
@@ -505,9 +505,7 @@ My feed
 </h4>
 <ul class='feed-filter__list'>
 <li class='feed-default feed-filter__item'>
-<a class='feed-filter__link' href='javascript:void(0)'>
-View my feed
-</a>
+<a href="feed.html" class="feed-filter__link">View my feed</a>
 </li>
 </ul>
 </div>
@@ -516,8 +514,7 @@ View my feed
 Groups
 </h4>
 <ul class='feed-filter__list nav__groups'>
-<li>Group 1</li>
-<li>Group 2</li>
+<li>Private Medical Centre</li>
 </ul>
 <button class='btn-beige btn-new' data-target='#group-create-modal' data-toggle='modal'>Create group</button>
 </div>
@@ -607,8 +604,7 @@ Select a group
 </div>
 <ul class='compose__groups-list'>
 <li class='list-item--active'>No group</li>
-<li>Group 1</li>
-<li>Group 2</li>
+<li>Private Medical Centre</li>
 </ul>
 </div>
 </div>
@@ -833,16 +829,15 @@ Select a group
 <div class='feed-items'>
 <div class='feed-item'>
 <div class='feed-item__header'>
-<a href="profile.html" class="feed-item__avatar-block"><img alt='avatar' class='feed-item__avatar-img' onerror='this.style.display = &#39;none&#39;' src='https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/23/api_oran-headshot-min.jpg'>
-OR
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/patrick-kelly.jpg" alt="Patrick Kelly" class="feed-item__avatar-img" />
 </a><div class='feed-item__header-main'>
 <div class='feed-item__header-row'>
-<a href="profile.html" class="feed-item__author">Oran Rigby
+<a href="profile.html" class="feed-item__author">Dr Patrick Kelly
 </a><a class='feed-item__story-link' href='javascript:void(0)'>
 <time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>2 hours ago</time>
 </a>
 </div>
-<div class='feed-item__header-aux' style='width: calc(100% - 154px);'>
+<div class='feed-item__header-aux' style='width: calc(100% - 173px);'>
 <div class='feed-item__dropdown-wrapper'>
 <a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
 <div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
@@ -869,13 +864,17 @@ Doctor
 </div>
 </div>
 <div class='feed-item__body'>
-<a class='post-link' href='https://www.sciencedirect.com/science/article/pii/S0039606017302799' target='_blank'>
+<p class='feed-item__text'>This is a serious problem in Ireland with low chance for a positive outcome unless something changes about the way we approach medical training and job creation.</p>
+<a class='post-link' href='https://www.imt.ie/news/almost-15000-people-age-75-plus-waited-24-hours-ed-first-quarter-23-04-2018/' target='_blank'>
+<div class='post-link__header'>
+<img src="images/feed/imt.jpg" alt="post picture" class="post-link__img" />
+</div>
 <div class='post-link__body'>
 <h2 class='post-link__title'>
-From innovation to market adoption in the operating room: The “CFO as customer” - ScienceDirect
+Almost 15,000 people age 75-plus waited 24 hours in ED in first quarter of 2018
 </h2>
 <span class='post-link__link'>
-www.sciencedirect.com
+www.imt.ie
 </span>
 </div>
 </a>
@@ -904,16 +903,15 @@ www.sciencedirect.com
 </div>
 <div class='feed-item'>
 <div class='feed-item__header'>
-<a href="profile.html" class="feed-item__avatar-block"><img alt='avatar' class='feed-item__avatar-img' onerror='this.style.display = &#39;none&#39;' src='https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg'>
-PM
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/john-murphy.jpg" alt="John Murphy" class="feed-item__avatar-img" />
 </a><div class='feed-item__header-main'>
 <div class='feed-item__header-row'>
-<a href="profile.html" class="feed-item__author">Plexa Medbot
+<a href="profile.html" class="feed-item__author">Prof John Murphy MD
 </a><a class='feed-item__story-link' href='javascript:void(0)'>
-<time class='feed-item__time time timeago' datetime='2018-04-16T09:00:12.905Z'>1 day ago</time>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>2 hours ago</time>
 </a>
 </div>
-<div class='feed-item__header-aux' style='width: calc(100% - 169px);'>
+<div class='feed-item__header-aux' style='width: calc(100% - 216px);'>
 <div class='feed-item__dropdown-wrapper'>
 <a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
 <div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
@@ -922,23 +920,36 @@ PM
 <i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
 Hide post
 </a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
 </div>
 </div>
 </div>
 </div>
 <span class='feed-item__label feed-item__label--position'>
-Medical Organisation
+Doctor
 </span>
 </div>
 </div>
 <div class='feed-item__body'>
-<a class='post-link' href='http://www.annfammed.org/lookup/doi/10.1370/afm.2196' target='_blank'>
+<p class='feed-item__text'>Overwork, under-resourced. Becoming increasingly common in the workplace.</p>
+<p class='feed-item__text'>We need new tools to allow for on-demand medical job placement.</p>
+<a class='post-link' href='https://www.theguardian.com/healthcare-network/views-from-the-nhs-frontline/2018/apr/23/burnt-out-doctor-why-matters' target='_blank'>
+<div class='post-link__header'>
+<img src="images/feed/guardian.jpg" alt="post picture" class="post-link__img" />
+</div>
 <div class='post-link__body'>
 <h2 class='post-link__title'>
-EvidenceNOW: Balancing Primary Care Implementation and Implementation Research
+I am a burnt-out doctor. This is why it matters | Eileen Parkes | Healthcare Professionals Network | The Guardian
 </h2>
 <span class='post-link__link'>
-www.annfammed.org
+www.theguardian.com
 </span>
 </div>
 </a>
@@ -967,16 +978,15 @@ www.annfammed.org
 </div>
 <div class='feed-item'>
 <div class='feed-item__header'>
-<a href="profile.html" class="feed-item__avatar-block"><img alt='avatar' class='feed-item__avatar-img' onerror='this.style.display = &#39;none&#39;' src='https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg'>
-PM
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/patricia-carlson.jpg" alt="Patricia Carlson" class="feed-item__avatar-img" />
 </a><div class='feed-item__header-main'>
 <div class='feed-item__header-row'>
-<a href="profile.html" class="feed-item__author">Plexa Medbot
+<a href="profile.html" class="feed-item__author">Dr Patricia Carlson
 </a><a class='feed-item__story-link' href='javascript:void(0)'>
-<time class='feed-item__time time timeago' datetime='2018-04-15T16:00:17.520Z'>2 days ago</time>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>3 hours ago</time>
 </a>
 </div>
-<div class='feed-item__header-aux' style='width: calc(100% - 169px);'>
+<div class='feed-item__header-aux' style='width: calc(100% - 197px);'>
 <div class='feed-item__dropdown-wrapper'>
 <a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
 <div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
@@ -985,23 +995,35 @@ PM
 <i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
 Hide post
 </a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
 </div>
 </div>
 </div>
 </div>
 <span class='feed-item__label feed-item__label--position'>
-Medical Organisation
+Doctor
 </span>
 </div>
 </div>
 <div class='feed-item__body'>
-<a class='post-link' href='https://www.sciencedirect.com/science/article/pii/S0304383518302441' target='_blank'>
+<p class='feed-item__text'>Wonderful story. Very powerful show of force from the public sector in the UK.</p>
+<a class='post-link' href='http://www.bbc.co.uk/news/uk-england-birmingham-43872737' target='_blank'>
+<div class='post-link__header'>
+<img src="images/feed/bbc.jpg" alt="post picture" class="post-link__img" />
+</div>
 <div class='post-link__body'>
 <h2 class='post-link__title'>
-A novel tropomyosin-related kinase A inhibitor, KK5101 to treat pancreatic cancer
+Boy recovering well after five-organ transplant - BBC News
 </h2>
 <span class='post-link__link'>
-www.sciencedirect.com
+www.bbc.co.uk
 </span>
 </div>
 </a>
@@ -1030,16 +1052,15 @@ www.sciencedirect.com
 </div>
 <div class='feed-item'>
 <div class='feed-item__header'>
-<a href="profile.html" class="feed-item__avatar-block"><img alt='avatar' class='feed-item__avatar-img' onerror='this.style.display = &#39;none&#39;' src='https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg'>
-PM
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/adbdul-samad-nijad-abadi.jpg" alt="Abdul-Samad Nijad Abadi" class="feed-item__avatar-img" />
 </a><div class='feed-item__header-main'>
 <div class='feed-item__header-row'>
-<a href="profile.html" class="feed-item__author">Plexa Medbot
+<a href="profile.html" class="feed-item__author">Dr Adbdul-Samad Nijad Abadi
 </a><a class='feed-item__story-link' href='javascript:void(0)'>
-<time class='feed-item__time time timeago' datetime='2018-04-13T09:00:15.739Z'>4 days ago</time>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>4 hours ago</time>
 </a>
 </div>
-<div class='feed-item__header-aux' style='width: calc(100% - 169px);'>
+<div class='feed-item__header-aux' style='width: calc(100% - 277px);'>
 <div class='feed-item__dropdown-wrapper'>
 <a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
 <div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
@@ -1048,23 +1069,36 @@ PM
 <i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
 Hide post
 </a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
 </div>
 </div>
 </div>
 </div>
 <span class='feed-item__label feed-item__label--position'>
-Medical Organisation
+Doctor
 </span>
 </div>
 </div>
 <div class='feed-item__body'>
-<a class='post-link' href='http://Insights.ovid.com/crossref?an=00006250-900000000-98092' target='_blank'>
+<p class='feed-item__text'>Amazing advances in this field just keep getting better.</p>
+<p class='feed-item__text'>We’re currently dealing with a huge increase in the number of</p>
+<a class='post-link' href='http://www.bbc.co.uk/news/uk-scotland-tayside-central-43864875' target='_blank'>
+<div class='post-link__header'>
+<img src="images/feed/bbc2.jpg" alt="post picture" class="post-link__img" />
+</div>
 <div class='post-link__body'>
 <h2 class='post-link__title'>
-Optimizing Blood Transfusion Practices Through Bundled Intervention Implementation in Patients With Gynecologic Cancer Undergoing Laparotomy
+Prostate cancer diagnosis breakthrough hailed - BBC News
 </h2>
 <span class='post-link__link'>
-Insights.ovid.com
+www.bbc.co.uk
 </span>
 </div>
 </a>
@@ -1093,16 +1127,15 @@ Insights.ovid.com
 </div>
 <div class='feed-item'>
 <div class='feed-item__header'>
-<a href="profile.html" class="feed-item__avatar-block"><img alt='avatar' class='feed-item__avatar-img' onerror='this.style.display = &#39;none&#39;' src='https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg'>
-PM
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/guan-yin-liao.jpg" alt="Guan-yin Liao" class="feed-item__avatar-img" />
 </a><div class='feed-item__header-main'>
 <div class='feed-item__header-row'>
-<a href="profile.html" class="feed-item__author">Plexa Medbot
+<a href="profile.html" class="feed-item__author">Dr Guan-yin Liao
 </a><a class='feed-item__story-link' href='javascript:void(0)'>
-<time class='feed-item__time time timeago' datetime='2018-04-08T16:00:04.265Z'>9 days ago</time>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>5 hours ago</time>
 </a>
 </div>
-<div class='feed-item__header-aux' style='width: calc(100% - 169px);'>
+<div class='feed-item__header-aux' style='width: calc(100% - 186px);'>
 <div class='feed-item__dropdown-wrapper'>
 <a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
 <div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
@@ -1111,23 +1144,97 @@ PM
 <i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
 Hide post
 </a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
 </div>
 </div>
 </div>
 </div>
 <span class='feed-item__label feed-item__label--position'>
-Medical Organisation
+Doctor
 </span>
 </div>
 </div>
 <div class='feed-item__body'>
-<a class='post-link' href='http://doi.wiley.com/10.1111/jocd.12502' target='_blank'>
+<p class='feed-item__text'>Hi, I’ve just started a private practice in Chatswood. I’m looking for people in the area for patient referrals.</p>
+<p class='feed-item__text'>If there are any private groups on Plexa for Chatswood doctors, please invite me!</p>
+</div>
+<div class='feed-item__comments-region'></div>
+<div class='feed-item__footer share-data'>
+<div class='feed-item__stats'>
+<span class='feed-item__likes icon-like'>
+<span class='feed-item__like'>Like</span>
+<svg>
+<use xlink:href='#like-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='feed-item__like-counter'>0</span>
+</span>
+<span class='feed-item__share icon-share' data-target='#share-modal' data-toggle='modal'>
+<svg>
+<use xlink:href='#share2-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+</span>
+</div>
+<form class='feed-item__reply-form'>
+<textarea class='feed-item__reply-input' placeholder='Type your reply' rows='1' style='height: 36px;'></textarea>
+<button class='feed-item__reply-btn' disabled='disabled' type='submit'></button>
+</form>
+</div>
+</div>
+<div class='feed-item'>
+<div class='feed-item__header'>
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/ravi-patel.jpg" alt="Ravi Patel" class="feed-item__avatar-img" />
+</a><div class='feed-item__header-main'>
+<div class='feed-item__header-row'>
+<a href="profile.html" class="feed-item__author">Dr Ravi Patel
+</a><a class='feed-item__story-link' href='javascript:void(0)'>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>6 hours ago</time>
+</a>
+</div>
+<div class='feed-item__header-aux' style='width: calc(100% - 158px);'>
+<div class='feed-item__dropdown-wrapper'>
+<a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
+<div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
+<div class='feed-item__dropdown-section'>
+<a class='feed-item__dropdown-link feed-item__hide' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
+Hide post
+</a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
+</div>
+</div>
+</div>
+</div>
+<span class='feed-item__label feed-item__label--position'>
+Doctor
+</span>
+</div>
+</div>
+<div class='feed-item__body'>
+<p class='feed-item__text'>Thanks to Dr. Abdul-Samad for sharing the above article about prostate treatment breakthroughs. Have been hearing wondering news about this lately and am very interested to see the good it can bring.</p>
+<a class='post-link' href='https://www.theguardian.com/society/2018/apr/22/prostate-cancer-ultrasound-diagnosis-test' target='_blank'>
+<div class='post-link__header'>
+<img src="images/feed/guardian2.jpg" alt="post picture" class="post-link__img" />
+</div>
 <div class='post-link__body'>
 <h2 class='post-link__title'>
-Correlations between skin hydration parameters and corneocyte‐derived parameters to characterize skin conditions - Masaki -  - Journal of Cosmetic Dermatology - Wiley Online Library
+Prostate cancer breakthrough as UK team develops more accurate test | Society | The Guardian
 </h2>
 <span class='post-link__link'>
-doi.wiley.com
+www.theguardian.com
 </span>
 </div>
 </a>
@@ -1156,16 +1263,15 @@ doi.wiley.com
 </div>
 <div class='feed-item'>
 <div class='feed-item__header'>
-<a href="profile.html" class="feed-item__avatar-block"><img alt='avatar' class='feed-item__avatar-img' onerror='this.style.display = &#39;none&#39;' src='https://d1x2yd8scvgoir.cloudfront.net/main/profile/avatar/129/api_medbot-avatar.jpg'>
-PM
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/ruwaydah-juman-wasem.jpg" alt="Ruwaydah Juman Wasem" class="feed-item__avatar-img" />
 </a><div class='feed-item__header-main'>
 <div class='feed-item__header-row'>
-<a href="profile.html" class="feed-item__author">Plexa Medbot
+<a href="profile.html" class="feed-item__author">Dr Ruwaydah Juman Wasem
 </a><a class='feed-item__story-link' href='javascript:void(0)'>
-<time class='feed-item__time time timeago' datetime='2018-04-07T16:00:06.646Z'>10 days ago</time>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>7 hours ago</time>
 </a>
 </div>
-<div class='feed-item__header-aux' style='width: calc(100% - 169px);'>
+<div class='feed-item__header-aux' style='width: calc(100% - 264px);'>
 <div class='feed-item__dropdown-wrapper'>
 <a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
 <div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
@@ -1174,23 +1280,371 @@ PM
 <i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
 Hide post
 </a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
 </div>
 </div>
 </div>
 </div>
 <span class='feed-item__label feed-item__label--position'>
-Medical Organisation
+Doctor
 </span>
 </div>
 </div>
 <div class='feed-item__body'>
-<a class='post-link' href='http://bmjopen.bmj.com/lookup/doi/10.1136/bmjopen-2017-020449' target='_blank'>
+<p class='feed-item__text'>So much discussion about blockchain and healthcare. Can anyone help to explain how this could be incorporated into a family practice?</p>
+<p class='feed-item__text'>What benefits would it bring and is it easy for a technophobe like me to manage?</p>
+<a class='post-link' href='https://www.theguardian.com/society/2018/apr/22/prostate-cancer-ultrasound-diagnosis-test' target='_blank'>
+<div class='post-link__header'>
+<img src="images/feed/delloite.jpg" alt="post picture" class="post-link__img" />
+</div>
 <div class='post-link__body'>
 <h2 class='post-link__title'>
-http://bmjopen.bmj.com/lookup/doi/10.1136/bmjopen-2017-020449
+Blockchain: Opportunities for health care | Deloitte US
 </h2>
 <span class='post-link__link'>
-bmjopen.bmj.com
+www2.deloitte.com
+</span>
+</div>
+</a>
+</div>
+<div class='feed-item__comments-region'></div>
+<div class='feed-item__footer share-data'>
+<div class='feed-item__stats'>
+<span class='feed-item__likes icon-like'>
+<span class='feed-item__like'>Like</span>
+<svg>
+<use xlink:href='#like-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='feed-item__like-counter'>0</span>
+</span>
+<span class='feed-item__share icon-share' data-target='#share-modal' data-toggle='modal'>
+<svg>
+<use xlink:href='#share2-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+</span>
+</div>
+<form class='feed-item__reply-form'>
+<textarea class='feed-item__reply-input' placeholder='Type your reply' rows='1' style='height: 36px;'></textarea>
+<button class='feed-item__reply-btn' disabled='disabled' type='submit'></button>
+</form>
+</div>
+</div>
+<div class='feed-item'>
+<div class='feed-item__header'>
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/michael-davies.jpg" alt="Michael Davies" class="feed-item__avatar-img" />
+</a><div class='feed-item__header-main'>
+<div class='feed-item__header-row'>
+<a href="profile.html" class="feed-item__author">Dr Michael Davies
+</a><a class='feed-item__story-link' href='javascript:void(0)'>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>8 hours ago</time>
+</a>
+</div>
+<div class='feed-item__header-aux' style='width: calc(100% - 194px);'>
+<div class='feed-item__dropdown-wrapper'>
+<a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
+<div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
+<div class='feed-item__dropdown-section'>
+<a class='feed-item__dropdown-link feed-item__hide' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
+Hide post
+</a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
+</div>
+</div>
+</div>
+</div>
+<span class='feed-item__label feed-item__label--position'>
+Doctor
+</span>
+</div>
+</div>
+<div class='feed-item__body'>
+<p class='feed-item__text'>Specialist doctor in cardiology. Working for over 12 years in the field and loving it.</p>
+<p class='feed-item__text'>I just wanted to say how great the Quantum Consult process is with Plexa. Thanks to Oran and the team.</p>
+</div>
+<div class='feed-item__comments-region'></div>
+<div class='feed-item__footer share-data'>
+<div class='feed-item__stats'>
+<span class='feed-item__likes icon-like'>
+<span class='feed-item__like'>Like</span>
+<svg>
+<use xlink:href='#like-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='feed-item__like-counter'>0</span>
+</span>
+<span class='feed-item__share icon-share' data-target='#share-modal' data-toggle='modal'>
+<svg>
+<use xlink:href='#share2-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+</span>
+</div>
+<form class='feed-item__reply-form'>
+<textarea class='feed-item__reply-input' placeholder='Type your reply' rows='1' style='height: 36px;'></textarea>
+<button class='feed-item__reply-btn' disabled='disabled' type='submit'></button>
+</form>
+</div>
+</div>
+<div class='feed-item'>
+<div class='feed-item__header'>
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/louise-parker.jpg" alt="Louise Parker" class="feed-item__avatar-img" />
+</a><div class='feed-item__header-main'>
+<div class='feed-item__header-row'>
+<a href="profile.html" class="feed-item__author">Dr Louise Parker
+</a><a class='feed-item__story-link' href='javascript:void(0)'>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>9 hours ago</time>
+</a>
+</div>
+<div class='feed-item__header-aux' style='width: calc(100% - 180px);'>
+<div class='feed-item__dropdown-wrapper'>
+<a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
+<div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
+<div class='feed-item__dropdown-section'>
+<a class='feed-item__dropdown-link feed-item__hide' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
+Hide post
+</a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
+</div>
+</div>
+</div>
+</div>
+<span class='feed-item__label feed-item__label--position'>
+Doctor
+</span>
+</div>
+</div>
+<div class='feed-item__body'>
+<p class='feed-item__text'>There are a lot of skeptics about this treatment. Looking to hear from patients that have had success with this process and also from those who haven’t.</p>
+<p class='feed-item__text'>Contact me via Plexa.</p>
+<a class='post-link' href='http://www.bbc.co.uk/news/health-43815369' target='_blank'>
+<div class='post-link__header'>
+<img src="images/feed/bbc3.jpg" alt="post picture" class="post-link__img" />
+</div>
+<div class='post-link__body'>
+<h2 class='post-link__title'>
+Why a faecal transplant could save your life - BBC News
+</h2>
+<span class='post-link__link'>
+www.bbc.co.uk
+</span>
+</div>
+</a>
+</div>
+<div class='feed-item__comments-region'></div>
+<div class='feed-item__footer share-data'>
+<div class='feed-item__stats'>
+<span class='feed-item__likes icon-like'>
+<span class='feed-item__like'>Like</span>
+<svg>
+<use xlink:href='#like-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='feed-item__like-counter'>0</span>
+</span>
+<span class='feed-item__share icon-share' data-target='#share-modal' data-toggle='modal'>
+<svg>
+<use xlink:href='#share2-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+</span>
+</div>
+<form class='feed-item__reply-form'>
+<textarea class='feed-item__reply-input' placeholder='Type your reply' rows='1' style='height: 36px;'></textarea>
+<button class='feed-item__reply-btn' disabled='disabled' type='submit'></button>
+</form>
+</div>
+</div>
+<div class='feed-item'>
+<div class='feed-item__header'>
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/guan-yin-liao.jpg" alt="Guan-yin Liao" class="feed-item__avatar-img" />
+</a><div class='feed-item__header-main'>
+<div class='feed-item__header-row'>
+<a href="profile.html" class="feed-item__author">Dr Guan-yin Liao
+</a><a class='feed-item__story-link' href='javascript:void(0)'>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>10 hours ago</time>
+</a>
+</div>
+<div class='feed-item__header-aux' style='width: calc(100% - 186px);'>
+<div class='feed-item__dropdown-wrapper'>
+<a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
+<div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
+<div class='feed-item__dropdown-section'>
+<a class='feed-item__dropdown-link feed-item__hide' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
+Hide post
+</a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
+</div>
+</div>
+</div>
+</div>
+<span class='feed-item__label feed-item__label--position'>
+Doctor
+</span>
+</div>
+</div>
+<div class='feed-item__body'>
+<p class='feed-item__text'>Has anyone had experience with the 2008 Varian 21Ix for Oncology treatment?</p>
+<p class='feed-item__text'>Our practice is looking at using one.</p>
+</div>
+<div class='feed-item__comments-region'></div>
+<div class='feed-item__footer share-data'>
+<div class='feed-item__stats'>
+<span class='feed-item__likes icon-like'>
+<span class='feed-item__like'>Like</span>
+<svg>
+<use xlink:href='#like-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='feed-item__like-counter'>0</span>
+</span>
+<span class='feed-item__share icon-share' data-target='#share-modal' data-toggle='modal'>
+<svg>
+<use xlink:href='#share2-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+</span>
+</div>
+<form class='feed-item__reply-form'>
+<textarea class='feed-item__reply-input' placeholder='Type your reply' rows='1' style='height: 36px;'></textarea>
+<button class='feed-item__reply-btn' disabled='disabled' type='submit'></button>
+</form>
+</div>
+</div>
+<div class='feed-item'>
+<div class='feed-item__header'>
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/ravi-patel.jpg" alt="Ravi Patel" class="feed-item__avatar-img" />
+</a><div class='feed-item__header-main'>
+<div class='feed-item__header-row'>
+<a href="profile.html" class="feed-item__author">Dr Ravi Patel
+</a><a class='feed-item__story-link' href='javascript:void(0)'>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>11 hours ago</time>
+</a>
+</div>
+<div class='feed-item__header-aux' style='width: calc(100% - 158px);'>
+<div class='feed-item__dropdown-wrapper'>
+<a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
+<div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
+<div class='feed-item__dropdown-section'>
+<a class='feed-item__dropdown-link feed-item__hide' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
+Hide post
+</a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
+</div>
+</div>
+</div>
+</div>
+<span class='feed-item__label feed-item__label--position'>
+Doctor
+</span>
+</div>
+</div>
+<div class='feed-item__body'>
+<p class='feed-item__text'>I’m looking to connect with specialists who practice around Monash University in Melbourne, Australia.</p>
+<p class='feed-item__text'>I know there are a number of doctors on Plexa that fit the bill. Please contact me via private chat if you are interested in a study.</p>
+</div>
+<div class='feed-item__comments-region'></div>
+<div class='feed-item__footer share-data'>
+<div class='feed-item__stats'>
+<span class='feed-item__likes icon-like'>
+<span class='feed-item__like'>Like</span>
+<svg>
+<use xlink:href='#like-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+<span class='feed-item__like-counter'>0</span>
+</span>
+<span class='feed-item__share icon-share' data-target='#share-modal' data-toggle='modal'>
+<svg>
+<use xlink:href='#share2-icon' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+</svg>
+</span>
+</div>
+<form class='feed-item__reply-form'>
+<textarea class='feed-item__reply-input' placeholder='Type your reply' rows='1' style='height: 36px;'></textarea>
+<button class='feed-item__reply-btn' disabled='disabled' type='submit'></button>
+</form>
+</div>
+</div>
+<div class='feed-item'>
+<div class='feed-item__header'>
+<a href="profile.html" class="feed-item__avatar-block"><img src="images/feed/ruwaydah-juman-wasem.jpg" alt="Ruwaydah Juman Wasem" class="feed-item__avatar-img" />
+</a><div class='feed-item__header-main'>
+<div class='feed-item__header-row'>
+<a href="profile.html" class="feed-item__author">Dr Ruwaydah Juman Wasem
+</a><a class='feed-item__story-link' href='javascript:void(0)'>
+<time class='feed-item__time time timeago' datetime='2018-04-19T06:45:18.548Z'>12 hours ago</time>
+</a>
+</div>
+<div class='feed-item__header-aux' style='width: calc(100% - 264px);'>
+<div class='feed-item__dropdown-wrapper'>
+<a class='feed-item__dropdown-trigger feed-item__triangle-trigger' href='javascript: void(0)'></a>
+<div class='feed-item__dropdown feed-item__dropdown--arrow-trigger'>
+<div class='feed-item__dropdown-section'>
+<a class='feed-item__dropdown-link feed-item__hide' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-eye-close'></i>
+Hide post
+</a>
+<a class='feed-item__dropdown-link feed-item__report' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-flag'></i>
+Report
+</a>
+<a class='feed-item__dropdown-link feed-item__block' href='javascript:void(0)'>
+<i class='feed-item__dropdown-item-icon glyphicon glyphicon-remove-sign'></i>
+Block user
+</a>
+</div>
+</div>
+</div>
+</div>
+<span class='feed-item__label feed-item__label--position'>
+Doctor
+</span>
+</div>
+</div>
+<div class='feed-item__body'>
+<p class='feed-item__text'>Wonderful foundation operating out of Australia.</p>
+<a class='post-link' href='https://www.melanoma.org.au/' target='_blank'>
+<div class='post-link__header'>
+<img src="images/feed/melanoma.jpg" alt="post picture" class="post-link__img" />
+</div>
+<div class='post-link__body'>
+<h2 class='post-link__title'>
+Melanoma Institute Australia
+</h2>
+<span class='post-link__link'>
+www.melanoma.org.au
 </span>
 </div>
 </a>
